@@ -7,7 +7,7 @@ theme:
     code: Red Hat Mono
 
   logo: assets/logo_immac_blanc.png #a resize
-  favicon: assets/IMMAC_Logo-lycee_VIOLET_FOND_TRANSPARENT.png #a resize *ICO
+  favicon: assets/favicon.svg
   features: 
     #- navigation.footer
     - navigation.tabs
