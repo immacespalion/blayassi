@@ -1,12 +1,13 @@
 ---
 title: Accueil
 hide: 
-    navigation: true
+    - toc
+    - navigation
 ---
 
 <h1 style="display: flex; justify-content: space-between; align-items: center;">
   Bienvenue !
-  <img src="assets/logo_immac_violet.png" alt="Logo de l'établissement" style="height: 100px; margin-left: 10px;">
+  <img src="assets/logo_immac_violet.png" alt="Logo de l'établissement" style="width: 25%; margin-left: 10px;">
 </h1>
 
 ???+ warning "Attention"

@@ -1,3 +1,9 @@
+---
+title: Présentation
+hide: 
+    - toc
+---
+
 # EDS Mathématiques - Classe de Première
 
 Bienvenue dans la section dédiée à l'enseignement de spécialité Mathématiques pour les élèves de Première. Cette page vous guidera à travers les enjeux de l'année et vous donnera accès à de nombreuses ressources pour progresser efficacement.
