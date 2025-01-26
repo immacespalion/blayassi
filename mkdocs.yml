@@ -53,9 +53,17 @@ markdown_extensions: #for the emojis
       alternate_style: true
   - admonition
   - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
 
 extra_css:
   - stylesheets/extra.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
 extra: 
   social: 
@@ -65,3 +73,7 @@ extra:
       link: https://lyceeimmacespalion.org
     - icon: material/instagram
       link: https://www.instagram.com/immacespalion?igsh=aXhhZmVoYTNwaG1x
+
+plugins:
+  - search
+  - mkdocs-nav-weight 

@@ -1,8 +1,9 @@
 ---
 title: Cours
+weight: 14
 ---
 
-#Dérivation locale
+#Géométrie analytique
 
 Dans ce chapitre, nous allons apprendre à
 

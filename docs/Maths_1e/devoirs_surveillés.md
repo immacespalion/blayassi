@@ -1,3 +1,7 @@
+---
+weight: 16
+---
+
 # Devoirs surveillés
 
 Vous trouverez sur cette page les sujets et les correction des devoirs surveillés (DS) des années précédentes.

@@ -1,8 +1,9 @@
 ---
 title: Cours
+weight: 11
 ---
 
-#Dérivation locale
+#Probabilités conditionnelles
 
 Dans ce chapitre, nous allons apprendre à
 

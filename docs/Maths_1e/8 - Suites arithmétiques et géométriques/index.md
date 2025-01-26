@@ -1,8 +1,9 @@
 ---
 title: Cours
+weight: 8
 ---
 
-#Dérivation locale
+#Suites arithmétiques et géométriques
 
 Dans ce chapitre, nous allons apprendre à
 

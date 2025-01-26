@@ -1,8 +1,9 @@
 ---
 title: Cours
+weight: 13
 ---
 
-#Dérivation locale
+#Fonction exponentielle
 
 Dans ce chapitre, nous allons apprendre à
 

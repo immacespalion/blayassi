@@ -1,8 +1,9 @@
 ---
 title: Cours
+weight: 12
 ---
 
-#Dérivation locale
+#Variations d'une fonction
 
 Dans ce chapitre, nous allons apprendre à
 

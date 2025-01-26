@@ -1,8 +1,9 @@
 ---
 title: Cours
+weight: 6
 ---
 
-#Dérivation locale
+#Dérivation globale
 
 Dans ce chapitre, nous allons apprendre à
 

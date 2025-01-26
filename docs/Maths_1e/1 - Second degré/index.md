@@ -1,5 +1,6 @@
 ---
 title: Cours
+weight: 1
 ---
 
 #Second degré (partie 1)

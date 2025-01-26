@@ -1,9 +1,9 @@
 ---
 title: Cours
+weight: 10
 ---
 
-#Dérivation locale
-
+#Applications du produit scalaire
 Dans ce chapitre, nous allons apprendre à
 
 * Obj 1

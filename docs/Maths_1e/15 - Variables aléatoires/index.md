@@ -1,8 +1,9 @@
 ---
 title: Cours
+weight: 15
 ---
 
-#Dérivation locale
+#Variables aléatoires
 
 Dans ce chapitre, nous allons apprendre à
 

@@ -1,8 +1,9 @@
 ---
 title: Cours
+weight: 5
 ---
 
-#Dérivation locale
+#Second degré (partie 2)
 
 Dans ce chapitre, nous allons apprendre à
 

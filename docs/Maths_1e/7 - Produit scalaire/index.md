@@ -1,8 +1,9 @@
 ---
 title: Cours
+weight: 7
 ---
 
-#Dérivation locale
+#Produit scalaire
 
 Dans ce chapitre, nous allons apprendre à
 

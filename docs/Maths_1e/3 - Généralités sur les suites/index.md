@@ -1,8 +1,9 @@
 ---
 title: Cours
+weight: 3
 ---
 
-#Dérivation locale
+#Généralités sur les suites
 
 Dans ce chapitre, nous allons apprendre à
 

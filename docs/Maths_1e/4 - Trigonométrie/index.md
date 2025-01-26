@@ -1,8 +1,9 @@
 ---
 title: Cours
+weight: 4
 ---
 
-#Dérivation locale
+#Trigonométrie
 
 Dans ce chapitre, nous allons apprendre à
 

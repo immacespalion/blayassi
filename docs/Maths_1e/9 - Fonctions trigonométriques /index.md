@@ -1,8 +1,9 @@
 ---
 title: Cours
+weight: 9
 ---
 
-#Dérivation locale
+#Fonctions trigonométriques
 
 Dans ce chapitre, nous allons apprendre à
 
