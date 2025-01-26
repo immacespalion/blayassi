@@ -3,13 +3,20 @@
 
 Vous trouverez sur cette page plusieurs exerciseurs qui vous permettrons de travailler les pré-requis de ce chapitre, ainsi que les applications directes principales. 
 
-* [Pré-requis] Dresser un tableau de variations à partir d'une courbe
-* [Pré-requis] Déterminer graphiquement les extremums d'une foncion
-* [Pré-requis] Utiliser le calcul littéral (distributivité, factorisation, identités remarquables, ...)
+Pré-requis : 
+
+* Dresser un tableau de variations à partir d'une courbe
+* Déterminer graphiquement les extremums d'une foncion
+* Utiliser le calcul littéral (distributivité, factorisation, identités remarquables, ...)
+
+Applications directes :
 
 1. Déterminer si une fonction est un polynôme du second degré.
 2. Donner la forme canonique d'un trinôme.
 3. Étudier les variations d'un trinôme.
+
+!!! warning "**Attention**" 
+    Ces exerciseurs sont un complément pour renforcer vos compétences. Ils ne suffisent pas à eux seuls pour réviser efficacement le chapitre. Pensez à étudier le cours et à revoir les exercices traités en classe pour une maîtrise complète des notions.
 
 ---
 

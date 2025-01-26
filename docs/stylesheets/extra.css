@@ -21,6 +21,7 @@
 
 .md-typeset .admonition {
   font-size: inherit; /* Taille du texte standard */
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1); /* Ombre diffuse */
 }
 
 /* Arrondir les bandeaux colorés (titres) des admonitions */

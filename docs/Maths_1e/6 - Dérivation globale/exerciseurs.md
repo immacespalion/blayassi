@@ -3,11 +3,13 @@
 
 Vous trouverez sur cette page plusieurs exerciseurs qui vous permettrons de travailler les pré-requis de ce chapitre, ainsi que les applications directes principales. 
 
+Pré-requis :
 <ul>
-  <li>[Pré-requis] Calculer un taux de variations</li>
-  <li>[Pré-requis] Déterminer l’équation réduite d’une tangente</li>
+  <li>Calculer un taux de variations</li>
+  <li>Déterminer l’équation réduite d’une tangente</li>
 </ul>
 
+Applications directes :
 <ol>
   <li>Dérivée de $k \times u$ <em>(fiches 15 et 16)</em></li>
   <li>Dérivée d’un polynôme <em>(fiches 15 et 16)</em></li>
@@ -17,9 +19,13 @@ Vous trouverez sur cette page plusieurs exerciseurs qui vous permettrons de trav
   <li>Dérivée de $g(ax + b)$ <em>(fiche 19)</em></li>
 </ol>
 
+Révisions complètes : 
 <ul>
-  <li>Révisions complètes <em>(fiches 15, 16, 17, 18 et 19)</em></li>
+  <li>Fiches 15, 16, 17, 18 et 19</em></li>
 </ul>
+
+!!! warning "**Attention**" 
+    Ces exerciseurs sont un complément pour renforcer vos compétences. Ils ne suffisent pas à eux seuls pour réviser efficacement le chapitre. Pensez à étudier le cours et à revoir les exercices traités en classe pour une maîtrise complète des notions.
 
 ---
 
