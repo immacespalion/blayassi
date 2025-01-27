@@ -9,7 +9,7 @@ hide:
 
 ## Entrainement 5e - Élèves
 
-<iframe src="https://coopmaths.fr/alea/?EEEE2e0a294917ea15c2152c0f22272e26ee2b0e25f21399139d0f2f181826330f1e2d0a12d2133612d112c726ee2b1d17e614bb26ee2b2d17fa2b4d2cca295327c227c32d5c14fa0f1c2633208e17e60f1c2633209a181c263928e62cce271726ee2b2217e6" width="100%" height="700px" style="border: 1px solid #216C9A; border-radius:18px;" allowfullscreen></iframe>
+<iframe src="https://coopmaths.fr/alea/?EEEE2e0a294917ea15c2152c0f22272e26ee2b0e25f21399139d0f2f181826330f1e2d0a12d2133612d112c726ee2b1d17e614bb26ee2b2d17fa2b4d2cca295327c227c32d5c14fa0f1c2633208e17e60f1c2633209a181c263928e62cce271726ee2b2217e6" class="exerciseur" allowfullscreen></iframe>
 
 ---
 

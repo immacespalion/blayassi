@@ -1,5 +1,6 @@
 ---
 title: Donner la forme canonique d'un trinôme
+weight: 2
 ---
 
 # Donner la forme canonique d'un trinôme
@@ -60,4 +61,4 @@ title: Donner la forme canonique d'un trinôme
 
 ## S'entrainer !
 
-<iframe src="https://coopmaths.fr/alea/?EEEE2e0a294917eb12d612d50f22272e13461dc313fa132b2b1614bb272e13350f1c272e132b263127b6182b2eb21db72e3627c127cb277b27c817e81336133512d20f2d29592a7617f92bab2b3e2c942a7211132baf2ada111026332bab29562dfa11110e8714c715d22b042da329530e8714d813f2139e19dd2ada002e" width="100%" height="500px" style="border: 1px solid #216C9A; border-radius:18px;" allowfullscreen></iframe>
+<iframe src="https://coopmaths.fr/alea/?EEEE2e0a294917eb12d612d50f22272e13461dc313fa132b2b1614bb272e13350f1c272e132b263127b6182b2eb21db72e3627c127cb277b27c817e81336133512d20f2d29592a7617f92bab2b3e2c942a7211132baf2ada111026332bab29562dfa11110e8714c715d22b042da329530e8714d813f2139e19dd2ada002e" class="exerciseur" allowfullscreen></iframe>
