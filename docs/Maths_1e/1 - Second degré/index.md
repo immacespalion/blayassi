@@ -11,5 +11,5 @@ Dans ce chapitre, nous allons apprendre à
 * Déterminer une forme canonique 
 * Calculer les coordonnées du sommet d'une parabole
 
-!!! example "Bientôt disponible"
-    Ce contenu sera bientôt disponile.
+!!! warning "**Attention**" 
+    Les exerciseurs proposé sont un complément pour renforcer vos compétences. Ils ne suffisent pas à eux seuls pour réviser efficacement le chapitre. Pensez à étudier le cours et à revoir les exercices traités en classe pour une maîtrise complète des notions.
