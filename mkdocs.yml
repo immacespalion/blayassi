@@ -74,6 +74,9 @@ extra:
       link: https://lyceeimmacespalion.org
     - icon: material/instagram
       link: https://www.instagram.com/immacespalion?igsh=aXhhZmVoYTNwaG1x
+  analytics:
+    provider: google
+    property: G-65TK1PRCWG
 
 plugins:
   - search
