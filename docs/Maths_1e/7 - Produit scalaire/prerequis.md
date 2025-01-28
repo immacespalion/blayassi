@@ -16,8 +16,6 @@ Vous trouverez sur cette page plusieurs exerciseurs qui vous permettrons de trav
 
 ---
 
-## Pré-requis
-
 #### Calculer les coordonnées d’un vecteur
 
 <iframe src="https://coopmaths.fr/alea/?EEEE2e0a2949181b158e26be0f22272e13b0139d11a60f2717e80f1d17e612c72d0a132b26f117e60f2e2dfe272e27f01368132b294917e71bcf145e132b2b16138f272e13350f2c17e70f1c272e132b2e3627c127cb277b27c817e81336133512d10f2d29592a7617f8263127022a762c942a762cf826fc2baf27602b470e8714d813f2139e197e27c811110e8714da138e139e15f10e8714ce169a2b042e5e270127ca0072" class="exerciseur" allowfullscreen></iframe>

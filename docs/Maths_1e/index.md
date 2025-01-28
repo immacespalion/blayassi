@@ -37,9 +37,18 @@ Consultez les sujets et corrections des années précédentes pour vous prépare
 
 ---
 
+💡 **Astuce** : Prenez l'habitude de travailler régulièrement et de revoir vos erreurs pour progresser efficacement.
+
+---
+
 ## À propos
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
-💡 **Astuce** : Prenez l'habitude de travailler régulièrement et de revoir vos erreurs pour progresser efficacement.
+??? info "Historique des mises à jour"
+    * 28.01.2025 - Rajout du chapitre 8 (cours+exerciseurs+pré-requis)
+    * 27.01.2025 - Rajout des chapitres 6 et 7 (cours+exerciseurs+pré-requis)
+    * 24.01.2025 - Rajout de l'onglet "Historique des MàJ" + refonte de la structure des chapitres.
+
+
 
 Bonne navigation et excellente année en mathématiques ! 😊
