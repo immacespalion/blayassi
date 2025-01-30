@@ -5,6 +5,8 @@ weight: 7
 
 # Produit scalaire
 
+## Objectifs
+
 Dans ce chapitre, nous allons apprendre à
 
 1. Calculer un produit scalaire avec des normes et un angle *(fiche 20)*
@@ -17,6 +19,6 @@ Dans ce chapitre, nous allons apprendre à
 
 ---
 
-# Révisions complètes
+## Révisions complètes
 
 <iframe src="https://coopmaths.fr/alea/?EEEE2e0a2949181a139926f00f22272e26ee2b0a1bcd14bb2e0a29491816140614970f22272e26ee2b0a1bcd151f2e0a2949181927e916220f22272e26ee2b0a1bcd14572e0a29491816140614970f22272e26ee2b0a1bcd151f2e0a2949181927e916220f22272e26ee2b0a1bcd14572e0a2949181a139926f00f22272e26ee2b0a1bcd14bb2e3627c127cb277b27c817e81336133512d10f2d29592a7618070e8714d813f2139e197e2e622d362bab2cf826fc2ae52a36139e1a400e8714d6163527c8" class="exerciseur" allowfullscreen></iframe>

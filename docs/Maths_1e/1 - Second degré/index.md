@@ -3,7 +3,9 @@ title: Cours
 weight: 1
 ---
 
-#Second degré (partie 1)
+# Second degré (partie 1)
+
+## Objectifs
 
 Dans ce chapitre, nous allons apprendre à
 

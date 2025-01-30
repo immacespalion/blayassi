@@ -45,6 +45,7 @@ Consultez les sujets et corrections des années précédentes pour vous prépare
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 30.01.2025 - Ajout de fiches de révision pour le chapitre 8
     * 28.01.2025 - Rajout du chapitre 8 (cours+exerciseurs+pré-requis)
     * 27.01.2025 - Rajout des chapitres 6 et 7 (cours+exerciseurs+pré-requis)
     * 24.01.2025 - Rajout de l'onglet "Historique des MàJ" + refonte de la structure des chapitres.
