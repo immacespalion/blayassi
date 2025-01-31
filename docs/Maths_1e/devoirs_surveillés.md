@@ -21,9 +21,9 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill�
     [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds3.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds3-correction.pdf)
 
 
-<!-- * DS4 - Dérivation globale et produit scalaire : 
+* DS4 - Dérivation globale et produit scalaire : 
     
-    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds4.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds4-correction.pdf) -->
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds4.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds4-correction.pdf)
 
 
 ## 2023-2024
