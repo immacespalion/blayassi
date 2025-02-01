@@ -11,7 +11,7 @@ theme:
   features: 
     #- navigation.footer
     - navigation.tabs
-    - navigation.indexes #Atterir direct sur index
+    #- navigation.indexes #Atterir direct sur index
     #- toc.integrate
   palette:
     # Palette toggle for automatic mode

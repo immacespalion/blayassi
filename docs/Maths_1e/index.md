@@ -32,6 +32,9 @@ Accédez à un résumé clair et concis de chaque chapitre :
 ### 2. **Exerciseurs pour s'entraîner ✏️**
 Pratiquez des exercices interactifs pour appliquer directement les notions apprises en classe. Ces exerciseurs sont conçus pour vous guider pas à pas et vérifier vos réponses.
 
+!!! warning "**Attention**" 
+    Les exerciseurs proposés sont un complément pour renforcer vos compétences. Ils ne suffisent pas à eux seuls pour réviser efficacement le chapitre. Pensez à étudier le cours et à revoir les exercices traités en classe pour une maîtrise complète des notions.
+
 ### 3. **Archives des devoirs surveillés 📄**
 Consultez les sujets et corrections des années précédentes pour vous préparer efficacement aux évaluations.
 
@@ -45,6 +48,7 @@ Consultez les sujets et corrections des années précédentes pour vous prépare
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 01.02.2025 - Ajout du chapitre 5 (cours+exerciseurs+pré-requis)
     * 31.01.2025 - Ajout du DS4 et de sa correction
     * 30.01.2025 - Ajout de fiches de révision pour le chapitre 8
     * 28.01.2025 - Rajout du chapitre 8 (cours+exerciseurs+pré-requis)

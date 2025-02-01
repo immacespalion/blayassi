@@ -7,7 +7,7 @@ weight: 1
 
 ## Comment faire ?
 
-!!! methode "Comment déterminer si une fonction est polynomiale de degré 2"
+!!! methode "Comment déterminer si une fonction est polynomiale de degré 2 ?"
     ### Algébriquement :
     1. On développe au maximum l’expression algébrique de la fonction.
     2. On simplifie l’expression.

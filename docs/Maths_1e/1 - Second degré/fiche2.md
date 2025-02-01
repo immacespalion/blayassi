@@ -7,7 +7,7 @@ weight: 2
 
 ## Comment faire ?
 
-!!! methode "Comment donner la forme canonique d'un trinôme (méthode 1)"
+!!! methode "Comment donner la forme canonique d'un trinôme ? (méthode 1)"
     <span style="color: gray;">On prendre pour exemple : </span> $ \textcolor{gray}{f(x) = 6x^2 + 5x - 3 .}$
 
     1. On factorise l’expression de \( f \) par le coefficient de \( x^2 \) :
@@ -34,7 +34,7 @@ weight: 2
         \textcolor{gray}{6 \left( \left( x + \frac{5}{12} \right)^2 - \left( \frac{5}{12} \right)^2 - \frac{1}{2} \right) = 6 \left( \left( x + \frac{5}{12} \right)^2 - \frac{97}{24} \right)}
         $$
 
-!!! methode "Comment donner la forme canonique d'un trinôme (méthode 2)"
+!!! methode "Comment donner la forme canonique d'un trinôme ? (méthode 2)"
     <span style="color: gray;">On prendre pour exemple : </span> $ \textcolor{gray}{f(x) = 6x^2 + 5x - 3 .}$
 
     1. On calcule \( \alpha \) :

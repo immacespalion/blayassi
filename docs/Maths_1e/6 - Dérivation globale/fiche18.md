@@ -7,7 +7,7 @@ weight: 4
 
 ## Comment faire ?
 
-!!! methode "Comment dériver le quotient de deux fonction"
+!!! methode "Comment dériver le quotient de deux fonction ?"
     On considère la fonction \( f \) définie sur \( \mathbb{R}^* \) par \( \textcolor{gray}{f(x) = \frac{2x^2 + 4x - 5}{\sqrt{x}}} \).
 
     1. **On identifie le dividende et le diviseur constituant l’expression algébrique de la fonction.**  

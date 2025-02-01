@@ -7,7 +7,7 @@ weight: 2
 
 ## Comment faire ?
 
-!!! methode "Comment dériver une somme de fonctions"
+!!! methode "Comment dériver une somme de fonctions ?"
     On considère la fonction \( f \) définie sur \( \mathbb{R}^+ \) par \( \textcolor{gray}{f(x) = x^3 + x^2 + \sqrt{x}} \).
 
     1. **On identifie chaque terme constituant l’expression algébrique de la fonction.**  

@@ -7,7 +7,7 @@ weight: 3
 
 ## Comment faire ?
 
-!!! methode "Comment étudier les variations d'un trinôme"
+!!! methode "Comment étudier les variations d'un trinôme ?"
     <span style="color: gray;">On prendre pour exemple : </span> \( \textcolor{gray}{f(x) = 2x^2 - 12x + 20} \).
 
     1. On identifie les coefficients du trinôme. 

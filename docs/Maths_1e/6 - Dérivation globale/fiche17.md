@@ -7,7 +7,7 @@ weight: 3
 
 ## Comment faire ?
 
-!!! methode "Comment dériver le produit de deux fonction"
+!!! methode "Comment dériver le produit de deux fonction ?"
     On considère la fonction \( f \) définie sur \( \mathbb{R} \) par \( \textcolor{gray}{f(x) = (x^2 - 5x + 1)(3x + 4)} \).
 
     1. **On identifie les deux facteurs constituant l’expression algébrique de la fonction.**  

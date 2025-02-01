@@ -7,7 +7,7 @@ weight: 1
 
 ## Comment faire ?
 
-!!! methode "Comment dériver les fonctions usuelles"
+!!! methode "Comment dériver les fonctions usuelles ?"
     | Fonction                     | Domaine de définition | Domaine de dérivabilité | Dérivée                       |
     |------------------------------|-----------------------|--------------------------|-------------------------------|
     | \( f(x) = k \)               | \( \mathbb{R} \)     | \( \mathbb{R} \)         | \( f'(x) = 0 \)              |
