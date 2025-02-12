@@ -79,3 +79,10 @@ iframe.exerciseur {
   border-radius:18px;
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
 }
+
+img.image {
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+  border-radius: 18px; 
+  border: 1px solid #5c1aac; 
+  max-width: 100%;
+}

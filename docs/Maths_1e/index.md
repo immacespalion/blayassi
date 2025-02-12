@@ -48,6 +48,7 @@ Consultez les sujets et corrections des années précédentes pour vous prépare
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 12.02.2025 - Ajout du chapitre 9 (cours+exerciseurs+pré-requis)
     * 01.02.2025 - Ajout du chapitre 5 (cours+exerciseurs+pré-requis)
     * 31.01.2025 - Ajout du DS4 et de sa correction
     * 30.01.2025 - Ajout de fiches de révision pour le chapitre 8
