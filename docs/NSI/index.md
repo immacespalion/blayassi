@@ -1,6 +1,8 @@
 ---
 title: Présentation
 weight: 0
+hide: 
+    - toc
 ---
 
 # NSI - 1e
@@ -64,3 +66,10 @@ Dans cette section, tu trouveras :
 
 🚀 **Prêt à démarrer ton apprentissage en NSI ?**  
 👉 Explore dès maintenant les **premiers chapitres du programme** !
+
+---
+## À propos
+Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
+
+??? info "Historique des mises à jour"
+    * 12.02.2025 - Ajout de deux TP pour "Système d'exploitation"
