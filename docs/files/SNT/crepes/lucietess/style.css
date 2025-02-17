@@ -1,0 +1,12 @@
+body {
+	background-color: #000FFF;
+	font-family: Arial;
+	color: #FFFF00;
+}
+
+h1 {
+	text-decoration: underline;
+	font-size: 70px;
+	text-align: center; 
+	font-family: Arial;
+}
