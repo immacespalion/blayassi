@@ -56,6 +56,9 @@ markdown_extensions: #for the emojis
   - pymdownx.details
   - pymdownx.arithmatex:
       generic: true
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 extra_css:
   - stylesheets/extra.css

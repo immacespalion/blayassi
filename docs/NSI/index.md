@@ -5,7 +5,7 @@ hide:
     - toc
 ---
 
-# NSI - 1e
+# EDS NSI - Classe de première
 
 Bienvenue dans la section dédiée à l'**Enseignement de Spécialité Numérique et Sciences Informatiques** (**NSI**) en classe de **Première**. Cette spécialité permet de découvrir les **fondements de l’informatique**, d’apprendre la **programmation**, et de comprendre comment sont **structurées et manipulées les données**.
 
@@ -72,4 +72,15 @@ Dans cette section, tu trouveras :
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 24.02.2025 - Fin du cours de la séquence "Système d'exploitation"
     * 12.02.2025 - Ajout de deux TP pour "Système d'exploitation"
+
+??? info "Sources"
+    Cette section NSI a été conçue à partir des merveilleux sites web ci-dessous ainsi que des ouvrages listés ci-après. 
+
+    - [Site de NSI du lycée Diderot de Lyon](https://portail.lyc-la-martiniere-diderot.ac-lyon.fr/srv1/co/_Module_NSI_1.html)
+    - [Site de NSI de M. Gouygou](https://cgouygou.github.io/1NSI/)
+    - [Site de NSI de Gilles Lassus](https://glassus.github.io/premiere_nsi/)
+    - [Site de NSI de David Roche](https://pixees.fr/informatiquelycee)
+    - Cahier "Collection 3.0 - Numérique et Sciences Informatiques" - S. Bonnaud et C. Savinas - Bordas
+    - Livre "NSI 1re, 30 leçons avec exercices corrigés" - T. Balabonski, S. Conchon, J-C. Filiâtre, K. Nguyen - Ellipses

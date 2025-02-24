@@ -29,7 +29,7 @@ Bravo à tous pour votre travail et **bon appétit** ! 🚀
 - [Jozef et Matéo](../../files/SNT/crepes/jozefmateo/recettecrepes.html)
 - [Tania et Learzia](../../files/SNT/crepes/tanialearzia/exercice.html)
 - [Charlotte et Rebecca]
-- [Noemy et Rose]
+- [Ilana et Rose](../../files/SNT/crepes/roseilana/recettecrepes.html)
 
 #### Secondes 2
 
@@ -41,3 +41,6 @@ Bravo à tous pour votre travail et **bon appétit** ! 🚀
 - [Maé et Solène](../../files/SNT/crepes/maesolene/recettecrepes.html)
 - [Lucie et Tess](../../files/SNT/crepes/lucietess/recettecrepes.html)
 - [Joachim](../../files/SNT/crepes/joachin/recettecrepes.html)
+- [Romain](../../files/SNT/crepes/romain/Romain.html)
+- [Emmanuel](../../files/SNT/crepes/emmanuel/recettecrepes.html)
+- [Clélia et Romane](../../files/SNT/crepes/cleliaromane/Recette%20crepes.html)
