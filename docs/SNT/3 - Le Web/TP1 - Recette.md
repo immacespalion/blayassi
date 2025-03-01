@@ -44,3 +44,5 @@ Bravo à tous pour votre travail et **bon appétit** ! 🚀
 - [Romain](../../files/SNT/crepes/romain/Romain.html)
 - [Emmanuel](../../files/SNT/crepes/emmanuel/recettecrepes.html)
 - [Clélia et Romane](../../files/SNT/crepes/cleliaromane/Recette%20crepes.html)
+- [Ilan](../../files/SNT/crepes/ilan/index.html)
+- [Quentin](../../files/SNT/crepes/quentin/recettecrepes.html)
