@@ -25,6 +25,10 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill�
     
     [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds4.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds4-correction.pdf)
 
+* DS5 - Suites arithmétiques et géométriques, produit sclaire et dérivation globale (+ second degré) : 
+
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds5.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds5-correction.pdf)
+
 
 ## 2023-2024
 
