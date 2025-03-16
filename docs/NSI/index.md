@@ -72,6 +72,7 @@ Dans cette section, tu trouveras :
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 16.03.2025 - Ajout d'aides pour le TP Terminus + début de rédaction de la séquence sur les données en table + début exercices OS
     * 24.02.2025 - Fin du cours de la séquence "Système d'exploitation"
     * 12.02.2025 - Ajout de deux TP pour "Système d'exploitation"
 

@@ -13,6 +13,9 @@ theme:
     - navigation.tabs
     #- navigation.indexes #Atterir direct sur index
     #- toc.integrate
+    - content.code.copy  # Optionnel, pour ajouter un bouton "Copier" sur les blocs de code
+    - attr_list
+    - md_in_html
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
