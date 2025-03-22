@@ -1,5 +1,5 @@
 ---
-title: Cours
+title: Objectifs
 weight: 12
 ---
 

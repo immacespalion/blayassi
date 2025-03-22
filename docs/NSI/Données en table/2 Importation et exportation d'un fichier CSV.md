@@ -1,13 +1,22 @@
 ---
-title: Manipulation et traitement
+title: Importation et exportation de fichier CSV
 weight: 2
 ---
 
-# Manipulation et traitement des tables 📊
+# Importation et exportation d'un fichier CSV 🗃️
 
 Après avoir appris à représenter une table en Python, nous allons maintenant voir **comment exploiter ces données efficacement**. Cette partie vous permettra de **charger, rechercher, trier et modifier** des tables, tout en appliquant des opérations courantes sur les fichiers CSV.
 
 Nous commencerons par **importer et exporter des fichiers CSV en Python**, car ils sont un format universel pour l’échange de données. Ensuite, nous verrons comment **sélectionner, filtrer et trier** les informations dans une table.
+
+Dans toute cette section, on utilisera le fichier CSV suivant comme exemple. 
+
+```CSV title="eleves.csv" linenums="1"
+ID,Nom,Âge,Moyenne
+1,Alice,16,15.8
+2,Bob,17,13.2
+3,Clara,16,17.5
+```
 
 ---
 
@@ -25,19 +34,21 @@ Pour lire un fichier CSV, on utilise le module `csv` et la fonction `csv.reader(
 Exemple de lecture d'un fichier nommé `eleves.csv` :
 
 ```python title="Python" linenums="1"
-import csv #On importe le module csv
+import csv #(1)
 
-# Ouvrir le fichier en mode lecture
-with open("eleves.csv", newline="", encoding="utf-8") as fichier:
-    lecteur = csv.reader(fichier, delimiter=",")  # Définition du délimiteur
-    table = list(lecteur)  # Conversion du fichier en liste de listes
+with open("eleves.csv", newline="") as fichier: #(2)
+    lecteur = csv.reader(fichier, delimiter=",")  # (3)
+    table = list(lecteur)  #(4)
 
-# Affichage du résultat
+# Affichage (optionnel) du résultat
 for ligne in table:
     print(ligne)
 ```
 
-Sortie :
+1. On importe le module csv
+2. On ouvre le fichier `eleves.csv` et on le stocke dans la variable `fichier` pour l'exploiter dans la suite du programme. <br/><br/> 🔎 Remarques : <ul> <li>l'argument `newline=''` permet de supprimer les retours à la ligne (`/n`) présent dans le fichier CSV;</li> <li>Il faut parfois préciser l'encodage du fichier CSV avec l'argument `encoding="utf-8"` par exemple</li></ul>
+3. On créer un nouvel objet `reader` en lui précisant le délimiteur utilisé.
+4. *[Optionel]* On stocke le contenu dans une liste `table` pour l'utiliser utlérieurement.
 
 ```python
 [‘ID’, ‘Nom’, ‘Âge’, ‘Moyenne’]
@@ -57,16 +68,18 @@ Exemple de lecture d'un fichier nommé `eleves.csv` :
 ```python title="Python" linenums="1"
 import csv
 
-with open("eleves.csv", newline="", encoding="utf-8") as fichier:
-    lecteur = csv.DictReader(fichier, delimiter=",")  # Lecture avec noms des colonnes
-    table = list(lecteur)  # Conversion du fichier en liste de dictionnaires
+with open("eleves.csv", newline="") as fichier:
+    lecteur = csv.DictReader(fichier, delimiter=",")  #(1)
+    table = list(lecteur)  #(2)
 
 # Affichage du résultat
 for ligne in table:
     print(ligne)
 ```
 
-Sortie :
+1. On utilise `DictReader` au lieu de `reader` pour préciser que l'on souhaite obtenir un dictionnaire et non pas une liste.
+2. Création, optionnelle, d'une variable pour stocker notre liste de dictionnaire.
+
 
 ```python
 {‘ID’: ‘1’, ‘Nom’: ‘Alice’, ‘Âge’: ‘16’, ‘Moyenne’: ‘15.8’}
@@ -79,7 +92,7 @@ Cette approche est **plus lisible et plus sécurisée**, car elle permet d’acc
 !!! warning "Erreurs courantes"
     1. **Problème d’encodage (`UnicodeDecodeError`)**
         - Vérifier que le fichier est bien encodé en **UTF-8**.
-        - Toujours utiliser `encoding="utf-8"` lors de l’ouverture du fichier.
+        - Utiliser `encoding="utf-8"` lors de l’ouverture du fichier si nécessaire.
 
     2. **Erreur de séparateur mal interprété**
         - Vérifier si le fichier utilise `","`, `";"`, ou `"\t"` comme séparateur.
@@ -115,7 +128,7 @@ L’écriture d’un fichier CSV peut se faire, toujours à l'aide du module `cs
 #### Écriture d’un CSV à partir d’une liste de listes
 
 ```python title="Python" linenums="1"
-import csv
+import csv #(1)
 
 table = [
     ["ID", "Nom", "Âge", "Moyenne"],
@@ -125,15 +138,20 @@ table = [
 ]
 
 # Écriture dans un fichier CSV
-with open("eleves_export.csv", "w", newline="", encoding="utf-8") as fichier:
-    writer = csv.writer(fichier, delimiter=",")
-    writer.writerows(table)  # Écriture de toutes les lignes
+with open("eleves_export.csv", "w", newline="") as fichier: #(2)
+    writer = csv.writer(fichier, delimiter=",") #(3)
+    writer.writerows(table)  #(4)
 ```
+
+1. On importe le module `csv` de Python nécessaire
+2. On créer un fichier nommé `eleves_export.csv` dans le même dossier que le fichier python. On ouvre celui-ci en mode écrite (`w` pour `write`).
+3. On déclare un objet `writer`, ce sera notre "écrivain". On lui précise dans quel fichier écrire (ici `fichier`) et quel délimiteur utiliser (ici la virgule).
+4. On écrit chaque ligne de notre table `table` dans le document. <br/> <br/> 🔎 Remarque : On pourrait ajouter manuellement de nouvelles lignes avec `writer.writerow(...)` (sans le S)
 
 #### Écriture d’un CSV à partir d’une liste de dictionnaires
 
 ```python title="Python" linenums="1"
-import csv
+import csv #(1)
 
 table = [
     {"ID": 1, "Nom": "Alice", "Âge": 16, "Moyenne": 15.8},
@@ -142,13 +160,21 @@ table = [
 ]
 
 # Écriture dans un fichier CSV
-with open("eleves_export_dict.csv", "w", newline="", encoding="utf-8") as fichier:
-    descripteurs = ["ID", "Nom", "Âge", "Moyenne"]  # Nom des colonnes
-    writer = csv.DictWriter(fichier, fieldnames=descripteurs, delimiter=",")
+with open("eleves_export_dict.csv", "w", newline="") as fichier: #(2)
+    descripteurs = ["ID", "Nom", "Âge", "Moyenne"]  #(3)
+    writer = csv.DictWriter(fichier, fieldnames=descripteurs, delimiter=",") #(4)
     writer.writeheader()  # Écriture de l'en-tête
     writer.writerows(table)  # Écriture des lignes
 ```
 
+1. On importe le module `csv` de Python nécessaire
+2. On créer un fichier nommé `eleves_export_dict.csv` dans le même dossier que le fichier python. On ouvre celui-ci en mode écrite (`w` pour `write`).
+3. On déclare une nouvelle variable contenant la liste des descripteurs.
+4. On déclare un objet `writer`, ce sera notre "écrivain". On lui précise dans quel fichier écrire (ici `fichier`), **quels sont les descripteurs** et quel délimiteur utiliser (ici la virgule).
+
+
 !!! info "À retenir !"
     - `csv.writer()` et `csv.DictWriter()` permettent **d’exporter des données en CSV**.
     - Pour exporter en CSV une liste de dictionnaire, il est nécessaire de fournir la liste des descripteurs en plus de la table.
+
+--- 
