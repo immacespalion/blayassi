@@ -48,6 +48,7 @@ Consultez les sujets et corrections des années précédentes pour vous prépare
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 22.03.2025 - Ajout des chapitres 10 et 11 (complets) + prérequis et fiche 39 du chapitre 12
     * 14.03.2025 - Ajout du DS5 - 2024/2025
     * 12.02.2025 - Ajout du chapitre 9 (cours+exerciseurs+pré-requis)
     * 01.02.2025 - Ajout du chapitre 5 (cours+exerciseurs+pré-requis)

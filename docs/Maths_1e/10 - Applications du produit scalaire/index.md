@@ -7,7 +7,7 @@ weight: 10
 
 ## Objectifs
 
-Dans ce chapitre, nous allons apprendre à
+Dans ce chapitre, nous allons apprendre à :
 
 * Déterminer si deux vecteurs sont orthogonaux
 * Calculer une longueur ou un angle avec le théoreme d'Al-Kashi
