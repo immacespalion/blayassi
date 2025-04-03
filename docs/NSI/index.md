@@ -72,6 +72,7 @@ Dans cette section, tu trouveras :
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 23.03.2025 - Fin de la leçon sur les données en table.
     * 22.03.2025 - Suite de la rédaction sur les données en table (parties 2 et 3 complètes + debut 4)
     * 19.03.2025 - Suite de la rédaction sur les données en table + début rédaction des exercices de cette séquence.
     * 17.03.2025 - Fin de rédaction des exercices de la séquence sur les OS.
