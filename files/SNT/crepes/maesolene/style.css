@@ -1,0 +1,18 @@
+body {
+	background-color: #fffdeb ;
+	font-family: comic sans MS;
+	color: #000000;
+	font-size: 25px;
+}
+h1 {
+	text-decoration: underline;
+	font-size: 50px;
+	text-align: center;
+	font-family: comic sans MS;
+}
+div {
+	text-align: center;
+}
+img {
+	border : 10px double #000000
+}
