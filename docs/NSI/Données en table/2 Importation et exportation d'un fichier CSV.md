@@ -36,7 +36,7 @@ Exemple de lecture d'un fichier nommé `eleves.csv` :
 ```python title="Python" linenums="1"
 import csv #(1)
 
-with open("eleves.csv", newline="") as fichier: #(2)
+with open("eleves.csv", "r") as fichier: #(2)
     lecteur = csv.reader(fichier, delimiter=",")  # (3)
     table = list(lecteur)  #(4)
 
@@ -46,7 +46,7 @@ for ligne in table:
 ```
 
 1. On importe le module csv
-2. On ouvre le fichier `eleves.csv` et on le stocke dans la variable `fichier` pour l'exploiter dans la suite du programme. <br/><br/> 🔎 Remarques : <ul> <li>l'argument `newline=''` permet de supprimer les retours à la ligne (`/n`) présent dans le fichier CSV;</li> <li>Il faut parfois préciser l'encodage du fichier CSV avec l'argument `encoding="utf-8"` par exemple</li></ul>
+2. On ouvre le fichier `eleves.csv` et on le stocke dans la variable `fichier` pour l'exploiter dans la suite du programme. <br/><br/> 🔎 Remarques : <ul> <li>L'argument `"r"` signifie que l'on ouvre le fichier en mode lecture (**r**ead)</li><li>Il faut parfois ajouter un argument `newline=''` pour supprimer les retours à la ligne (`/n`) présent dans le fichier CSV;</li> <li>Il faut parfois préciser l'encodage du fichier CSV avec l'argument `encoding="utf-8"` par exemple</li></ul>
 3. On créer un nouvel objet `reader` en lui précisant le délimiteur utilisé.
 4. *[Optionel]* On stocke le contenu dans une liste `table` pour l'utiliser utlérieurement.
 
@@ -68,7 +68,7 @@ Exemple de lecture d'un fichier nommé `eleves.csv` :
 ```python title="Python" linenums="1"
 import csv
 
-with open("eleves.csv", newline="") as fichier:
+with open("eleves.csv", "r") as fichier:
     lecteur = csv.DictReader(fichier, delimiter=",")  #(1)
     table = list(lecteur)  #(2)
 
@@ -138,7 +138,7 @@ table = [
 ]
 
 # Écriture dans un fichier CSV
-with open("eleves_export.csv", "w", newline="") as fichier: #(2)
+with open("eleves_export.csv", "w") as fichier: #(2)
     writer = csv.writer(fichier, delimiter=",") #(3)
     writer.writerows(table)  #(4)
 ```
@@ -160,9 +160,9 @@ table = [
 ]
 
 # Écriture dans un fichier CSV
-with open("eleves_export_dict.csv", "w", newline="") as fichier: #(2)
+with open("eleves_export_dict.csv", "w") as fichier: #(2)
     descripteurs = ["ID", "Nom", "Âge", "Moyenne"]  #(3)
-    writer = csv.DictWriter(fichier, fieldnames=descripteurs, delimiter=",") #(4)
+    writer = csv.DictWriter(fichier, descripteurs, delimiter=",") #(4)
     writer.writeheader()  # Écriture de l'en-tête
     writer.writerows(table)  # Écriture des lignes
 ```
@@ -176,5 +176,40 @@ with open("eleves_export_dict.csv", "w", newline="") as fichier: #(2)
 !!! info "À retenir !"
     - `csv.writer()` et `csv.DictWriter()` permettent **d’exporter des données en CSV**.
     - Pour exporter en CSV une liste de dictionnaire, il est nécessaire de fournir la liste des descripteurs en plus de la table.
+
+!!! expert "Pour aller plus loin : Compléter un fichier CSV existant"
+    Il est également possibile d'ouvrir un fichier en mode **a**ppend afin de le compléter.
+
+    Par exemple, considérons le fichier CSV suivant : 
+
+    ```csv title="eleves.csv"
+    ID,Nom,Âge,Moyenne
+    1,Alice,16,15.8
+    2,Bob,17,13.2
+    3,Clara,16,17.5
+    ```
+
+    On peut ajouter des élèves grâce au code suivant : 
+
+    ```python linenums="1"
+    import csv
+
+    with open("eleves.csv", 'a') as fichier:
+        descripteurs = ["ID", "Nom", "Âge", "Moyenne"]
+        writer = csv.DictWriter(fichier, descripteurs, delimiter=",")
+        writer.writerows(new_students)
+    ```
+
+    Ce qui nous donnera : 
+
+    ```csv title="eleves.csv"
+    ID,Nom,Âge,Moyenne
+    1,Alice,16,15.8
+    2,Bob,17,13.2
+    3,Clara,16,17.5
+    4,Benjamin,16,14.1
+    5,Valérie,17,18.5
+
+    ```
 
 --- 
