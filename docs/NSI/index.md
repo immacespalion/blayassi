@@ -72,6 +72,7 @@ Dans cette section, tu trouveras :
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 19.04.2025 - Correction et ajout d'exercice sur les table/CSV + cours/TP/exercices sur la représentation des nombres entiers
     * 23.03.2025 - Fin de la leçon sur les données en table.
     * 22.03.2025 - Suite de la rédaction sur les données en table (parties 2 et 3 complètes + debut 4)
     * 19.03.2025 - Suite de la rédaction sur les données en table + début rédaction des exercices de cette séquence.
@@ -83,6 +84,7 @@ Cette section est mise à jour régulièrement pour inclure de nouvelles ressour
 ??? info "Sources"
     Cette section NSI a été conçue à partir des merveilleux sites web ci-dessous ainsi que des ouvrages listés ci-après. 
 
+    - [Site de NSI de M. Quenton au lycée Angellier de Dunkerque](https://dquenton.forge.apps.education.fr/nsi-premiere-specialite/)
     - [Site de NSI du lycée Diderot de Lyon](https://portail.lyc-la-martiniere-diderot.ac-lyon.fr/srv1/co/_Module_NSI_1.html)
     - [Site de NSI de M. Gouygou](https://cgouygou.github.io/1NSI/)
     - [Site de NSI de Gilles Lassus](https://glassus.github.io/premiere_nsi/)
