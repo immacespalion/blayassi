@@ -56,6 +56,29 @@ C’est pourquoi on préfère une autre méthode : le **complément à deux**, q
 
 ---
 
+## Une autre méthode : le complément à un 🧮
+
+Avant d’adopter la méthode encore utilisée aujourd'hui, certains systèmes utilisaient une méthode un peu plus simple : le **complément à un**.
+
+!!! definition "Définition : complément à un"
+    Le **complément à un** d’un entier $N$ est obtenu en **inversant tous les bits** de son écriture binaire.
+
+    ---
+
+    Par exemple, sur 4 bits, on a $5 = 0101_2$ donc $-5$ (en complément à un) = $1010_2$
+
+Cette méthode permettait déjà de représenter **des entiers négatifs**, mais elle avait plusieurs **inconvénients**.
+
+!!! warning "Limites du complément à un"
+    - Il existe **deux représentations du zéro** : `0000` (pour $+0$) et `1111` (pour $-0$).
+    - Les opérations comme l’addition deviennent **plus complexes** :
+        - Il faut parfois **réajouter une retenue** à la fin.
+        - Exemple : $5 + (-5)$ ne donne pas 0 directement, sauf si on gère la **retenue finale**.
+
+C’est pour **résoudre ces problèmes** qu’on a introduit la méthode du **complément à deux**, qui améliore cette idée en ajoutant **+1 au complément à un**.
+
+---
+
 ## La méthode du complément à deux 🔄
 
 Pour résoudre les problèmes liés à la représentation des entiers négatifs, les ordinateurs utilisent une méthode très efficace : **le complément à deux** (souvent noté C2).  

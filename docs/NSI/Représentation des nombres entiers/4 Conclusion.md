@@ -1,6 +1,6 @@
 ---
 title: Conclusion
-weight: 4 
+weight: 5 
 ---
 
 # Conclusion 🏁
@@ -9,10 +9,10 @@ Nous avons vu dans ce chapitre que les ordinateurs ne "pensent" pas avec nos nom
 
 Nous savons désormais :
 
-- [x] Représenter un **entier naturel** dans les bases 2, 8, 10 ou 16 ;
-- [x] Convertir des entiers d’une base à une autre, dans les deux sens ;
-- [x] Comprendre et appliquer le **complément à deux**, la méthode standard pour représenter les entiers négatifs ;
-- [x] Réaliser des **additions**, des **soustractions** et des **multiplications** binaires à la main.
+- [x] Savoir passer de la représentation d'une base dans une autre, pour les bases 2, 10 et 16 ;
+- [x] Évaluer le nombre de bits nécessaires à l'écriture en base 2 d'un entier, de la somme ou du produit de deux nombres entiers. ;
+- [x] Utiliser le complément à 2 ;
+- [x] Connaître les conséquences de la représentation approximative des nombres réels en informatique.
 
 Ces compétences nous permettent de **mieux comprendre le fonctionnement des machines**, mais aussi de développer une rigueur qui nous servira en **algorithmique**, en **Python** et dans tous les autres chapitres de NSI.
 

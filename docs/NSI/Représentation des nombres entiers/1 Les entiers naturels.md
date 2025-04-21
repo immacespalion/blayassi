@@ -5,20 +5,16 @@ weight: 2
 
 # Représentation des entiers en base 2, 8, 10 et 16 🔢
 
-Les ordinateurs ne raisonnent pas comme nous. Ils utilisent des **systèmes de numération différents**, adaptés à leur fonctionnement interne.
-
----
-
-## Pourquoi plusieurs bases ? 🤔
-
 Avant de découvrir des systèmes de numération utilisés en informatique, il est utile de prendre un moment pour **réfléchir à notre propre manière de compter**.  
 On utilise tous les jours des nombres, mais **sait-on vraiment comment notre système fonctionne ?** Pourquoi utilisons-nous ces dix chiffres ? Quelle est l’importance de la position dans un nombre ?
 
 Comprendre cela nous aidera à mieux saisir les bases que nous allons aborder ensuite… et à ne pas les considérer comme des bizarreries informatiques.
 
-### Le système décimal de position 🔟
+---
 
-Le système que nous utilisons tous les jours est appelé **système de numération décimal de position**.
+## Le système décimal de position 🔟
+
+Le système de numération que nous utilisons tous les jours est appelé **système de numération décimal de position**.
 
 !!! definition "Définition : Système de numération décimal de position"
     Notre système de numération est appelé **système de numération décimal de position** car :  
@@ -37,23 +33,50 @@ Prenons par exemple le nombre $343$. Les deux chiffres $3$ n'ont pas la même va
 Donc $343 = 3\times 10^2 + 4\times 10^1 + 3\times 10^0$
 
 !!! info "Comparaison avec des systèmes de numération plus anciens"
-    Ce fonctionnement est **très différent** des anciens systèmes comme :
+    Dans notre système, la position de chaque chiffre dans l'écriture du nombre correspond à la puissance de 10 par laquelle on le multiplie.
+    
+    Ce fonctionnement est **très différent** des systèmes de numération que nous avons rencontré dans le TP précédent : 
 
-    - Le système égyptien : chaque symbole avait une valeur **fixe**, qu’il soit placé avant ou après.
-    - Le système romain : les lettres s’ajoutent ou se soustraient, **mais leur position n’a pas de poids multiplicatif**.
+    - Dans le **système égyptien**, chaque symbole avait une valeur **fixe**, qu’il soit placé avant ou après.
+    - Dans le **système romain**, les lettres s’ajoutent ou se soustraient, **mais leur position n’a pas de poids multiplicatif**.
 
-### Définitions des bases
+---
+
+## Notion de base
 
 Pour parler du "système postionnel de numération à 10 chiffres", il est courant de parler de **base 10**. Cette notion peut s’étendre à d’autres bases :
 
-!!! definition "Base de numération"
-    Une **base n** est un système de numération positionnel comportant $n$ chiffres différents.
+!!! definition "Écriture d'un entier en base $b$"
+    Une **base n** est un système de numération positionnel comportant $n$ chiffres différents. Autrement dit :
 
-Dans la suite, nous travaillerons également avec les trois bases suivantes : 
+    - Choisir une base, c'est choisir la "taille" du paquet, et donc le nombre de chiffres dont on aura besoin : en base $b$, il y a $b$ chiffres.
+    - La position de chaque chiffre correspond à la puissance de $b$ par laquelle on le multiplie.
 
-- La **base 2** (binaire) : utilisé par les ordinateurs qui ne possèdent que deux états possibles : 0 et 1.
-- La **base 8** (octale) : plus compacte que la base 2, chaque **chiffre en base 8** correspondant à **3 chiffres** en base 2.
-- La **base 16** (hexadécimale) : très utilisée en informatique. Elle permet, entre autres, de lire facilement des nombres binaires, représenter les **adresses mémoire** et les **couleurs en HTML/CSS**, etc.
+!!! info "Notation"
+    On précisera la base utilisée (si différente de 10) en **indice en fin du nombre**.  
+    Par exemple, le nombre $342_5$ est écrit en base 5.
+
+Dans la suite, nous travaillerons principalement avec les trois bases suivantes : 
+
+!!! definition "Système binaire (base 2)"
+    - Le **système binaire** est le système de numération de base $b=2$.
+    - Il utilise donc seulement **deux chiffres** : 0 et 1, appelés **bits** (de l'anglais **bi**nary dig**it**, soit "chiffre binaire").
+    - Un regroupement de 8 bits est appelé un **octet**.
+    - Il est particulièrement adapté à l'**informatique** car il permet d'unifier la logique (Vrai/Faux), le calcul et l'électronique.
+    - Avec $n$ bits, on peut représenter $2^n$ nombres. Dans le cas des entiers naturels, on peut compter de $0$ à $2^n-1$...
+
+!!! definition "Système hexadécimal (base 16)"
+    - Le **système binaire** est le système de numération de base $b=16$.
+    - Il utilise donc **16 chiffres** : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E et F.
+    - Bien qu'il nécessite plus de chiffres, ce système donne des **écritures plus courtes** et particulièrement pratique du fait que 16 est une puissance de 2 : la conversion entre les systèmes binaire et hexadécimal se fait sans calcul, uniquement par **regroupement de 4 bits**.
+    - Il permet également de représenter des** adresses mémoires** ou même des [**couleurs**](http://www.proftnj.com/RGB3.htm) !
+
+!!! expert "Pour aller plus loin : le système octal (base 8)"
+    À la manière des Simpsons qui n'ont que 8 doigts, il existe également le **système octal** :
+
+    - Le système octal est le système de numération de base $b=8$.
+    - Il utilise donc **8 chiffres** : 0, 1, 2, 3, 4, 5, 6 et 7.
+
 
 
 Ces bases peuvent sembler nouvelles, mais elles suivent les mêmes règles que le système décimal… à une différence près : le nombre de chiffres utilisé.
@@ -64,25 +87,15 @@ Voici un tableau récapitulatif :
 |------|----------------|--------------------------|-----------------------|
 | 2    | Binaire        | 0, 1                     | $1010_2$                 |
 | 8    | Octale         | 0, 1, 2, 3, 4, 5, 6, 7                    | $12_8$                  |
-| 10   | Décimale       | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9                   | $123_{10}$                 |
+| 10   | Décimale       | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9                   | $123$                 |
 | 16   | Hexadécimale   | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F             | $A8_{16}$                  |
 
-!!! tip "Astuce"
-    Comme vous pouvez le voir dans l'exemple précédent, pour différencier la base, on l'**indique en indice**.
-
-!!! definition "Définitions : le bit et l'octet"
-    - Le système binaire est donc un système de numération positionnelle utilisant deux chiffres. Ces chiffres sont nommés **bit** (de l'anglais **bi**nary dig**it**, soit "chiffre binaire").
-
-    - Avec $n$ bits, on peut représenter $2^n$ nombres. Dans le cas des entiers naturels, on peut compter de $0$ à $2^n-1$...
-
-    - Un ensemble de 8 bits forme un **octet** (*byte* en anglais)
 
 ---
 
 ## Convertir un entier naturel vers la base 10 🔁
 
-Un nombre en base 2, 8 ou 16 peut être converti en base 10 en utilisant **la décomposition en puissances de la base**.  
-C’est exactement le même principe que celui vu pour le décimal : on décompose selon les puissances de la base.
+Un nombre en base $n$ peut être facilement converti en base 10. C’est exactement le même principe que celui vu pour le décimal : on **décompose selon les puissances de la base**.
 
 ### Méthode générale 🛠️
 
@@ -94,45 +107,6 @@ On décompose ce nombre comme une somme de **chiffres × puissances de la base**
     
     Alors : $N_{10} = a_n \times b^n + a_{n-1} \times b^{n-1} + \dots + a_1 \times b^1 + a_0 \times b^0$
 
-### Exemples 
-
-Voici quelques exemples : 
-
-- **Exemple 1 : Binaire vers décimal** 🧮
-
-    Convertir $1011_2$ en base 10
-
-    | Chiffre | Puissance de 2 | Valeur |
-    |---------|----------------|--------|
-    | 1       | $2^3$ = 8       | 8      |
-    | 0       | $2^2$ = 4       | 0      |
-    | 1       | $2^1$ = 2       | 2      |
-    | 1       | $2^0$ = 1       | 1      |
-
-    Ainsi, $1011_2 = 1\times 2^3 + 0\times 2^2 + 1\times 2^1 + 1\times 2^0 = 8 + 0 + 2 + 1 = 11_{10}$
-
-- **Exemple 2 : Octal vers décimal** 🐙
-
-    Convertir $56_8$ en base 10
-
-    | Chiffre | Puissance de 8 | Valeur |
-    |---------|----------------|--------|
-    | 5       | $8^1$ = 8       | 40     |
-    | 6       | $8^0$ = 1       | 6      |
-
-    Ainsi, $56_8 = 5\times 8^1 + 6 \times 8^0 = 5\times 8 + 6 \times 1 = 40 + 6 = 46_{10}$
-
-- **Exemple 3 : Hexadécimal vers décimal** 🔥
-
-    Convertir $2F_{16}$ en base 10  (`F` correspond à **15** en base 10)
-
-    | Chiffre | Puissance de 16 | Valeur |
-    |---------|------------------|--------|
-    | 2       | $16^1$ = 16       | 32     |
-    | F (=15) | $16^0$ = 1        | 15     |
-
-    Ainsi, $2F_{16} = 2\times 16^1 + 15 \times 16^0 = 2\times 16 + 15\times 1 = 32 + 15 = 47_{10}$
-
 !!! tip "Astuces"
     - Voici quelques puissances utiles à retenir : 
         - $2^0 =1, 2^1 = 2, 2^2 = 4, 2^3=8, 2^4 = 16, 2^5 = 32, 2^6 = 64, 2^7 = 128, 2^8 = 256$, etc.
@@ -143,6 +117,51 @@ Voici quelques exemples :
         | Base 10 | 10 | 11 | 12 | 13 | 14 | 15 |
         | --- | --- | --- | --- | --- | --- | ---|
         | Base 16 | A | B | C | D | E | F |
+
+### Exemples 
+
+Voici quelques exemples :
+
+=== "Binaire vers décimal 🧮"
+
+    Convertir $1011_2$ en base 10
+
+    | Rang           | 3     | 2     | 1     | 0     |
+    |----------------|-------|-------|-------|-------|
+    | Chiffre        | 1     | 0     | 1     | 1     |
+    | Puissance de 2 | $2^3$ | $2^2$ | $2^1$ | $2^0$ |
+    | Valeur         | 8     | 0     | 2     | 1     |
+
+    Ainsi, $1011_2 = 1\times 2^3 + 0\times 2^2 + 1\times 2^1 + 1\times 2^0 = 8 + 0 + 2 + 1 = 11$
+
+=== "Octal vers décimal 🐙"
+
+    Convertir $3456_8$ en base 10
+
+    | Rang           | 3     | 2     | 1     | 0     |
+    |----------------|-------|-------|-------|-------|
+    | Chiffre        | 3     | 4     | 5     | 6     |
+    | Puissance de 8 | $8^3$ | $8^2$ | $8^1$ | $8^0$ |
+    | Valeur         | 1536  | 256   | 40    | 6     |
+
+    On a : $3456_8 = 3\times 8^3 + 4\times 8^2 + 5\times 8^1 + 6 \times 8^0 = 3\times 512 + 4\times 64+ 5\times 8 + 6 \times 1 = 1536 + 256 + 40 + 6 = 1838$
+
+=== "Hexadécimal vers décimal ⬢"
+
+    Convertir $2C8F_{16}$ en base 10  
+    
+    On rappelle que :  
+
+    - $C_{16}$ correspond à $12$ en base 10;
+    - $F_{16}$ correspond à $15$ en base 10.
+
+    | Rang           | 3      | 2      | 1      | 0      |
+    |----------------|--------|--------|--------|--------|
+    | Chiffre        | 2      | C      | 8      | F      |
+    | Puissance de 8 | $16^3$ | $16^2$ | $16^1$ | $16^0$ |
+    | Valeur         | 8192   | 3072   | 128    | 15     |
+
+    Ainsi, on a : $2C8F_{16} = 2\times 16^3 + 11\times 16^2 + 8\times 16^1 + 15 \times 16^0 = 2\times 4096 + 11\times 256+ 8\times 16 + 15\times 1 = 8192+ 3072 + 128 + 15 = 11407$
 
 --- 
 
@@ -165,38 +184,33 @@ Mais au lieu de faire la décomposition "à la main", on utilise une méthode **
 
 Comme précédemment, voici quelques exemples pratiques : 
 
-- Exemple 1 : Décimal → Binaire 🧮
+=== "Décimal → Binaire 🧮"
 
     Convertir $13_{10}$ en base 2 :
 
-    | Étape | Division         | Quotient | Reste |
-    |-------|------------------|----------|-------|
-    | 1     | $13 ÷ 2$         | 6        | 1     |
-    | 2     | $6 ÷ 2$          | 3        | 0     |
-    | 3     | $3 ÷ 2$          | 1        | 1     |
-    | 4     | $1 ÷ 2$          | 0        | 1     |
+    <div style="display: flex; justify-content: center; gap: 20px;">
+    <img src="../../../files/NSI/Numeration/div1.png" alt="divisions successives" style="width: 40%;">
+    </div>
 
     Lecture des restes de bas en haut → **$13_{10} = 1101_2$**
 
-- Exemple 2 : Décimal → Octal 🐙
+=== "Décimal → Octal 🐙"
 
     Convertir $46_{10}$ en base 8 :
 
-    | Étape | Division         | Quotient | Reste |
-    |-------|------------------|----------|-------|
-    | 1     | $46 ÷ 8$         | 5        | 6     |
-    | 2     | $5 ÷ 8$          | 0        | 5     |
+    <div style="display: flex; justify-content: center; gap: 20px;">
+    <img src="../../../files/NSI/Numeration/div2.png" alt="divisions successives" style="width: 40%;">
+    </div>
 
     Lecture des restes de bas en haut → **$46_{10} = 56_8$**
 
-- Exemple 3 : Décimal → Hexadécimal 🔥
+=== "Décimal → Hexadécimal ⬢"
 
     Convertir $47_{10}$ en base 16 :
 
-    | Étape | Division         | Quotient | Reste |
-    |-------|------------------|----------|-------|
-    | 1     | $47 ÷ 16$        | 2        | 15    |
-    | 2     | $2 ÷ 16$         | 0        | 2     |
+    <div style="display: flex; justify-content: center; gap: 20px;">
+    <img src="../../../files/NSI/Numeration/div3.png" alt="divisions successives" style="width: 40%;">
+    </div>
 
     Rappel : **15 en hexadécimal = F**  
     Lecture des restes de bas en haut → **$47_{10} = 2F_{16}$**
