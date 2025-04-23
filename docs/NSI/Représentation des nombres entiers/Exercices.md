@@ -1,6 +1,6 @@
 ---
 title: Exercices
-weight: 10
+weight: 6
 ---
 
 # Exercices 
