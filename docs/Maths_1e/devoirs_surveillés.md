@@ -37,6 +37,14 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill√
 
     [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds7.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds7-correction.pdf)
 
+* Examen EDS : 
+
+    [Sujet FR :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/examenFR.pdf) / [Sujet EN :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/examenEN.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/examen-correction.pdf)
+
+* DS8 - Fonction exponentielle : 
+
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds8.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds8-correction.pdf)
+
 
 ## 2023-2024
 

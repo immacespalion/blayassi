@@ -29,5 +29,5 @@ weight: 1
 
 <iframe src="https://coopmaths.fr/alea/?EEEE2e0a2949181a133d16550f22272e13461e8b12ce14572b1614bb272e13350f2c17e90f1c272e132b2e3627c127cb277b27c817e8139a133512d10f2d29592a7617da139e1a400e8714cd16992df9294a2c942a76112027c32cf827561123263729462d9a2bab2cf82716139e13a02e03278028282b3c2d9a2bab111d2ba92f930e8714d813f2139e19dd2ada11112dc02da32ba62d360e8714d813f2139e197d2ada111127bc2c8e139e1a400e8714d60039" class="exerciseur" allowfullscreen></iframe>
 
-!!! warning "Attention !"
-    Cet exerciseur ne propose que des fonctions du troisième degré. Il vous faudra reprendre les exercices vus en cours pour pratiquer sur des cas plus variés.
+
+<iframe src="https://coopmaths.fr/alea/?EEEE2e0a2949181712d615930f22272e13461e8b12ce14bb2b1614bb272e13350f2c17ea0f1c272e132b2e3627c127cb277b27c817e81336133512d10f2d29592a7617da139e1a400e8714cd16992df9294a2c942a76112027c32cf827561123263729462d9a2bab11110e8714c715d22b3e11132bab270129542b042cca2d9a2bab2b3e2a7d0065" class="exerciseur" allowfullscreen></iframe>

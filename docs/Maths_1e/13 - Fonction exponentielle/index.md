@@ -1,14 +1,15 @@
 ---
 title: Objectifs
-weight: 12
+weight: 13
 ---
 
-# Variations d'une fonction
+# Fonction exponentielle
 
 Dans ce chapitre, nous allons apprendre à :
 
-* Étudier les variations d'une fonction
-* Déterminer les extremums d'une fonction
+* Utiliser les propriétés algébriques de l'exponentielle
+* Résoudre des équations et inéquations avec des exponentilles
+* Etudier une fonction contenant des exponentielles
 
 !!! warning "**Attention**" 
     Les exerciseurs proposés sont un complément pour renforcer vos compétences. Ils ne suffisent pas à eux seuls pour réviser efficacement le chapitre. Pensez à étudier le cours et à revoir les exercices traités en classe pour une maîtrise complète des notions.

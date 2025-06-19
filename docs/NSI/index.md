@@ -72,6 +72,8 @@ Dans cette section, tu trouveras :
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 19.06.2025 - Ajout des exercices du chapitre 2
+    * 17.06.2025 - Ajout de la leçon du chapitre 2 (Premiers pas en Python)
     * 19.04.2025 - Correction et ajout d'exercice sur les table/CSV + cours/TP/exercices sur la représentation des nombres entiers
     * 23.03.2025 - Fin de la leçon sur les données en table.
     * 22.03.2025 - Suite de la rédaction sur les données en table (parties 2 et 3 complètes + debut 4)

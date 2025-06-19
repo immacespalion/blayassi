@@ -233,3 +233,31 @@ img.image {
   max-width: 100%;
 }
 
+
+/* ✅ Bloc avec numéros de ligne */
+.md-typeset .highlight {
+  background-color: rgba(192, 192, 192, 0.1);
+  border-radius: 18px;
+  border: 1px solid #dedede;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Nettoyage interne sans toucher aux marges latérales */
+.md-typeset .highlight pre,
+.md-typeset .highlight code,
+.md-typeset .highlighttable,
+.md-typeset .highlighttable td {
+  background: transparent !important;
+  padding-top: 10 !important;
+  padding-bottom: 10 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.md-typeset pre,
+.md-typeset .highlight {
+  margin-bottom: 0.5em;
+}

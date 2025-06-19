@@ -1,6 +1,6 @@
 ---
 title: Introduction
-weight: 2
+weight: 3
 ---
 
 # Représentation des nombres entiers
