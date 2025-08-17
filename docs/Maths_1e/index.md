@@ -48,18 +48,21 @@ Consultez les sujets et corrections des années précédentes pour vous prépare
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
-    * 17.06.2025 - Ajout de l'examen EDS et du DS8
-    * 16.06.2025 - Ajout du chapitre 12 (complet) + chapitre 13
-    * 03.04.2025 - Ajout DS6 et sa correction
-    * 22.03.2025 - Ajout des chapitres 10 et 11 (complets) + prérequis et fiche 39 du chapitre 12
-    * 14.03.2025 - Ajout du DS5 - 2024/2025
-    * 12.02.2025 - Ajout du chapitre 9 (cours+exerciseurs+pré-requis)
-    * 01.02.2025 - Ajout du chapitre 5 (cours+exerciseurs+pré-requis)
-    * 31.01.2025 - Ajout du DS4 et de sa correction
-    * 30.01.2025 - Ajout de fiches de révision pour le chapitre 8
-    * 28.01.2025 - Rajout du chapitre 8 (cours+exerciseurs+pré-requis)
-    * 27.01.2025 - Rajout des chapitres 6 et 7 (cours+exerciseurs+pré-requis)
-    * 24.01.2025 - Rajout de l'onglet "Historique des MàJ" + refonte de la structure des chapitres.
+    * 17.08.2025 - Reset pour la nouvelle année
+
+    ??? info "Années précédentes"
+        * 17.06.2025 - Ajout de l'examen EDS et du DS8
+        * 16.06.2025 - Ajout du chapitre 12 (complet) + chapitre 13
+        * 03.04.2025 - Ajout DS6 et sa correction
+        * 22.03.2025 - Ajout des chapitres 10 et 11 (complets) + prérequis et fiche 39 du chapitre 12
+        * 14.03.2025 - Ajout du DS5 - 2024/2025
+        * 12.02.2025 - Ajout du chapitre 9 (cours+exerciseurs+pré-requis)
+        * 01.02.2025 - Ajout du chapitre 5 (cours+exerciseurs+pré-requis)
+        * 31.01.2025 - Ajout du DS4 et de sa correction
+        * 30.01.2025 - Ajout de fiches de révision pour le chapitre 8
+        * 28.01.2025 - Rajout du chapitre 8 (cours+exerciseurs+pré-requis)
+        * 27.01.2025 - Rajout des chapitres 6 et 7 (cours+exerciseurs+pré-requis)
+        * 24.01.2025 - Rajout de l'onglet "Historique des MàJ" + refonte de la structure des chapitres.
 
 
 
