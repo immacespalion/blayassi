@@ -87,4 +87,4 @@ extra:
 
 plugins:
   - search
-  - mkdocs-nav-weight 
+  - mkdocs-nav-weight

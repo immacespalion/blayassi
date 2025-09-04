@@ -1,0 +1,16 @@
+body {
+   background-color: #D3D3D3;
+   font-family: comic sans MS;
+   color: #A020F0;
+ }
+ 
+ h1 {
+    text-decoration: underline;
+	font-size: 70px;
+	text-align: center;
+	fontfamily: Arial;
+}
+	img {
+max-width : 400px;
+height : auto;
+}
