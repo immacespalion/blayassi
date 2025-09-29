@@ -16,7 +16,7 @@ hide:
     De nombreux contenus sont encore absents et le contenu déjà présent peut être incomplet ou contenir des erreurs. 
 
 
-Bienvenue à tous, chers élèves de **Seconde** et **Première** ! Ce site a été spécialement conçu pour vous accompagner tout au long de l'année scolaire dans les disciplines suivantes :
+Bienvenue à tous, chers **lycéens** ! Ce site a été spécialement conçu pour vous accompagner tout au long de l'année scolaire dans les disciplines suivantes :
 
 - **Sciences Numériques et Technologie (SNT)** - Classe de Seconde
 - **Enseignement de Spécialité Mathématiques (EDS Maths)** - Classe de Première

@@ -48,8 +48,11 @@ Consultez les sujets et corrections des années précédentes pour vous prépare
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
-    * 17.08.2025 - Reset pour la nouvelle année
+    * 29.09.2025 - Ajout du DS1
+    * 19.09.2025 - Ajout du chapitre 3
     * 04.09.2025 - Ajout du chapitre 2
+    * 17.08.2025 - Reset pour la nouvelle année
+    
 
     ??? info "Années précédentes"
         * 17.06.2025 - Ajout de l'examen EDS et du DS8
