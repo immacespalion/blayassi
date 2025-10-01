@@ -6,7 +6,7 @@ weight: 16
 
 Vous trouverez sur cette page les sujets et les correction des devoirs surveillés (DS) des années précédentes.
 
-## 2024-2025
+## 2025-2026
 
 * DS1 - Second degré (partie 1) :  
     

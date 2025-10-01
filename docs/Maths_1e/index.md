@@ -48,6 +48,7 @@ Consultez les sujets et corrections des années précédentes pour vous prépare
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 01.10.2025 - Ajout des chapitres 4 à 7
     * 29.09.2025 - Ajout du DS1
     * 19.09.2025 - Ajout du chapitre 3
     * 04.09.2025 - Ajout du chapitre 2

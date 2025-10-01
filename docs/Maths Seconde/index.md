@@ -52,6 +52,7 @@ Accès aux devoirs surveillés et à leurs corrigés pour vous entraîner dans d
 Cette section sera mise à jour tout au long de l’année avec de nouvelles ressources.
 
 ??? info "Historique des mises à jour"
+    * 01.10.2025 - Ajout du chapitre 2
     * 16.09.2025 - Ajout de la page et du chapitre 1
 
 Bonne navigation et excellente année en mathématiques ! 😊

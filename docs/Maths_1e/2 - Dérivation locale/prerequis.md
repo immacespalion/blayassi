@@ -9,6 +9,7 @@ Vous trouverez sur cette page plusieurs exerciseurs qui vous permettrons de trav
 * Calculer des images d'une fonction
 * Utiliser le calcul littéral (distributivité, factorisation, identités remarquables, ...)
 * Déterminer graphiquement l'expression d'une fonction affine
+* Représentation graphique d'une fonction affine 
 
 
 ---
@@ -24,3 +25,7 @@ Vous trouverez sur cette page plusieurs exerciseurs qui vous permettrons de trav
 #### Déterminer graphiquement l'expression d'une fonction affine
 
 <iframe src="https://coopmaths.fr/alea/?EEEE2e0a294917ee143313380f22272e13af133511a70f2717ea0f1d17e612c72d0a13f32922132b26f117e60f2f181a2a762e5e0f1e2d0a13fe133612d1132b2d9a2d9d27921a96139e1a400e8714d6169927c72ade2b3e2c94288f263528ea2c7a27c227c32d5c2a36139e13a027cd2c1327c82d362bab11110e8714c715d22b3e11132bab270129542b04262b28222b3e" class="exerciseur" allowfullscreen></iframe>
+
+#### Représentation graphique d'une fonction affine 
+
+<iframe src="https://coopmaths.fr/alea/?EEEE2e0a29491818140313060f22272e13af133511a80f2717ea0f1d17e612c72d0a13f32cff17e60f2217e60f1c272e132b2e3627c127cb277b27c817e8139a133512d20f2d29592a76180727c52c8e139e1a400e8714d6169827c32d922d9a2bab11142cca2c0929562dfa11110e8714c715d22b3e11132bab270129542b04262b28222b3e002b" class="exerciseur" allowfullscreen></iframe>
