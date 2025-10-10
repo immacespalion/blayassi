@@ -24,7 +24,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 ## Théorie sur les bases
 
 !!! exopapier "Exercice 1 - :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
-    On condisidère la base $7$. Citer tous les chiffres de cette base.
+    On considère la base $7$. Citer tous les chiffres de cette base.
 
     ??? success "Correction"
         0, 1, 2, 3, 4, 5, 6

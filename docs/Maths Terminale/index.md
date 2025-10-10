@@ -50,6 +50,7 @@ Accédez aux sujets et corrigés pour vous préparer efficacement aux évaluatio
 Cette section est enrichie tout au long de l’année pour vous accompagner dans vos révisions. Consultez régulièrement les nouveautés !
 
 ??? info "Historique des mises à jour"
+    * 10.10.2025 - Ajout DS1 et correction
     * 01.10.2025 - Ajout des chapitres 1, 2 et 3 (succint)
     * 17.08.2025 - Création de la page de présentation
 

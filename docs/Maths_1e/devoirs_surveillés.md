@@ -12,6 +12,10 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill�
     
     [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/25_26/ds1.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/25_26/ds1-correction.pdf)
 
+* DS2 - Dérivation locale :  
+    
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/25_26/ds2.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/25_26/ds2-correction.pdf)
+
 ## 2024-2025
 
 * DS1 - Second degré (partie 1) et dérivation locale : 
