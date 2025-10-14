@@ -75,7 +75,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     ??? success "Correction"
         - 239 : base ≥ 10 (car le "plus grand" chiffre est 9) 
-        - 1AF : base ≥ 16  (car le "plus grand" chiffre est F = $15_10$) 
+        - 1AF : base ≥ 16  (car le "plus grand" chiffre est F = $15_{10}$) 
         - 305 : base ≥ 6 (car le "plus grand" chiffre est 5) 
 
 
@@ -126,6 +126,12 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
         ➤ Il fallait **16 bits** ou **2 octets** pour stocker un numéro de ligne.
 
 !!! exopapier "Exercice 13 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
+    Quel est le lien entre la base 16 et la base 2 ?
+
+    ??? success "Correction"
+        Chaque chiffre hexadécimal correspond à un groupe de 4 bits.
+
+!!! exopapier "Exercice 14 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
     Une adresse IPv6 est composée de 8 champs de 4 valeurs hexadécimales, délimités par des « : » pour la rendre plus facile à lire pour l'humain. Par exemple, l'IPv6 de `facebook.com` est `2a03:2880: f145:82:face:b00c:face:b00c:0:25de`.
 
     Quel est le nombre de bits nécessaire pour écrire une adresse IPv6 en binaire ?
@@ -140,12 +146,6 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
         → $32 \times 4 = 128$ bits
 
         ➤ Une adresse IPv6 est donc codée sur **128 bits**
-
-!!! exopapier "Exercice 14 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
-    Quel est le lien entre la base 16 et la base 2 ?
-
-    ??? success "Correction"
-        Chaque chiffre hexadécimal correspond à un groupe de 4 bits.
 
 ---
 
