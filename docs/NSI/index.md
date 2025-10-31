@@ -72,6 +72,8 @@ Dans cette section, tu trouveras :
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 23.10.2025 - Fin leçon chapitre 4 + projet chapitre 4
+    * 22.10.2025 - Début leçon chapitre 4
     * 10.10.2025 - Corrections diverses
     * 19.09.2025 - Correction de l'exercice 14 pour Quentin
     * 19.06.2025 - Ajout des exercices du chapitre 2

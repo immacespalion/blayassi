@@ -1,0 +1,32 @@
+---
+title: Introduction
+weight: 5
+---
+
+# Expression booléenne et encodage des caractères ✅❌
+
+Chaque jour, nos ordinateurs, téléphones et objets connectés manipulent des milliards de données : textes, images, sons, vidéos...  
+Mais derrière toutes ces informations se cachent **de simples 0 et 1** 💡.
+
+Ces deux symboles — les **bits** — permettent de tout représenter et en particulier : 
+
+- des **valeurs logiques** comme *vrai* ou *faux* ;  
+- des **caractères** comme les lettres, chiffres et symboles.  
+
+L’objectif de ce chapitre est de comprendre **comment la machine représente la logique et le texte**.
+
+!!! info "Compétences visées"
+    - Dresser la table d’une **expression booléenne** avec `and`, `or`, `not`, `xor`
+    - Comprendre le **caractère séquentiel** des opérateurs `and` et `or`
+    - Identifier l’intérêt des **systèmes d’encodage** ASCII, ISO 8859-1 et Unicode
+    - **Convertir un fichier texte** dans différents formats d’encodage
+
+!!! question "À ton avis..."
+    - Pourquoi dit-on qu’un ordinateur ne “comprend” que le binaire ?  
+    - Comment une machine peut-elle faire la différence entre la lettre `A`, le chiffre `3` et le symbole `@` ?  
+    - Est-ce que toutes les lettres du monde (chinois, arabe, emoji, etc.) peuvent être représentées de la même façon ?
+
+---
+
+Dans les prochaines sections, nous verrons d’abord **comment l’ordinateur raisonne avec la logique booléenne**,  
+puis **comment il encode les caractères pour stocker et échanger des textes**. ✨
