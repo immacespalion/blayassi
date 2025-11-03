@@ -441,11 +441,11 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
         $$
         \begin{array}{ccccc}
-          & (1) & (1) &   &   \\
-          & 1 & 0 & 1 & 1 \\
-        + & 0 & 1 & 0 & 1 \\
+          & & (1) & (1) &  (1) &   \\
+          & & 1 & 0 & 1 & 1 \\
+        + & & 0 & 1 & 0 & 1 \\
         \hline
-          & 1 & 0 & 0 & 0
+          & 1 & 0 & 0 & 0 & 0
         \end{array}
         $$
 
@@ -453,7 +453,6 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
         \[
         \begin{array}{ccccc}
-          & (1) & (1) & (1) & \\
           & 1 & 1 & 1 & 0 \\
         + & 0 & 0 & 0 & 1 \\
         \hline

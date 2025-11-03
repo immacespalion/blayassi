@@ -1,5 +1,5 @@
 ---
-title: TD2 - Prototypage d'une fonction
+title: TD2 - Utiliser des jeux de tests
 weight: 2.5
 ---
 

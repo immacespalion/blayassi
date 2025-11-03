@@ -80,18 +80,19 @@ Certains sont limités à quelques langues, d’autres sont universels.
 
 ---
 
-### ISO 8859-1 (Latin-1)
+### ISO-8859-1 (Latin-1)
 
 Pour corriger cette limite, un nouveau standard à **8 bits** a été créé : **ISO-8859-1**, aussi appelé **Latin-1**.  
 Il permet d’ajouter les caractères utilisés dans les langues européennes.
 
-!!! python "Exemple"
+!!! example "Exemple"
+    Le caractère `é` est, par exemple, codé par la valeur **233** (`0xE9` en hexadécimal) : 
     ```python linenums="1"
     texte = "café"
     print(texte.encode("iso-8859-1"))  # b'caf\xe9'
     ```
 
-    Le caractère `é` est ici codé par la valeur **233** (`0xE9` en hexadécimal).
+    
 
 !!! info "Limite"
     Cet encodage fonctionne bien pour le français, mais **pas pour toutes les langues**.  
@@ -108,7 +109,9 @@ Chaque caractère du monde y possède un **code unique**, appelé *point de code
     L’**UTF-8** (*Unicode Transformation Format - 8 bits*) est un **format de stockage** de l’Unicode.  
     Il code chaque caractère sur **1 à 4 octets** selon sa complexité.
 
-!!! python "Exemple : UTF-8 en action"
+!!! example "Exemple : UTF-8 en action"
+    Nous allons donner l'encodage de "*🐍 Python café*" en UTF-8 : 
+
     ```python linenums="1"
     texte = "🐍 Python café"
     print(texte.encode("utf-8"))
@@ -118,12 +121,10 @@ Chaque caractère du monde y possède un **code unique**, appelé *point de code
     b'\xf0\x9f\x90\x8d Python caf\xc3\xa9'
     ```
 
-    Les caractères ASCII utilisent 1 octet,  
-    mais les emojis ou caractères spéciaux utilisent plusieurs octets.
+    Les caractères ASCII utilisent 1 octet,  mais les emojis ou caractères spéciaux utilisent plusieurs octets.
 
 !!! tip "Avantage"
-    L’UTF-8 est **rétrocompatible avec ASCII** :  
-    tous les textes ASCII sont aussi valides en UTF-8 !  
+    L’UTF-8 est **rétrocompatible avec ASCII** : tous les textes ASCII sont aussi valides en UTF-8 !  
 
     → C’est aujourd’hui **l’encodage universel** du Web 🌍
 
@@ -131,18 +132,26 @@ Chaque caractère du monde y possède un **code unique**, appelé *point de code
 
 ## Conversion entre encodages
 
-Il est parfois nécessaire de **convertir un fichier texte** d’un encodage à un autre,  
-par exemple lorsqu’il contient des caractères mal affichés (`Ã©` au lieu de `é`).
+Il est parfois nécessaire de **convertir un fichier texte** d’un encodage à un autre, par exemple lorsqu’il contient des caractères mal affichés (`Ã©` au lieu de `é`).
 
-!!! python "Exemple de conversion"
+!!! python "Conversion d'un encodage"
+    On cherchera ici à réécrire un fichier encodé en Latin-1 en UTF-8 à l'aide de Python.
+
     ```python linenums="1"
-    # Ouvrir un fichier en ISO-8859-1 et le réécrire en UTF-8
-    with open("ancien.txt", "r", encoding="iso-8859-1") as f:
-        contenu = f.read()
+    with open("ancien.txt", "r", encoding="iso-8859-1") as f: #(1)
+        contenu = f.read() #(2)
 
-    with open("nouveau.txt", "w", encoding="utf-8") as f:
-        f.write(contenu)
+    with open("nouveau.txt", "w", encoding="utf-8") as f: #(3)
+        f.write(contenu) #(4)
+
+    #Le fichier "nouveau.txt" contient maintenant le texte original,
+    # mais réencodé en UTF-8 à la place du Latin-1.
     ```
+
+    1. On ouvre le fichier "ancien.txt" encodé en Latin-1 en lui donnant le nom `f` dans le programme.
+    2. On stocke le contenu de ce fichier dans une variable `contenu`
+    3. On crée un nouveau fichier "nouveau.txt" encodé en UTF-8 et on le nomme `f` dans le programme.
+    4. On écrit le contenu de `contenu` dans ce nouveau fichier.
 
 !!! warning "Problèmes fréquents"
     - Ouvrir un fichier avec **le mauvais encodage** entraîne des symboles illisibles (`�` ou `Ã©`).  

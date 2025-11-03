@@ -72,6 +72,8 @@ Dans cette section, tu trouveras :
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 03.11.2025 - Diverse correction
+    * 01.11.2025 - Ajout lecon chapitre 5
     * 23.10.2025 - Fin leçon chapitre 4 + projet chapitre 4
     * 22.10.2025 - Début leçon chapitre 4
     * 10.10.2025 - Corrections diverses
