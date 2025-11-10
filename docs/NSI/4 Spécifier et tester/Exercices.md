@@ -23,7 +23,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
 ## Langages de programmation
 
-!!! exoordi "Exercice X - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 1 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     Noaïtte a lu que le langage **C** est utilisé pour programmer le système d’exploitation **UNIX** et qu’il est toujours très populaire.  
     Elle veut comparer sa syntaxe à celle du langage **Python**. Voici une même fonction écrite dans les deux langages :
 
@@ -58,7 +58,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
         2. Le mot-clé `float` indique que la fonction et les variables manipulent des **nombres réels** (à virgule).  
         3. En langage C, chaque instruction doit se terminer par un **point-virgule** pour signaler la fin de la ligne d’exécution.  
 
-!!! exoordi "Exercice 5 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 2 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     Léo découvre le langage **JavaScript**, très utilisé dans le développement web.  
     Il souhaite comparer sa syntaxe avec celle du langage **Python**.  
     Voici une même fonction, écrite dans les deux langages :
@@ -87,7 +87,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
         3. Les **accolades** servent à indiquer le **début et la fin du bloc** d’instructions de la fonction.  
         4. Le **point-virgule `;`** marque la fin de chaque instruction (il est facultatif, mais recommandé pour éviter les erreurs).
 
-!!! exoordi "Exercice X - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
+!!! exoordi "Exercice 3 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
     Manon apprend le langage **Swift**, utilisé sur iPhone et Mac.  
     Elle veut comparer sa syntaxe à celle de **Python**.  
     Voici une même fonction écrite dans les deux langages :
@@ -125,7 +125,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
 ## Spécification de fonctions
 
-!!! exoordi "Exercice X - :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 4 - :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
     On considère la fonction suivante :
 
     ```python linenums="1"
@@ -156,7 +156,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
                 return L * l
             ```
 
-!!! exoordi "Exercice X - :fontawesome-solid-star:  :fontawesome-regular-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 5 - :fontawesome-solid-star:  :fontawesome-regular-star: :fontawesome-regular-star:"
     On considère la fonction suivante :
 
     ```python linenums="1"
@@ -192,7 +192,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
                     return n2
             ```
 
-!!! exoordi "Exercice X - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 6 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     On considère la fonction suivante :
 
     ```python linenums="1"
@@ -231,7 +231,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
                 return a / b
             ```
 
-!!! exoordi "Exercice X - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 7 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     On souhaite écrire une fonction `racine_carree(x)` qui renvoie la racine carrée de `x`.
 
     1. Donne une précondition raisonnable sur `x`.
@@ -265,7 +265,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
                 return res
             ```
 
-!!! exoordi "Exercice X - :fontawesome-solid-star:  :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 8 - :fontawesome-solid-star:  :fontawesome-solid-star: :fontawesome-regular-star:"
     On considère la fonction suivante :
 
     ```python linenums="1"
@@ -304,7 +304,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
             ```
 
 
-!!! exoordi "Exercice X - :fontawesome-solid-star:  :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 9 - :fontawesome-solid-star:  :fontawesome-solid-star: :fontawesome-regular-star:"
     On considère la fonction suivante :
 
     ```python linenums="1"
@@ -345,7 +345,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
                     return nombre
             ```
 
-!!! exoordi "Exercice X - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
+!!! exoordi "Exercice 10 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
     Augustin a déjà eu **3 notes sur 20 en NSI** : 14, 15 et 16, coefficientées respectivement 1, 2 et 4.  
     En révisant la **dernière évaluation du trimestre**, qui aura un **coefficient 4**, il veut prévoir **sa moyenne trimestrielle**  en fonction de cette dernière note.
 
@@ -399,7 +399,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
 ## Tester un programme
 
-!!! exoordi "Exercice 4 - :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 11 - :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
     On considère la fonction suivante :
 
     ```python linenums="1"
@@ -426,7 +426,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
         print(est_pair(0))   # Attendu : True
         ```
 
-!!! exoordi "Exercice 5 - :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 12 - :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
     On considère la fonction suivante :
 
     ```python linenums="1"
@@ -454,7 +454,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
             assert valeur_absolue(0) == 0      # zéro
             ```
 
-!!! exoordi "Exercice X - :fontawesome-solid-star:  :fontawesome-regular-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 13 - :fontawesome-solid-star:  :fontawesome-regular-star: :fontawesome-regular-star:"
     On considère la fonction suivante :
 
     ```python linenums="1"
@@ -485,7 +485,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
             ```
 
 
-!!! exoordi "Exercice X - :fontawesome-solid-star:  :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 14 - :fontawesome-solid-star:  :fontawesome-solid-star: :fontawesome-regular-star:"
     On considère la fonction suivante :
 
     ```python linenums="1"
@@ -518,7 +518,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
             | Long texte | `"La programmation Python est cool"` | `10` | Vérifie le bon comptage sur une phrase complète |
 
 
-!!! exoordi "Exercice 6 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
+!!! exoordi "Exercice 15 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
     Malek travaille sur un logiciel d’analyse pour un système de vente.  
     Il doit écrire une fonction `prix_unitaire()` qui prend en arguments le **prix total** et le **nombre de produits**, et qui renvoie le **prix d’un seul produit** dans un lot de produits identiques.  
     Pour plus de 10 unités, une **réduction de 10 %** est appliquée sur le prix total.
@@ -572,7 +572,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
 ## Bibliothèques Python
 
-!!! exoordi "Exercice X - :fontawesome-solid-star:  :fontawesome-regular-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 16 - :fontawesome-solid-star:  :fontawesome-regular-star: :fontawesome-regular-star:"
     Dans la console Python de Basthon : 
 
     1. Calculer la racine carrée de 25, puis de 2;
@@ -584,7 +584,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
         1. `sqrt(25)` et `sqrt(2)`
         2. `pi**2`
 
-!!! exoordi "Exercice X - :fontawesome-solid-star:  :fontawesome-regular-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 17 - :fontawesome-solid-star:  :fontawesome-regular-star: :fontawesome-regular-star:"
     On considère le programme suivant : 
 
     ```python linenums="1"
@@ -609,7 +609,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
     ??? success "Correction"
         Pas de correction pour cet exercice
 
-!!! exoordi "Exercice 5 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 18 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     On souhaite comparer la fonction `random()` du langage **JavaScript** et l’équivalent en **Python**.
 
     1. Ouvrir un nouveau [notebook Basthon](https://notebook.basthon.fr), ouvrir le cahier de NSI puis cliquer sur **« Éditeur Python »**.  
@@ -631,7 +631,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
             - `random` en JavaScript génère un flottant entre deux 0 et 1 exclus.
         6. La fonction `random()` du module `random` de Python est identique à celle de JavaScript. 
 
-!!! exoordi "Exercice X - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 19 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     Dans le module [`marvel`](../../files/NSI/Specification%20et%20test/marvel.py) à télécharger, il y a une liste nommée `personnages` contenant les noms (type `str`) de tous les personnages de l'Univers Marvel.
 
     Combien de personnages contiennent la chaine de caractères `"Black"` ?
@@ -665,7 +665,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
         ```
 
 
-!!! exoordi "Exercice X - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
+!!! exoordi "Exercice 20 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
     L'objectif de cet exercice est de mesurer le temps d'exécution d'un programme. On va pour cela utiliser le module `time`.
 
     1. Dans la console Basthon : 

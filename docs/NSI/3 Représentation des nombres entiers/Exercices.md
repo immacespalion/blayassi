@@ -699,7 +699,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
     Convertir le nombre décimal $-4$ en représentation binaire sur 5 bits avec la méthode du bit de signe.
 
     ??? success "Correction"
-        Signe = 1, valeur = `0100` → $-4 = 11000$
+        Signe = 1, valeur = `0100` → $-4 = 10100$
 
 
 !!! exopapier "Exercice 41 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
