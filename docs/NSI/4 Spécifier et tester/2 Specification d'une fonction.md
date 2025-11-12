@@ -47,7 +47,7 @@ Toutes les fonctions intégrées à Python possèdent une documentation. Il sera
     On peut toutefois choisir de faire apparaitre le type des paramètres et du retour : 
 
     ```python linenums="1"
-    def somme(a: int, b:int ) -> float :
+    def somme(a: int, b:int ) -> int :
         return a + b
     ```
 

@@ -3,7 +3,7 @@ title: Encodage des caractères
 weight: 2
 ---
 
-## Encodage des caractères 🔤
+# Encodage des caractères 🔤
 
 L’ordinateur ne comprend que des **0** et des **1**.  
 Mais alors... comment fait-il pour manipuler du **texte**, comme `"Bonjour"` ou `"🐍 Python"` ? 🤔  

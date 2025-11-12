@@ -15,6 +15,11 @@ Ces deux symboles — les **bits** — permettent de tout représenter et en par
 
 L’objectif de ce chapitre est de comprendre **comment la machine représente la logique et le texte**.
 
+!!! histoire "Repères historiques"
+    En 1847, le britannique [George BOOLE](https://fr.wikipedia.org/wiki/George_Boole) inventa un formalisme permettant d'écrire des raisonnements logiques : l'**algèbre de Boole**. La notion même d'informatique n'existait pas à l'époque, même si les calculs étaient déjà automatisés (penser à la Pascaline de 1642).
+
+    Bien plus tard, en 1938, les travaux de l'américain [Claude SHANNON](https://fr.wikipedia.org/wiki/Claude_Shannon) prouva que des circuits électriques peuvent résoudre tous les problèmes que l'algèbre de Boole peut elle-même résoudre. Pendant la deuxième guerre mondiale, les travaux d'[Alan TURING](https://fr.wikipedia.org/wiki/Alan_Turing) puis de [John VON NEUMANN](https://fr.wikipedia.org/wiki/John_von_Neumann) poseront définitivement les bases de l'informatique moderne.
+
 !!! info "Compétences visées"
     - Dresser la table d’une **expression booléenne** avec `and`, `or`, `not`, `xor`
     - Comprendre le **caractère séquentiel** des opérateurs `and` et `or`
@@ -28,5 +33,4 @@ L’objectif de ce chapitre est de comprendre **comment la machine représente l
 
 ---
 
-Dans les prochaines sections, nous verrons d’abord **comment l’ordinateur raisonne avec la logique booléenne**,  
-puis **comment il encode les caractères pour stocker et échanger des textes**. ✨
+Dans les prochaines sections, nous verrons d’abord **comment l’ordinateur raisonne avec la logique booléenne**, puis **comment il encode les caractères pour stocker et échanger des textes**. ✨

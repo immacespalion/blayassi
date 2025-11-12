@@ -29,15 +29,15 @@ Si vos souvenirs sont bons en mathématiques, la racine carrée d’un nombre es
     
     ```python linenums="1"
     def racine(a):
-    # Méthode de Héron
-    assert a >= 0
-    x = 1
-    for i in range(10):
-        x = (x + a / x) / 2
-    return x
+        # Méthode de Héron
+        assert a >= 0
+        x = 1
+        for i in range(10):
+            x = (x + a / x) / 2
+        return x
     ```
 
-    **Compléter la quatrième ligne colonne du tableau avec les numéros de lignes correspondant au programme ci-dessus.**
+    **Compléter la quatrième colonne du tableau avec les numéros de lignes correspondant au programme ci-dessus.**
 
 4. Saisissez cette fonction sur [Basthon Notebook](https://notebook.basthon.fr). Tester la fonction avec un argument invalide en entrée, par exemple la valeur -2. **Que se passe-t-il ?**
 5. Supprimer la ligne 3 du programme et tester à nouveau la fonction avec -2 en argument. **Que se passe-t-il ?**

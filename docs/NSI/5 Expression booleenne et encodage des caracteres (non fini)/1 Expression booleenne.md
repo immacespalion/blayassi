@@ -3,7 +3,7 @@ title: Expression booléenne
 weight: 1
 ---
 
-## Expression booléenne 🧩
+# Expression booléenne 🧩
 
 Les **expressions booléennes** sont au cœur de la logique informatique.  
 Elles permettent à la machine de **prendre des décisions** : exécuter un bloc de code ou non, répéter une boucle, etc.
@@ -52,8 +52,8 @@ Ils permettent de créer des expressions plus complexes.
 
     | **Opérateur** | **Signification** | **Notation Python** | **Autres notations** | **Résultat si** |
     |:--------------|:------------------|:-------------|:-------------|:----------------|
-    | `and`         | ET logique        | `A and B`    | &, ∧ ou · | Vrai si A **et** B sont vrais |
-    | `or`          | OU logique        | `A or B`     | ∥, ∨ ou + | Vrai si A **ou** B est vrai |
+    | `and`         | ET logique        | `A and B` ou `A & B`    | &, ∧ ou · | Vrai si A **et** B sont vrais |
+    | `or`          | OU logique        | `A or B` ou `A | B`     | ∥, ∨ ou + | Vrai si A **ou** B est vrai |
     | `not`         | NON logique       | `not A`      | ˜, ¬ ou ! | Vrai si A est faux |
     | `xor`         | OU exclusif       | `A != B` ou `A ^ B` | ⊕ ou ⊻ | Vrai si **exactement un seul** est vrai |
 
@@ -90,6 +90,93 @@ Ils permettent de créer des expressions plus complexes.
 
     👉 Ce comportement s’appelle **l’évaluation paresseuse** (lazy evaluation).  
     Il permet d’**optimiser** le temps d’exécution et d’**éviter des erreurs** inutiles.
+
+!!! expert "Symboles des portes logiques"
+    Dans un ordinateur, ces mêmes opérations sont réalisées physiquement par des portes logiques (logic gates) :
+	
+    - La porte AND (ET) ne laisse passer le courant que si les deux entrées sont à 1.
+	- La porte OR (OU) laisse passer si au moins une entrée est à 1.
+	- La porte NOT (NON) inverse le signal (0 → 1, 1 → 0).
+
+    💡 Chaque porte logique est construite à partir de transistors et fonctionne sur des tensions électriques. Il existe donc des symboles permettant de les représenter lorsque l'on produit des schémas de circuit logique.
+
+    - Le porte AND : 
+         
+         <div style="text-align:center;">
+
+        | Symbole américain | Symbole international |
+        |:----------:|:----------:|
+        | <img src="../../../files/NSI/Logique/and-us.png" width="50%"> | <img src="../../../files/NSI/Logique/and-iec.png" width="50%"> |
+
+        </div>
+
+    - La porte OR : 
+         
+         <div style="text-align:center;">
+
+        | Symbole américain | Symbole international |
+        |:----------:|:----------:|
+        | <img src="../../../files/NSI/Logique/or-us.png" width="50%"> | <img src="../../../files/NSI/Logique/or-iec.png" width="50%"> |
+
+        </div>
+    - La porte NOT : 
+         
+         <div style="text-align:center;">
+
+        | Symbole américain | Symbole international |
+        |:----------:|:----------:|
+        | <img src="../../../files/NSI/Logique/not-us.png" width="50%"> | <img src="../../../files/NSI/Logique/not-iec.png" width="50%"> |
+
+        </div> 
+    - La porte XOR : 
+         
+         <div style="text-align:center;">
+
+        | Symbole américain | Symbole international |
+        |:----------:|:----------:|
+        | <img src="../../../files/NSI/Logique/xor-us.png" width="50%"> | <img src="../../../files/NSI/Logique/xor-iec.png" width="50%"> |
+
+        </div>
+
+    ??? expert "Pour aller plus loin : autres portes logiques"
+        Il existe d'autres portes logiques utilisées couramment en informatiques. À vous d'en donner leur table de vérité !
+
+        - La porte NAND : 
+         
+         <div style="text-align:center;">
+
+        | Symbole américain | Symbole international |
+        |:----------:|:----------:|
+        | <img src="../../../files/NSI/Logique/nand-us.png" width="50%"> | <img src="../../../files/NSI/Logique/nand-iec.png" width="50%"> |
+
+        </div>
+        - La porte NOR : 
+         
+         <div style="text-align:center;">
+
+        | Symbole américain | Symbole international |
+        |:----------:|:----------:|
+        | <img src="../../../files/NSI/Logique/nor-us.png" width="50%"> | <img src="../../../files/NSI/Logique/nor-iec.png" width="50%"> |
+
+        </div>
+        - La porte BUFFER : 
+         
+         <div style="text-align:center;">
+
+        | Symbole américain | Symbole international |
+        |:----------:|:----------:|
+        | <img src="../../../files/NSI/Logique/buffer-us.png" width="50%"> | <img src="../../../files/NSI/Logique/buffer-iec.png" width="50%"> |
+
+        </div>
+        - La porte XNOR : 
+         
+         <div style="text-align:center;">
+
+        | Symbole américain | Symbole international |
+        |:----------:|:----------:|
+        | <img src="../../../files/NSI/Logique/xnor-us.png" width="50%"> | <img src="../../../files/NSI/Logique/xnor-iec.png" width="50%"> |
+
+        </div>
 
 ---
 
