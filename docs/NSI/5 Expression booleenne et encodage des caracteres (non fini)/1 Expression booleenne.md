@@ -71,7 +71,117 @@ Ils permettent de créer des expressions plus complexes.
 
     </div>
 
-!!! warning "Caractère séquentiel (évaluation paresseuse)"
+---
+
+## Étudier une expression booléenne : méthode générale
+
+!!! definition "Définition : Table de vérité (généralisation)"
+    Une **table de vérité** est un tableau qui présente toutes les combinaisons possibles de valeurs pour les variables logiques d’une expression, et le résultat de cette expression.
+
+!!! methode "Méthode pour construire une table de vérité"
+    1. Lister les variables utilisées (ex : A, B, C).
+    2. Énumérer toutes les combinaisons possibles de 0 et 1 (il y a $2^n$ lignes pour $n$ variables).
+    3. Évaluer l’expression pour chaque combinaison.
+
+=== "Exemple 1"
+
+    Expression : `(A or B) and not(C)`
+
+    <div align="center">
+
+    | A | B | C | not(C) | (A or B) | Résultat final |
+    |:-:|:-:|:-:|:-------:|:---------:|:----------------:|
+    | 0 | 0 | 0 | 1 | 0 | 0 |
+    | 0 | 0 | 1 | 0 | 0 | 0 |
+    | 0 | 1 | 0 | 1 | 1 | 1 |
+    | 0 | 1 | 1 | 0 | 1 | 0 |
+    | 1 | 0 | 0 | 1 | 1 | 1 |
+    | 1 | 0 | 1 | 0 | 1 | 0 |
+    | 1 | 1 | 0 | 1 | 1 | 1 |
+    | 1 | 1 | 1 | 0 | 1 | 0 |
+
+    </div>
+
+=== "Exemple 2"
+
+    Expression : `(A and B) or (not A and not B)`
+
+    <div align="center">
+
+    | A | B | not A | not B | (A and B) | (not A and not B) | Résultat |
+    |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+    | 0 | 0 | 1 | 1 | 0 | 1 | 1 |
+    | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+    | 1 | 0 | 0 | 1 | 0 | 0 | 0 |
+    | 1 | 1 | 0 | 0 | 1 | 0 | 1 |
+
+    </div>
+
+    → On remarque que cette expression est vraie lorsque A et B ont la même valeur.
+
+!!! tip "Astuce"
+    Les tables de vérité servent aussi à :
+
+    - vérifier l’équivalence de deux expressions logiques,
+    - simplifier une expression compliquée,
+    - ou déterminer les conditions de déclenchement d’un algorithme.
+
+!!! warning "Priorité opératoire"
+    Comme dans une opération mathématique, il faut tenir compte des priorités opératoires. Voici l'ordre des priorités :
+
+    1. Parenthèses
+    2. `not`
+    3. `and`
+    4. `or` et `xor`
+
+Par exemple, si on considère l'expressions booléenne `A= True and True or (not False and False)`.
+
+1. On commence par les parenthèses : 
+    1. Dans les parenthèses, on commence par la négation, `not False` vaut `True`. 
+
+        Ainsi, on a : `A= True and True or (True and False)`
+
+    2. Dans les parenthèses toujours, on continue avec le `and` : `True and False` vaut `False`.
+
+        Ainsi, on a : `A= True and True or False`
+
+2. On continue avec le `and` : 
+
+    Ici, `True and True` vaut `True`, ainsi, on a : `A= True or False`
+
+3. On finit avec le `or` : 
+
+    Ici, `True or False` vaut `True`, ainsi, on a : `A= True`
+
+---
+
+## Expressions booléennes en Python
+
+Les expressions booléennes sont partout dans les programmes : dans les conditions, les boucles, les tests d’erreur…
+
+!!! example "Exemples simples"
+    Voici quelques exemples que nous avons déjà rencontrés : 
+
+    ```python linenums="1" title="Vérifier si un nombre est pair et positif"
+    n = 6
+    if n % 2 == 0 and n > 0:
+        print("n est pair et positif")
+    ```
+
+    ```python linenums="1" title="Vérifier si un âge est dans une tranche"
+    age = 17
+    if 13 <= age <= 19:
+        print("C’est un adolescent")
+    ```
+
+    ```python linenums="1" title="Vérifier si une valeur est en dehors d’un intervalle"
+    age = 17
+    x = 12
+    if not (0 <= x <= 10):
+        print("x n’est pas compris entre 0 et 10")
+    ```
+
+!!! info "Caractère séquentiel (évaluation paresseuse)"
     En Python, les opérateurs `and` et `or` n’évaluent pas toujours les deux expressions.
 
     - `A and B` → si `A` est faux, alors `B` **n’est pas évalué** (le résultat sera forcément faux).  
@@ -90,6 +200,15 @@ Ils permettent de créer des expressions plus complexes.
 
     👉 Ce comportement s’appelle **l’évaluation paresseuse** (lazy evaluation).  
     Il permet d’**optimiser** le temps d’exécution et d’**éviter des erreurs** inutiles.
+
+!!! warning "Erreurs fréquentes"
+    - Oublier les parenthèses peut modifier le résultat d’une expression.
+    - `and` est prioritaire sur `or` → toujours clarifier avec des parenthèses.
+    - Ne pas confondre `=` (affectation) et `==` (comparaison) !
+
+---
+
+## Expressions booléennes en électronique
 
 !!! expert "Symboles des portes logiques"
     Dans un ordinateur, ces mêmes opérations sont réalisées physiquement par des portes logiques (logic gates) :
@@ -178,93 +297,6 @@ Ils permettent de créer des expressions plus complexes.
 
         </div>
 
----
-
-## Étudier une expression booléenne : méthode générale
-
-!!! definition "Définition : Table de vérité (généralisation)"
-    Une **table de vérité** est un tableau qui présente toutes les combinaisons possibles de valeurs pour les variables logiques d’une expression, et le résultat de cette expression.
-
-!!! methode "Méthode pour construire une table de vérité"
-    1. Lister les variables utilisées (ex : A, B, C).
-    2. Énumérer toutes les combinaisons possibles de 0 et 1 (il y a $2^n$ lignes pour $n$ variables).
-    3. Évaluer l’expression pour chaque combinaison.
-
-=== "Exemple 1"
-
-    Expression : `(A or B) and not(C)`
-
-    <div align="center">
-
-    | A | B | C | not(C) | (A or B) | Résultat final |
-    |:-:|:-:|:-:|:-------:|:---------:|:----------------:|
-    | 0 | 0 | 0 | 1 | 0 | 0 |
-    | 0 | 0 | 1 | 0 | 0 | 0 |
-    | 0 | 1 | 0 | 1 | 1 | 1 |
-    | 0 | 1 | 1 | 0 | 1 | 0 |
-    | 1 | 0 | 0 | 1 | 1 | 1 |
-    | 1 | 0 | 1 | 0 | 1 | 0 |
-    | 1 | 1 | 0 | 1 | 1 | 1 |
-    | 1 | 1 | 1 | 0 | 1 | 0 |
-
-    </div>
-
-=== "Exemple 2"
-
-    Expression : `(A and B) or (not A and not B)`
-
-    <div align="center">
-
-    | A | B | not A | not B | (A and B) | (not A and not B) | Résultat |
-    |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-    | 0 | 0 | 1 | 1 | 0 | 1 | 1 |
-    | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
-    | 1 | 0 | 0 | 1 | 0 | 0 | 0 |
-    | 1 | 1 | 0 | 0 | 1 | 0 | 1 |
-
-    </div>
-
-    → On remarque que cette expression est vraie lorsque A et B ont la même valeur.
-
-!!! tip "Astuce"
-    Les tables de vérité servent aussi à :
-
-    - vérifier l’équivalence de deux expressions logiques,
-    - simplifier une expression compliquée,
-    - ou déterminer les conditions de déclenchement d’un algorithme.
-
----
-
-## Expressions booléennes en pratique
-
-Les expressions booléennes sont partout dans les programmes : dans les conditions, les boucles, les tests d’erreur…
-
-!!! example "Exemples simples"
-    Voici quelques exemples que nous avons déjà rencontrés : 
-
-    ```python linenums="1" title="Vérifier si un nombre est pair et positif"
-    n = 6
-    if n % 2 == 0 and n > 0:
-        print("n est pair et positif")
-    ```
-
-    ```python linenums="1" title="Vérifier si un âge est dans une tranche"
-    age = 17
-    if 13 <= age <= 19:
-        print("C’est un adolescent")
-    ```
-
-    ```python linenums="1" title="Vérifier si une valeur est en dehors d’un intervalle"
-    age = 17
-    x = 12
-    if not (0 <= x <= 10):
-        print("x n’est pas compris entre 0 et 10")
-    ```
-
-!!! warning "Erreurs fréquentes"
-    - Oublier les parenthèses peut modifier le résultat d’une expression.
-    - `and` est prioritaire sur `or` → toujours clarifier avec des parenthèses.
-    - Ne pas confondre `=` (affectation) et `==` (comparaison) !
 
 ---
 

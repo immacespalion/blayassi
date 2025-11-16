@@ -72,7 +72,10 @@ Dans cette section, tu trouveras :
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
-    * 03.11.2025 - Diverse correction
+    * 16.11.2025 - Optimisations du cours du chapitre 5, ajout des exercices. 
+    * 12.11.2025 - Optimisations du chapitre 5, ajout des activités. 
+    * 10.11.2025 - Diverses corrections
+    * 03.11.2025 - Diverses corrections
     * 01.11.2025 - Ajout lecon chapitre 5
     * 23.10.2025 - Fin leçon chapitre 4 + projet chapitre 4
     * 22.10.2025 - Début leçon chapitre 4
