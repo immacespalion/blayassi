@@ -72,6 +72,8 @@ Dans cette section, tu trouveras :
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 23.11.2025 - Cours complet - Chapitre 6
+    * 22.11.2025 - Début cours chapitre 6
     * 16.11.2025 - Optimisations du cours du chapitre 5, ajout des exercices. 
     * 12.11.2025 - Optimisations du chapitre 5, ajout des activités. 
     * 10.11.2025 - Diverses corrections
