@@ -49,7 +49,7 @@ print(a or b)
     | `False` | `False` | ... |
 
     !!! info "À retenir !"
-        On appelle ce tableau **table de vérité** de l'opérateur `or`. 
+        On appelle ce tableau **table de vérité** de l'opérateur `and`. 
 
 2. Compléter la table de vérité de l'opérateur `or` à l'aide du programme B : 
 

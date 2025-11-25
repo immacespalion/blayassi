@@ -111,10 +111,10 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     | a | b | not b | a or not b | not(a or not b) | not(a or not b) and b |
     |:-:|:-:|:------:|:------------:|:----------------:|:------------------------:|
-    | False | False |     ...       |        ...        |      ..              |           ...             |
-    | False | True  |     ...       |        ...        |      ..              |           ...             |
-    | True  | False |     ...       |        ...        |      ..              |           ...             |
-    | True  | True  |     ...       |        ...        |      ..              |           ...             |
+    | False | False |     ...       |        ...        |      ...              |           ...             |
+    | False | True  |     ...       |        ...        |      ...              |           ...             |
+    | True  | False |     ...       |        ...        |      ...              |           ...             |
+    | True  | True  |     ...       |        ...        |      ...              |           ...             |
 
     ??? success "Correction"
         **Étape 1 — Calculs ligne par ligne**
