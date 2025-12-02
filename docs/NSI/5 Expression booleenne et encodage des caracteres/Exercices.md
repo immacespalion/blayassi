@@ -374,10 +374,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
         2. `'\x0f\x0e\x1b\x18\x06\x14\x11'`
         3. `'BONJOUR'`
 
-!!! exoordi "Exercice 11 - :fontawesome-solid-skull:"
-    Résoudre le Pydéfi [La clé endommagée](https://pydefis.callicode.fr/defis/MasqueJetable/txt)
-
-!!! exoordi "Exercice 12 - :fontawesome-solid-skull: :fontawesome-solid-skull: :fontawesome-solid-skull:"
+!!! exoordi "Exercice 11 - :fontawesome-solid-skull: :fontawesome-solid-skull: :fontawesome-solid-skull:"
     Vous avez trouvé une image bien étrange : 
 
     <div style="text-align:center;">
@@ -396,7 +393,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     **XORez-vous découvrir qui est ce personnage-mystère ?**
 
-    [Rendez-vous sur Capytale](...)
+    [Rendez-vous sur Capytale](https://capytale2.ac-paris.fr/web/c/6465-8045951)
 
     ??? tip "Astuce"
         - Récupérer le code RGB d'un pixel : 
@@ -447,6 +444,31 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
         img_new.show() 
         ```
 
+!!! exoordi "Exercice 11 - :fontawesome-solid-skull: :fontawesome-solid-skull: :fontawesome-solid-skull:"
+    Résoudre le Pydéfi [La clé endommagée](https://pydefis.callicode.fr/defis/MasqueJetable/txt)
+
+    ??? success "Correction"
+
+        Voici le programme : 
+
+        ```python linenums="1"
+        for decalage in range(0, len(message)-40):
+            resultat_partiel = []
+            for i in range(min(len(cle_partielle), len(message))):
+                resultat_partiel.append(message[i+decalage] ^ cle_partielle[i])
+
+            texte_partiel = ''.join(chr(b) if 32 <= b < 127 else '.' for b in resultat_partiel)
+
+            print(decalage, ":", texte_partiel)
+        ```
+
+        On obtient ainsi, pour un décalage de 503 : 
+
+        ```
+        503 : ERALLIEMENTHABITUELACOLOGNENOUSDECIDERON
+        ```
+
+        Le rendez-vous est donc à Cologne
 
 
 ---

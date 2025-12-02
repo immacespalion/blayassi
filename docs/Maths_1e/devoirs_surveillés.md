@@ -22,7 +22,7 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill�
 
 * DS4 - Trigonométrie :  
     
-    <!--- [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/25_26/ds4.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/25_26/ds4-correction.pdf) -->
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/25_26/ds4.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/25_26/ds4-correction.pdf)
 
 ## 2024-2025
 
@@ -49,7 +49,7 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill�
 
 * DS6 - Fonctions trigonométriques :
 
-    <!--- [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds6.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds6-correction.pdf) -->
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds6.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds6-correction.pdf)
 
 * DS7 - Applications au produit scalaire : 
 
@@ -96,7 +96,7 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill�
 
 * DS8 - Fonctions trigonométriques :  
     
-    <!--- [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/ds8.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/ds8-correction.pdf) -->
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/ds8.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/ds8-correction.pdf)
 
 * DS9 - Applications au P.S., fonctions trigo, suites arithmétiques et géométriques :  
 
