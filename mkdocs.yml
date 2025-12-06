@@ -88,3 +88,4 @@ extra:
 plugins:
   - search
   - mkdocs-nav-weight
+  - glightbox

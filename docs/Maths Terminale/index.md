@@ -50,6 +50,8 @@ Accédez aux sujets et corrigés pour vous préparer efficacement aux évaluatio
 Cette section est enrichie tout au long de l’année pour vous accompagner dans vos révisions. Consultez régulièrement les nouveautés !
 
 ??? info "Historique des mises à jour"
+    * 06.12.2025 - Ajout du DS3+correction, bac blanc 0 + correction
+    * 01.12.2025 - Ajout de la page "Documents" avec TD+correction
     * 10.10.2025 - Ajout DS1 et correction
     * 01.10.2025 - Ajout des chapitres 1, 2 et 3 (succint)
     * 17.08.2025 - Création de la page de présentation

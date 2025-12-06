@@ -112,4 +112,4 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill√
 
 * BAC BLANC :  
 
-    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/bac_blanc.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/bac_blanc_correction.pdf)
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/bac_blanc.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/bac_blanc_correction.pdf) 

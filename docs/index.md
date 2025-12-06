@@ -7,7 +7,10 @@ hide:
 
 <h1 style="display: flex; justify-content: space-between; align-items: center;">
   Bienvenue !
-  <img src="assets/logo_immac_violet.png" alt="Logo de l'établissement" style="width: 25%; margin-left: 10px;">
+  <img src="assets/logo_immac_violet.png"
+       alt="Logo de l'établissement"
+       class="off-glb"
+       style="width: 25%; margin-left: 10px;">
 </h1>
 
 ???+ warning "Attention"
