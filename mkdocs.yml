@@ -1,7 +1,7 @@
 site_name: Mathématiques, SNT et NSI
 site_url: https://immacespalion.github.io/blayassi/
 theme:
-  name: material
+  name: material #pyodide-mkdocs-theme #OLD :material
   font: 
     text: Quicksand
     code: Red Hat Mono
@@ -87,5 +87,9 @@ extra:
 
 plugins:
   - search
+  #- pyodide_macros:         # plugin du thème Pyodide
+  #    on_error_fail: true   # conseillé par la doc
   - mkdocs-nav-weight
-  - glightbox
+  - glightbox:
+      skip_classes:
+        - skip_light_box

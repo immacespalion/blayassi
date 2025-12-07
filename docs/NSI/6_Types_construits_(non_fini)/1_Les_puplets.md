@@ -80,7 +80,7 @@ Les éléments d'un p-uplet sont **indexés** afin de permettre un accés rapide
     On considère le p-uplet ci-dessous : 
 
     <div align="center">
-        <img src="../../../files/NSI/Types%20construits/puplet_acces.png" width=40%>
+        <img src="../../../files/NSI/Types_construits/puplet_acces.png" width=40%>
     </div>
 
     - `t[0]` désigne la première composante, `t[1]` la seconde, ...

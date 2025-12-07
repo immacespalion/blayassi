@@ -632,7 +632,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
         6. La fonction `random()` du module `random` de Python est identique à celle de JavaScript. 
 
 !!! exoordi "Exercice 19 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
-    Dans le module [`marvel`](../../files/NSI/Specification%20et%20test/marvel.py) à télécharger, il y a une liste nommée `personnages` contenant les noms (type `str`) de tous les personnages de l'Univers Marvel.
+    Dans le module [`marvel`](../../files/NSI/Specification_et_test/marvel.py) à télécharger, il y a une liste nommée `personnages` contenant les noms (type `str`) de tous les personnages de l'Univers Marvel.
 
     Combien de personnages contiennent la chaine de caractères `"Black"` ?
 

@@ -210,7 +210,7 @@ Par exemple, voici la matrice représentant le tableau ci-dessous :
 
   <div>
     <div align="center">
-        <img src="../../../files/NSI/Types%20construits/matrice1.png" width=40%>
+        <img src="../../../files/NSI/Types_construits/matrice1.png" width=40%>
     </div>
   </div>
 

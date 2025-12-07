@@ -14,7 +14,7 @@ weight: 2
     1. **On identifie le coefficient $a$ de $x^2$.**  
        Ici, $\textcolor{gray}{a = 3}$.
 
-    2. **On détermine les racines du polynôme** [(voir fiche 12)](../5%20-%20Second%20degré%202/fiche13.md).  
+    2. **On détermine les racines du polynôme** [(voir fiche 12)](../5_Second_degre_2/fiche13.md).  
        Ici, $\textcolor{gray}{f(x) = 0 \iff x \in \{-1; -\frac{2}{3}\}}$.
 
     3. **Analyse du signe de $f(x)$.**  
