@@ -393,8 +393,205 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
   
 
+## Les dictionnaires
+
+!!! exopapier "Exercice 1 – :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
+    On considère le dictionnaire suivant :
+
+    ```python
+    d = {"a": 1, "b": 2}
+    ```
+
+    1. Donner la valeur associée à la clé `"a"`.
+    2. Donner le nombre d’entrées du dictionnaire.
+
+    ??? success "Correction"
+        - `d["a"] = 1`
+        - `len(d) = 2`
+  
+!!! exopapier "Exercice 2 – :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
+    Parmi les écritures suivantes, indiquer lesquelles correspondent à des **dictionnaires** :
+
+    ```python
+    a = {"x": 3}
+    b = {1, 2, 3}
+    c = {}
+    d = [("a", 1), ("b", 2)]
+    ```
+
+    ??? success "Correction"
+        - `a` ✅
+        - `b` ❌ (ensemble)
+        - `c` ✅
+        - `d` ❌ (liste)
+
+!!! exoordi "Exercice 3 – :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
+    Créer un dictionnaire `notes` associant `"Alice"` à 14 et `"Bob"` à 11, puis afficher la note de Bob.
+
+    ??? success "Correction"
+        ```python
+        notes = {"Alice": 14, "Bob": 11}
+        print(notes["Bob"])
+        ```
+
+!!! exopapier "Exercice 4 – :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
+    Vrai ou faux ?
+
+    - Les clés d’un dictionnaire doivent être uniques  
+    - Un dictionnaire est indexé par des entiers consécutifs  
+    - Un dictionnaire est modifiable  
+
+    ??? success "Correction"
+        - Vrai
+        - Faux
+        - Vrai
+
+!!! exopapier "Exercice 5 – :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
+    Sans exécuter le code, indiquer ce qui est affiché :
+
+    ```python
+    d = {"x": 5}
+    d["x"] = 8
+    print(d)
+    ```
+
+    ??? success "Correction"
+        Le dictionnaire affiché est `{"x": 8}`.
+
+!!! exoordi "Exercice 6 – :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
+    Créer un dictionnaire vide puis y ajouter la clé `"ville"` associée à `"Millau"`.
+
+    ??? success "Correction"
+        ```python
+        d = {}
+        d["ville"] = "Millau"
+        ```
+
+!!! exopapier "Exercice 19 – :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Comparer liste et dictionnaire pour stocker des notes d’élèves.
+    Donner un avantage du dictionnaire.
+
+    ??? success "Correction"
+        Le dictionnaire permet d’associer directement un nom à une note.
+
+
+!!! exopapier "Exercice 7 – :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Sans exécuter le code, indiquer la valeur affichée :
+
+    ```python
+    d = {"a": 1, "b": 2}
+    print("a" in d)
+    ```
+
+    ??? success "Correction"
+        La valeur affichée est `True`.
+
+!!! exoordi "Exercice 8 – :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Écrire une fonction `est_present` qui renvoie `True` si une clé est présente dans un dictionnaire, `False` sinon.
+
+    ??? success "Correction"
+        ```python
+        def est_present(d: dict, cle) -> bool:
+            return cle in d
+        ```
+
+!!! exopapier "Exercice 9 – :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    On considère le code suivant :
+
+    ```python
+    d = {"a": 1, "b": 2}
+    for cle in d:
+        print(cle)
+    ```
+
+    1. Que parcourt la boucle ?
+    2. Qu’affiche ce programme ?
+
+    ??? success "Correction"
+        1. Les clés du dictionnaire  
+        2. `a` puis `b` (dans un ordre quelconque)
+
+
+!!! exoordi "Exercice 10 – :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Écrire une fonction qui renvoie la somme des valeurs d’un dictionnaire de nombres.
+
+    ??? success "Correction"
+        ```python
+        def somme_valeurs(d: dict) -> int:
+            s = 0
+            for v in d.values():
+                s += v
+            return s
+        ```
+
+!!! exopapier "Exercice 11 – :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Sans exécuter le code, indiquer l’erreur éventuelle :
+
+    ```python
+    d = {"a": 1}
+    print(d["b"])
+    ```
+
+    ??? success "Correction"
+        Le programme provoque une erreur `KeyError`.
+
+!!! exopapier "Exercice 12 – :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Expliquer pourquoi une liste ne peut pas être utilisée comme clé d’un dictionnaire.
+
+    ??? success "Correction"
+        Une liste est modifiable, or une clé doit être immuable.
+
+
+!!! exoordi "Exercice 13 – :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Construire un dictionnaire associant chaque entier de 1 à 5 à son carré.
+
+    ??? success "Correction"
+        ```python
+        d = {i: i*i for i in range(1, 6)}
+        ```
+
+
+!!! exopapier "Exercice 14 – :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Un dictionnaire est-il adapté pour représenter :
+    - un répertoire téléphone (nom → numéro) ?
+    - une suite ordonnée de nombres ?
+
+    Justifier.
+
+    ??? success "Correction"
+        - Oui pour le répertoire  
+        - Non pour une suite ordonnée
+
+
+!!! exopapier "Exercice 15 – :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
+    Sans exécuter le code, donner la valeur finale de `d` :
+
+    ```python
+    d = {"a": 1, "b": 2}
+    d["c"] = d["a"] + d["b"]
+    ```
+
+    ??? success "Correction"
+        `d = {"a": 1, "b": 2, "c": 3}`
 
 
 
+!!! exoordi "Exercice 18 – :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
+    Construire un dictionnaire imbriqué permettant de stocker pour chaque élève son âge et sa moyenne.
 
+    ??? success "Correction"
+        ```python
+        eleves = {
+            "Alice": {"age": 16, "moyenne": 15},
+            "Bob": {"age": 17, "moyenne": 12}
+        }
+        ```
 
+!!! exoordi "Exercice 20 – :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
+    Écrire une fonction qui inverse clés et valeurs d’un dictionnaire (valeurs uniques).
+
+    ??? success "Correction"
+        ```python
+        def inverse(d: dict) -> dict:
+            return {v: k for k, v in d.items()}
+        ```

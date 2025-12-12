@@ -72,6 +72,8 @@ Dans cette section, tu trouveras :
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 12.12.2025 - Ajout des premiers exercices du chapitre 6
+    * 06.12.2025 - Ajout du TP - Secret Santa - Chapitre 6
     * 23.11.2025 - Cours complet - Chapitre 6
     * 22.11.2025 - Début cours chapitre 6
     * 16.11.2025 - Optimisations du cours du chapitre 5, ajout des exercices. 
