@@ -89,7 +89,7 @@ Les éléments d'un p-uplet sont **indexés** afin de permettre un accés rapide
 !!! expert "Pour aller plus loin : p-uplet nommé"
     Un **p-uplet nommé** permet d’accéder aux valeurs par nom de champ, au lieu des indices.
 
-    Ce type de p-uplet n'existe pas en Python. Il sera donc implémenter à l'aide d'un dictionnaire (voir partie 3 de ce chapitre).
+    Ce type de p-uplet n'existe pas en Python. Il sera donc implémenté à l'aide d'un dictionnaire (voir partie 3 de ce chapitre).
 
 ---
 

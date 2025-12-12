@@ -87,6 +87,16 @@ Les listes sont **modifiables** (on dit *mutables*). On peut donc utiliser la sy
     print(notes_NSI)   # [16, 14, 15]
     ```
 
+Ou même ajouter de nouveaux éléments : 
+
+!!! python "Méthode `append()`"
+    La méthode `append()` ajoute un élément à la fin d’une liste.
+
+    ```python linenums="1"
+    notes = [12, 15, 9]
+    notes.append(18)
+    print(notes)   # [12, 15, 9, 18]
+    ```
 ---
 
 ## Quelques fonctions utiles
