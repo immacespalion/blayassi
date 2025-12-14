@@ -67,11 +67,14 @@ markdown_extensions: #for the emojis
 extra_css:
   - stylesheets/extra.css
   - https://unpkg.com/katex@0/dist/katex.min.css
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css
 
 extra_javascript:
   - javascripts/katex.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - javascripts/editor-loader.js
+  - javascripts/editor-module.js
 
 extra: 
   social: 
@@ -89,6 +92,7 @@ plugins:
   - search
   #- pyodide_macros:         # plugin du thème Pyodide
   #    on_error_fail: true   # conseillé par la doc
+  - macros
   - mkdocs-nav-weight
   - glightbox:
       skip_classes:
