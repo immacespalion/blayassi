@@ -289,11 +289,11 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
         2. `L` et `M` désignent en fait la même liste en mémoire, la modification de `M` entraine donc la modification de `L` ! Pour effectuer une vraie copie de la liste `L`, on devrait procéder comme suit : 
 
             ```python linenums="1"
-            L = M.copy()
+            M = L.copy()
             # ou
-            L = M[:]
+            M = L[:]
             # ou
-            L = list(M)
+            M = list(L)
             ```
 
 !!! exopapier "Exercice 10 – :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"

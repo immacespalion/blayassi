@@ -42,6 +42,10 @@ Vous trouverez ci-dessous l'ensemble des TD des chapitres déjà aborder en clas
     
     [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td6.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/td6-correction.pdf)
 
+- TD7 - Limites de fonctions
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td7.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/td7-correction.pdf)
+
 
 - TD A - Vecteurs de l'espace
     
@@ -58,6 +62,10 @@ Vous trouverez ci-dessous l'ensemble des TD des chapitres déjà aborder en clas
 - TD D - Repérage dans l'espace
     
     [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/tdD.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/tdD-correction.pdf)
+
+- TD E - Dénombrement (partie 2)
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/tdE.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/tdE-correction.pdf)
 
 
 ---

@@ -27,6 +27,8 @@ Ces balises permettent de rendre une page claire, lisible et bien structurée, a
     <h6>Titre de niveau 6</h6>
     ```
 
+⚠️ Les balises de titres servent à structurer le contenu, pas à modifier la taille du texte.
+
 ---
 
 ## Les listes 📋
@@ -58,6 +60,16 @@ Les listes permettent de présenter des informations de manière **structurée e
         <li>Ouvrir la page dans le navigateur</li>
     </ol>
     ```
+
+!!! tip "Type de liste numérotée"
+    Il est aussi possible de changer la numérotation grâce à l'attribut type :
+
+    - `type="1"` pour un compteur 1, 2, 3...,
+    - `type="a"` pour un compteur a, b, c...,
+    - `type="A"` pour un compteur A, B, C,...,
+    - `type="I"` pour un compteur I, II, III...,
+
+    Cependant, ce sera plutôt au fichier .css de s'occuper de ce type de mise en forme...
 
 ---
 
@@ -100,7 +112,7 @@ Les listes permettent de présenter des informations de manière **structurée e
     <h2 id="presentation">Présentation</h2>
     ```
 
-    👉 L’id sera très utile :
+    👉 L’`id` sera très utile :
     
     - pour le CSS
     - pour créer des liens intra-page
@@ -118,7 +130,7 @@ Les listes permettent de présenter des informations de manière **structurée e
 
     - `<header>` : Pour l'en-tête de la page
     - `<nav>` : Pour le menu de navigation
-    - `<section>` : Pour un section de contenu
+    - `<section>` : Pour une section de contenu
     - `<footer>` : Pour le pied de page
 
 👉 Ces balises permettent :

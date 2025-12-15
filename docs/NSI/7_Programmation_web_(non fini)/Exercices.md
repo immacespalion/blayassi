@@ -146,3 +146,105 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 ---
 
 ## HTML - Titres, listes et balises génériques
+
+!!! exoordi "Exercice 6 - :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
+    Testez le rendu par défaut de chaque niveau de titre entre les balises <body>.
+
+    ---
+
+    {{ html_playground("demo", "<!DOCTYPE html>
+<html lang=\"fr\">
+    <head>
+        <meta charset=\"utf-8\">
+        <title>Les titres HTML</title>
+    </head>
+    <body>
+        ...
+    </body>
+</html>") }}
+
+!!! exoordi "Exercice 7 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Reprendre le fichier `favoris.html` (de l'exercice 5) avec un éditeur de texte.
+
+    1. Dans ce fichier, mettre :
+        1. son nom et son prénom en titre 1 en haut de la page ;
+        2. «Mes sites utiles en NSI» en titre 2 après le paragraphe déjà écrit.
+    2. Ouvrir `favoris.html` à l'aide du navigateur pour constater le rendu. Ne pas hésiter à appeler le professeur pour vérification.
+
+!!! exoordi "Exercice 8 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    En s'inspirant du code déjà entré dans le formulaire, écrire le code Html permettant d'afficher la liste ci-dessous :
+    
+    ![exo8](../../files/NSI/HTML/exo8.png)
+
+    --- 
+
+    {{ html_playground("demo", "<!DOCTYPE html>
+<html lang=\"fr\">
+    <head>
+        <meta charset=\"utf-8\">
+        <title>Liste d'éléments html</title>
+    </head>
+    <body>
+		<ol type=\"A\">  
+			<li> Item 1 </li>
+			<li> Item 2 </li>
+			<li> Item 3 </li>
+		</ol>
+        
+    </body>
+</html>") }}
+
+    ??? success "Correction"
+        ```html
+        <!DOCTYPE html>
+        <html lang="fr">
+            <head>
+                <meta charset="utf-8">
+                <title>Liste d'éléments html</title>
+            </head>
+            <body>
+                <ol type="A">
+                    <li>Document et en-tête
+                        <ol type="1">
+                            <li>Doctype</li>
+                            <li>head</li>
+                        </ol>
+                    </li>
+                    <li>Structure
+                        <ol type="1">
+                            <li>header </li>
+                            <li>article</li>
+                            <li>section</li>
+                            <li> footer</li>
+                        </ol>
+                    </li>
+                    <li>Groupes
+                        <ol type="1">
+                            <li>Paragraphe</li>
+                            <li>Les listes
+                                <ol type="a">
+                                    <li>Liste non ordonnée</li>
+                                    <li>Liste ordonnée</li>
+                                </ol>
+                            </li>
+                            <li>Balises bloc génériques : div</li>				
+                        </ol>
+                    </li>						
+                </ol>
+            </body>
+        </html>
+        ```
+
+!!! exoordi "Exercice 9 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Reprendre le fichier `favoris.html` avec un éditeur de texte.
+
+    1. Dans ce fichier, ajouter les trois sites suivants sous forme d'une liste non ordonnée après le second titre :
+        
+        - Espace Numérique de Travail
+        - Site d'exercices en Html/Css & Python ;
+        - Documentation Mozilla sur le HTML
+        - Documentation Mozilla sur le CSS
+
+        Pour l'instant, on ne fait pas de liens hypertextes vers ces sites.
+
+    2. Ouvrir `favoris.html` à l'aide du navigateur pour constater le rendu. Ne pas hésiter à appeler le professeur pour vérification.
