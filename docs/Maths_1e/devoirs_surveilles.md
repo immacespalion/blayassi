@@ -24,6 +24,14 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill�
     
     [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/25_26/ds4.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/25_26/ds4-correction.pdf)
 
+* DS5 - Second degré (partie 2) :  
+    
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/25_26/ds5.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/25_26/ds5-correction.pdf)
+
+* Bac Blanc - Décembre :  
+    
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/25_26/bacblanc1.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/25_26/bacblanc1-correction.pdf)
+
 ## 2024-2025
 
 * DS1 - Second degré (partie 1) et dérivation locale : 

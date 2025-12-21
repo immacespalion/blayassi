@@ -72,7 +72,7 @@
   --md-admonition-icon--expert: url("../assets/brain_connected.svg");
   --md-admonition-icon--propriete: url("../assets/gears-solid.svg");
   --md-admonition-icon--html: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M128 96L162.9 491.8L319.5 544L477.1 491.8L512 96L128 96zM436.2 223.9L252.4 223.9L256.5 273.3L432.1 273.3L418.5 421.7L320.6 448.7L320.6 449L319.5 449L220.8 421.7L214.8 345.9L262.5 345.9L266 384L319.5 398.5L373.2 384L379.2 321.8L212.3 321.8L199.5 176.2L440.6 176.2L436.2 223.9z"/></svg>');
-  --md-admonition-icon--css: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M472.3 96L96 96L96 472.3C96 491.3 103.6 509.5 117 523C130.4 536.5 148.7 544 167.7 544L472.3 544C491.3 544 509.5 536.4 523 523C536.5 509.6 544 491.3 544 472.3L544 167.7C544 148.7 536.4 130.5 523 117C509.6 103.5 491.3 96 472.3 96zM428.4 495.4C420.7 486.9 416.7 474.7 416.4 458.8L447.7 458.8C447.9 472.9 452.8 479.9 462.5 479.9C467.4 479.9 470.9 478.3 473 475.2C475 472.1 476 467.2 476 460.4C476 455 474.7 450.5 472 447C468.5 442.8 463.9 439.5 458.8 437.5L447.2 432C436.9 427.1 429.4 421.2 424.7 414.4C420.2 407.6 418 398.1 418 386C418 372.4 422 361.4 429.8 352.9C437.9 344.4 448.9 340.2 463 340.2C476.6 340.2 487.1 344.4 494.5 352.7C502 361.1 506 373 506.3 388.6L476.2 388.6C476.4 383.5 475.3 378.4 473.2 373.8C471.5 370.4 468.2 368.7 463.2 368.7C454.4 368.7 450 373.9 450 384.4C450 389.7 451.1 393.8 453.2 397C456.3 400.5 460.2 403.2 464.6 404.8L475.7 409.7C487.2 415 495.4 421.4 500.5 429.1C505.6 436.8 508.1 447.1 508.1 460.1C508.1 475.6 504.1 487.5 495.8 495.8C487.6 504.1 476.3 508.3 461.7 508.3C447.1 508.3 436.1 504.1 428.3 495.6zM327.4 495.4C319.7 486.9 315.7 474.7 315.4 458.8L346.7 458.8C346.9 472.9 351.8 479.9 361.5 479.9C366.4 479.9 369.9 478.3 371.9 475.2C373.9 472.1 374.9 467.2 374.9 460.4C374.9 455 373.6 450.5 371 447C367.5 442.8 362.9 439.5 357.8 437.5L346.2 432C335.9 427.1 328.4 421.2 323.7 414.4C319.2 407.6 317 398.1 317 386C317 372.4 321 361.4 328.8 352.9C336.9 344.4 347.9 340.2 362 340.2C375.6 340.2 386.1 344.4 393.4 352.7C401 361.1 404.9 373 405.3 388.6L375.2 388.6C375.4 383.5 374.3 378.4 372.2 373.8C370.5 370.4 367.2 368.7 362.2 368.7C353.4 368.7 349 373.9 349 384.4C349 389.7 350.1 393.8 352.2 397C355.3 400.5 359.2 403.2 363.6 404.8L374.7 409.7C386.2 415 394.4 421.4 399.5 429.1C404.6 436.8 407.1 447.1 407.1 460.1C407.1 475.6 403 487.5 394.8 495.8C386.6 504.1 375.3 508.3 360.7 508.3C346.1 508.3 335.1 504.1 327.3 495.6zM221.8 496.5C213.4 488.8 209.3 477.3 209.3 462L209.3 386.6C209.3 371.4 213.7 359.9 222.5 352C231.4 344.2 243.2 340.2 257.7 340.2C271.8 340.2 282.9 344.2 291.1 352.2C299.4 360.2 303.6 372.2 303.6 388.1L303.6 394.1L270.5 394.1L270.5 388.3C270.5 382.2 269.2 377.6 266.5 374.7C265.4 373.2 263.9 372 262.2 371.2C260.5 370.4 258.7 370 256.8 370.1C251.4 370.1 247.6 371.9 245.4 375.7C243.1 380.9 242.1 386.5 242.4 392.1L242.4 457.6C242.4 471.3 247.2 478.2 256.8 478.4C261.3 478.4 264.7 476.8 267 473.6C269.5 469.5 270.7 464.8 270.5 460L270.5 455.1L303.6 455.1L303.6 460.2C303.6 470.8 301.5 479.7 297.4 486.8C293.4 493.7 287.5 499.3 280.3 502.8C272.6 506.5 264.2 508.3 255.7 508.1C241.5 508.1 230.2 504.2 221.9 496.5z"/></svg>');
+  --md-admonition-icon--css: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M128 96L162.9 491.8L320 544L477.1 491.8L512 96L128 96zM441.1 176L436.3 223.3L321 272.6L320.7 272.7L432.2 272.7L419.4 419.3L321.2 448L222.4 418.8L216 344.9L264.9 344.9L268.1 383.2L320.7 396.5L375.4 381.1L379.1 319.5L212.8 319L212.8 318.9L212.6 319L209 272.7L321.1 226L327.6 223.3L204.7 223.3L198.9 176L441.1 176z"/></svg>');
   --md-admonition-icon--editeur: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM282.2 359.6C290.8 349.5 289.7 334.4 279.6 325.8C269.5 317.2 254.4 318.3 245.8 328.4L197.8 384.4C190.1 393.4 190.1 406.6 197.8 415.6L245.8 471.6C254.4 481.7 269.6 482.8 279.6 474.2C289.6 465.6 290.8 450.4 282.2 440.4L247.6 400L282.2 359.6zM394.2 328.4C385.6 318.3 370.4 317.2 360.4 325.8C350.4 334.4 349.2 349.6 357.8 359.6L392.4 400L357.8 440.4C349.2 450.5 350.3 465.6 360.4 474.2C370.5 482.8 385.6 481.7 394.2 471.6L442.2 415.6C449.9 406.6 449.9 393.4 442.2 384.4L394.2 328.4z"/></svg>');
 }
 
@@ -211,7 +211,7 @@
 
 .md-typeset .html > .admonition-title,
 .md-typeset .html > summary {
-  background-color: #f1193617;
+  background-color: rgba(240, 101, 41, 0.1);
 }
 
 .md-typeset .html > .admonition-title::before,
@@ -219,6 +219,24 @@
   background-color: #f06529;
   -webkit-mask-image: var(--md-admonition-icon--html);
           mask-image: var(--md-admonition-icon--html);
+}
+
+/*Admonition CSS*/
+.md-typeset .admonition.css,
+.md-typeset details.css {
+  border-color: #2965f1;
+}
+
+.md-typeset .css > .admonition-title,
+.md-typeset .css > summary {
+  background-color: rgba(41, 101, 241, 0.1);
+}
+
+.md-typeset .css > .admonition-title::before,
+.md-typeset .css > summary::before {
+  background-color: #2965f1;
+  -webkit-mask-image: var(--md-admonition-icon--css);
+          mask-image: var(--md-admonition-icon--css);
 }
 
 /*Admonition editeurHTML*/
@@ -292,8 +310,8 @@ img.image {
   background: transparent !important;
   padding-top: 10 !important;
   padding-bottom: 10 !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
   border: none !important;
   box-shadow: none !important;
 }
@@ -390,4 +408,83 @@ img.image {
 .btn:focus-visible{
   outline: 3px solid #f06529;
   outline-offset: 3px;
+}
+
+/* Empêche le scroll horizontal global */
+.md-typeset [data-html-playground]{
+  max-width: 100%;
+  /*overflow-x: hidden;*/
+}
+
+/* CRUCIAL en grid : autoriser les colonnes à rétrécir */
+.md-typeset [data-html-playground] .panel,
+.md-typeset [data-html-playground] .editor{
+  min-width: 0;
+}
+
+/* CodeMirror : autoriser le contenu à ne pas élargir le conteneur */
+.md-typeset [data-html-playground] .cm-editor,
+.md-typeset [data-html-playground] .cm-scroller{
+  max-width: 100%;
+}
+
+/* Si une ligne est très longue, on scroll à l’intérieur de l’éditeur (pas la page) */
+.md-typeset [data-html-playground] .cm-scroller{
+  overflow-x: auto;
+}
+
+/* L'iframe ne doit jamais dépasser */
+.md-typeset [data-html-playground] iframe.preview{
+  display: block;
+  max-width: 100%;
+}
+
+
+
+
+
+/**---- Structure html/css/js de Nicolas Buyle-Bodin, groupe IREM-ISN de Lyon, sous licence Creative Commons BY-NC-SA ----**/
+/**---- Respect de la Paternité - Pas d'utilisation commerciale - Partage des conditions initiales à l'identique ----**/
+
+#bac_a_sable input[type="color"]{
+  width: 44px;
+  height: 30px;
+  border-radius: 999px;
+  cursor: pointer;
+  background: transparent;
+  vertical-align: middle;
+  display: inline-block;
+  transform-origin: center;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+#bac_a_sable input[type="color"]:hover{
+  transform: scale(1.1);   /* grandit légèrement */
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+}
+
+#bac_a_sable input[type="color"]:active{
+  transform: scale(0.98);   /* petit “clic” */
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0);
+}
+
+#bac_a_sable input[type="color"]:focus-visible{
+  outline: 3px solid #f06529;
+  outline-offset: 3px;
+}
+
+/* Le carré interne (Chrome/Safari) */
+#bac_a_sable input[type="color"]::-webkit-color-swatch-wrapper{
+  padding: 0;
+  border-radius: 999px;
+}
+#bac_a_sable input[type="color"]::-webkit-color-swatch{
+  border: 2px solid rgba(0,0,0,.15);
+  border-radius: 999px;
+}
+
+/* Firefox */
+#bac_a_sable input[type="color"]::-moz-color-swatch{
+  border: 2px solid rgba(0,0,0,.15);
+  border-radius: 999px;
 }

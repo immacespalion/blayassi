@@ -10,11 +10,28 @@ const DEFAULT_EXAMPLE = `<!-- Modifie-moi 🙂 -->
   h1{color:teal;}
 </style>`;
 
-function wrapIfNeeded(input) {
+function wrapIfNeeded(input, block) {
   const s = input.trim();
+
+  const rawBase = (block.dataset.baseHref ?? "").trim();
+
+  // ✅ Si on a un base_href explicite => on l'utilise (pour images, etc.)
+  // ✅ Sinon => base neutre pour que les ancres #... restent intra-iframe
+  const baseHref = rawBase
+    ? new URL(rawBase, document.baseURI).href
+    : "about:srcdoc";
+
+  const baseTag = `<base href="${baseHref}">`;
+
   const looksLikeFullPage = /<html[\s>]|<body[\s>]|<!doctype/i.test(s);
-  if (looksLikeFullPage) return s;
-  return `<!doctype html><html><head><meta charset="utf-8"></head><body>${s}</body></html>`;
+  if (looksLikeFullPage) {
+    if (/<head[\s>]/i.test(s)) {
+      return s.replace(/<head[\s>]*>/i, (m) => `${m}\n${baseTag}\n`);
+    }
+    return `${baseTag}\n${s}`;
+  }
+
+  return `<!doctype html><html><head><meta charset="utf-8">\n${baseTag}\n</head><body>${s}</body></html>`;
 }
 
 function decodeB64Utf8(b64) {
@@ -57,16 +74,9 @@ function initPlayground(block, index) {
     localStorage.setItem(storageKey, startDoc);
   }
 
-  const wrapIfNeeded = (input) => {
-    const s = input.trim();
-    const looksLikeFullPage = /<html[\s>]|<body[\s>]|<!doctype/i.test(s);
-    if (looksLikeFullPage) return s;
-    return `<!doctype html><html><head><meta charset="utf-8"></head><body>${s}</body></html>`;
-  };
-
   const render = (view) => {
     const code = view.state.doc.toString();
-    frame.srcdoc = wrapIfNeeded(code);
+    frame.srcdoc = wrapIfNeeded(code, block);
     localStorage.setItem(storageKey, code);
   };
 

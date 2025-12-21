@@ -23,3 +23,7 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill√
 * Bac Blanc - Sujet 0 : 
     
     [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/bacblanc0.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/bacblanc0-correction.pdf)
+
+* Bac Blanc - D√©cembre: 
+    
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/bacblanc1.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/bacblanc1-correction.pdf)
