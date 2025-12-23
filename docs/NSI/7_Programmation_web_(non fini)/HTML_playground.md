@@ -5,10 +5,9 @@ weight: 1
 
 # Playground HTML
 
-{{ html_playground("demo", "<!-- Modifie-moi 🙂 -->
-<h1>Hello 👋</h1>
-<p>Du <strong>HTML</strong> ici.</p>
-<style>
-  body{font-family:Arial; padding:16px;}
-  h1{color:teal;}
-</style>") }}
+{{ html_css_playground(
+  key="demo-hc",
+  html_file="files/NSI/HTML/exemples/html.html",
+  css_file="files/NSI/HTML/exemples/css.css"
+) }}
+

@@ -44,7 +44,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     ---
 
-    {{ html_playground("demo", "<!DOCTYPE html>
+    {{ html_playground("exo2", "<!DOCTYPE html>
 <html lang=\"fr\">
     <head>
         <meta charset=\"utf-8\">
@@ -98,7 +98,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     ---
 
-    {{ html_playground("demo", "<!DOCTYPE html>
+    {{ html_playground("exo4", "<!DOCTYPE html>
 <html lang=\"fr\">
     <head>
         <meta charset=\"utf-8\">
@@ -152,7 +152,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     ---
 
-    {{ html_playground("demo", "<!DOCTYPE html>
+    {{ html_playground("exo6", "<!DOCTYPE html>
 <html lang=\"fr\">
     <head>
         <meta charset=\"utf-8\">
@@ -178,7 +178,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     --- 
 
-    {{ html_playground("demo", "<!DOCTYPE html>
+    {{ html_playground("exo8", "<!DOCTYPE html>
 <html lang=\"fr\">
     <head>
         <meta charset=\"utf-8\">
@@ -262,7 +262,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     ---
 
-    {{ html_playground("demo", "<!DOCTYPE html>
+    {{ html_playground("exo10", "<!DOCTYPE html>
 <html lang=\"fr\">
     <head>
         <meta charset=\"utf-8\">
@@ -297,7 +297,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     ---
 
-    {{ html_playground("demo", "<!DOCTYPE html>
+    {{ html_playground("exo11", "<!DOCTYPE html>
 <html lang=\"fr\">
     <head>
         <meta charset=\"utf-8\">
@@ -368,8 +368,6 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
         3. `<img src="../images_du_site/Une_image.png" />`
 
 !!! exoordi "Exercice 14 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
-    A REFAIRE AVEC LA NOUVELLE ARBORESCENCE
-
     L'image ci-dessous présente un extrait de l'arborescence du présent site. La page actuelle est `liens_internes.html`.
 
     ![arborescence](../../files/NSI/HTML/Arborescence_Exercice.png)
@@ -378,7 +376,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     ---
 
-    {{ html_playground("demo", "<!DOCTYPE html>
+    {{ html_playground("exo14", "<!DOCTYPE html>
 <html lang=\"fr\">
     <head>
         <meta charset=\"utf-8\">
@@ -415,7 +413,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     ---
 
-    {{ html_playground("demo", "<!DOCTYPE html>
+    {{ html_playground("exo15", "<!DOCTYPE html>
 <html lang=\"fr\">
     <head>
         <meta charset=\"utf-8\">
@@ -469,7 +467,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     ---
 
-    {{ html_playground("demo", example_file="files/NSI/HTML/liens_intra_page.html") }}
+    {{ html_playground("exo17", example_file="files/NSI/HTML/liens_intra_page.html") }}
 
     ??? success "Correction"
         On aurait : 
@@ -545,7 +543,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     ---
 
-    {{ html_playground("demo", "<!DOCTYPE html>
+    {{ html_playground("exo18", "<!DOCTYPE html>
 <html lang=\"fr\">
     <head>
         <meta charset=\"utf-8\">
@@ -602,7 +600,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     ---
 
-    {{ html_playground("demo", "<!DOCTYPE html>
+    {{ html_playground("exo19", "<!DOCTYPE html>
 <html lang=\"fr\">
     <head>
         <meta charset=\"utf-8\">

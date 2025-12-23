@@ -391,7 +391,7 @@ img.image {
   border-radius: 999px;     /* full rounded */
   cursor: pointer;
   font-weight: 600;
-  background-color: #ff350c7e;
+  background-color: #722dc093;
   transition: transform .15s ease, box-shadow .15s ease;
 }
 
@@ -406,7 +406,7 @@ img.image {
 }
 
 .btn:focus-visible{
-  outline: 3px solid #f06529;
+  outline: 3px solid #b542db;
   outline-offset: 3px;
 }
 
@@ -487,4 +487,89 @@ img.image {
 #bac_a_sable input[type="color"]::-moz-color-swatch{
   border: 2px solid rgba(0,0,0,.15);
   border-radius: 999px;
+}
+
+
+/* =========================
+   HTML + CSS playground
+   ========================= */
+
+.md-typeset [data-htmlcss-playground]{
+  display: grid;
+  gap: 12px;
+  max-width: 100%;
+}
+
+/* grille interne : 2 colonnes sur grand écran, sinon 1 */
+.md-typeset [data-htmlcss-playground] .grid{
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px){
+  .md-typeset [data-htmlcss-playground] .grid{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* le rendu prend toute la largeur */
+  .md-typeset [data-htmlcss-playground] .panel-preview{
+    grid-column: 1 / -1;
+  }
+}
+
+.md-typeset [data-htmlcss-playground] .panel .label{
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* toolbar sous le rendu */
+.md-typeset [data-htmlcss-playground] .toolbar{
+  display:flex;
+  font-size: 12px;
+  gap:8px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+/* iframe preview */
+.md-typeset [data-htmlcss-playground] iframe.preview{
+  width:100%;
+  min-height:340px;
+  border-radius: 18px;
+  border: 1px solid #dedede;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+  display: block;
+  max-width: 100%;
+}
+
+/* CodeMirror */
+.md-typeset [data-htmlcss-playground] .cm-editor{
+  height: 340px;
+  background-color: rgba(192, 192, 192, 0.1);
+  border-radius: 18px;
+  border: 1px solid #dedede;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  font-size: 12px;
+}
+
+/* éviter que la grid déborde */
+.md-typeset [data-htmlcss-playground] .panel,
+.md-typeset [data-htmlcss-playground] .editor{
+  min-width: 0;
+}
+
+.md-typeset [data-htmlcss-playground] .cm-editor,
+.md-typeset [data-htmlcss-playground] .cm-scroller{
+  max-width: 100%;
+}
+
+.md-typeset [data-htmlcss-playground] .cm-scroller{
+  overflow-x: auto;
 }
