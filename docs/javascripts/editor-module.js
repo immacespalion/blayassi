@@ -1,24 +1,33 @@
-(() => {
-  // --- Résolution robuste des URLs ---
-  const me =
-    document.currentScript ||
-    document.querySelector('script[src$="javascripts/editor-module.js"]') ||
-    document.querySelector('script[src$="editor-module.js"]');
+(async function () {
+  // --- Charge CodeMirror depuis ton bundle local (pas de imports statiques) ---
+  const BASE = document.currentScript?.src || location.href;
+  const BUNDLE_URL = new URL("./codemirror-bundle.js", BASE).href;
 
-  const MODULE_URL =
-    me?.src || new URL("javascripts/editor-module.js", document.baseURI).href;
+  let CM;
+  try {
+    CM = await import(BUNDLE_URL);
+  } catch (e) {
+    console.error("[editor-module] import bundle failed:", e);
+    return;
+  }
 
-  const BUNDLE_URL = new URL("./codemirror-bundle.js", MODULE_URL).href;
+  const EditorView = CM.EditorView;
+  const EditorState = CM.EditorState;
+  const basicSetup = CM.basicSetup;
+  const htmlLang = CM.html;
+  const cssLang = CM.css; // ⚠️ doit être exporté par ton bundle
 
-  // --- Helpers ---
-  const DEFAULT_HTML = `<!-- Modifie-moi 🙂 -->
-<h1>Hello 👋</h1>
-<p>Du <strong>HTML</strong> ici.</p>`;
+  if (!EditorView || !EditorState || !basicSetup || !htmlLang) {
+    console.error("[editor-module] CodeMirror exports missing in bundle:", CM);
+    return;
+  }
 
-  const DEFAULT_CSS = `/* Modifie-moi 🙂 */
-body{font-family:Arial; padding:16px;}
-h1{color:teal;}`;
+  // Si cssLang n'est pas dispo, on n'empêche pas l'éditeur HTML seul de marcher
+  if (!cssLang) {
+    console.warn("[editor-module] css() manquant dans codemirror-bundle.js -> l'éditeur HTML+CSS ne pourra pas démarrer.");
+  }
 
+  // ------------------ Helpers ------------------
   function decodeB64Utf8(b64) {
     if (!b64) return "";
     if (typeof TextDecoder === "undefined") {
@@ -28,51 +37,45 @@ h1{color:teal;}`;
     return new TextDecoder("utf-8").decode(bytes);
   }
 
-  function wrapSrcdoc(htmlCode, cssCode, block) {
-    const s = (htmlCode ?? "").trim();
-    const css = (cssCode ?? "").trim();
+  function fixLegacyEntities(s) {
+    if (!s) return s;
+    // vieux contenus stockés / rendus avec &#10;
+    return s.includes("&#10;") ? s.replaceAll("&#10;", "\n") : s;
+  }
 
-    const rawBase = (block?.dataset?.baseHref ?? "").trim();
-    const baseHref = rawBase ? new URL(rawBase, document.baseURI).href : "about:srcdoc";
-    const baseTag = `<base href="${baseHref}">`;
+  function baseHrefFor(block) {
+    const rawBase = (block.dataset.baseHref ?? "").trim();
+    return rawBase ? new URL(rawBase, document.baseURI).href : "about:srcdoc";
+  }
 
+  function wrapHtmlDoc(inputHtml, inputCss, block) {
+    const html = (inputHtml || "").trim();
+    const css = (inputCss || "").trim();
+
+    const baseTag = `<base href="${baseHrefFor(block)}">`;
     const cssTag = css ? `<style>\n${css}\n</style>` : "";
 
-    const looksLikeFullPage = /<html[\s>]|<body[\s>]|<!doctype/i.test(s);
+    const looksLikeFullPage = /<html[\s>]|<body[\s>]|<!doctype/i.test(html);
 
     if (looksLikeFullPage) {
       // Injecte <base> + <style> dans <head> si possible
-      if (/<head[\s>]/i.test(s)) {
-        return s.replace(/<head[\s>]*>/i, (m) => `${m}\n${baseTag}\n${cssTag}\n`);
+      if (/<head[\s>]/i.test(html)) {
+        return html.replace(/<head[\s>]*>/i, (m) => `${m}\n${baseTag}\n${cssTag}\n`);
       }
-      // Sinon on préfixe (moins parfait mais fonctionne)
-      return `${baseTag}\n${cssTag}\n${s}`;
+      // Sinon on préfixe
+      return `${baseTag}\n${cssTag}\n${html}`;
     }
 
-    return `<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-${baseTag}
-${cssTag}
-</head>
-<body>
-${s}
-</body>
-</html>`;
+    // Fragment -> on encapsule
+    return `<!doctype html><html><head><meta charset="utf-8">\n${baseTag}\n${cssTag}\n</head><body>${html}</body></html>`;
   }
 
-  // --- Chargement CodeMirror (bundle) ---
-  let CM_PROMISE = null;
-  async function loadCM() {
-    if (!CM_PROMISE) {
-      CM_PROMISE = import(BUNDLE_URL);
-    }
-    return CM_PROMISE;
+  function safeJSONParse(s) {
+    try { return JSON.parse(s); } catch { return null; }
   }
 
-  // --- Init: HTML seul (compat avec ton macro actuel) ---
-  async function initHtmlOnly(block, index, cm) {
+  // ------------------ HTML playground (1 éditeur) ------------------
+  function initHtmlPlayground(block, index) {
     if (block.dataset.initialized === "1") return;
     block.dataset.initialized = "1";
 
@@ -80,31 +83,42 @@ ${s}
     const frame = block.querySelector("iframe.preview");
     if (!editorHost || !frame) return;
 
-    const { EditorView, basicSetup, EditorState, html: htmlLang } = cm;
+    const storageKey = block.dataset.storageKey || `html_editor:${location.pathname}:${index}`;
+    const metaKey = `${storageKey}:meta`;
 
-    const storageKey =
-      block.dataset.storageKey || `html_editor:${location.pathname}:${index}`;
-
-    // Exemple HTML (base64 en attribut)
-    let exampleText = DEFAULT_HTML;
+    // Exemple
+    let exampleText = "";
     if (block.dataset.exampleB64) {
-      exampleText = decodeB64Utf8(block.dataset.exampleB64) || DEFAULT_HTML;
+      exampleText = decodeB64Utf8(block.dataset.exampleB64);
+    } else {
+      const source = block.querySelector("textarea.source");
+      exampleText = source ? source.value : "";
     }
+    if (!exampleText) {
+      exampleText = `<!-- Modifie-moi 🙂 -->\n<h1>Hello 👋</h1>\n<p>Du <strong>HTML</strong> ici.</p>`;
+    }
+    exampleText = fixLegacyEntities(exampleText);
 
-    // startDoc: exemple (tu peux remettre localStorage si tu veux, mais je reste simple/stable)
-    let startDoc = exampleText;
+    const exampleHash = block.dataset.exampleB64 || btoa(unescape(encodeURIComponent(exampleText)));
 
-    // vieux bug éventuel
-    if (startDoc.includes("&#10;")) startDoc = startDoc.replaceAll("&#10;", "\n");
+    // StartDoc : localStorage (sauf si l'exemple a changé)
+    const meta = safeJSONParse(localStorage.getItem(metaKey) || "");
+    let startDoc = localStorage.getItem(storageKey) ?? exampleText;
+    startDoc = fixLegacyEntities(startDoc);
+
+    if (!meta || meta.hash !== exampleHash) {
+      startDoc = exampleText;
+      localStorage.setItem(storageKey, startDoc);
+      localStorage.setItem(metaKey, JSON.stringify({ hash: exampleHash }));
+    }
 
     const render = (view) => {
       const code = view.state.doc.toString();
-      frame.srcdoc = wrapSrcdoc(code, "", block);
-      try { localStorage.setItem(storageKey, code); } catch {}
+      frame.srcdoc = wrapHtmlDoc(code, "", block);
+      localStorage.setItem(storageKey, code);
     };
 
     let debounce = null;
-
     const view = new EditorView({
       parent: editorHost,
       state: EditorState.create({
@@ -128,60 +142,82 @@ ${s}
     });
     block.querySelector('[data-action="example"]')?.addEventListener("click", () => {
       view.dispatch({ changes: { from: 0, to: view.state.doc.length, insert: exampleText } });
+      localStorage.setItem(storageKey, exampleText);
+      localStorage.setItem(metaKey, JSON.stringify({ hash: exampleHash }));
       render(view);
     });
 
     render(view);
   }
 
-  // --- Init: HTML + CSS (nouvelle macro) ---
-  async function initHtmlCss(block, index, cm) {
+  // ------------------ HTML+CSS playground (2 éditeurs) ------------------
+  function initHtmlCssPlayground(block, index) {
     if (block.dataset.initialized === "1") return;
     block.dataset.initialized = "1";
 
-    // Attendus dans le HTML de la macro :
-    // - .editor-html
-    // - .editor-css
-    // - iframe.preview
+    if (!cssLang) {
+      console.error("[editor-module] Impossible d'init HTML+CSS: css() non exporté par codemirror-bundle.js");
+      return;
+    }
+
     const hostHtml = block.querySelector(".editor-html");
     const hostCss = block.querySelector(".editor-css");
     const frame = block.querySelector("iframe.preview");
     if (!hostHtml || !hostCss || !frame) return;
 
-    const { EditorView, basicSetup, EditorState, html: htmlLang, css: cssLang } = cm;
+    const baseKey = block.dataset.storageKey || `htmlcss_editor:${location.pathname}:${index}`;
+    const htmlKey = `${baseKey}:html`;
+    const cssKey = `${baseKey}:css`;
+    const metaKey = `${baseKey}:meta`;
 
-    const baseKey =
-      block.dataset.storageKey || `htmlcss_editor:${location.pathname}:${index}`;
-    const storageHtml = `${baseKey}:html`;
-    const storageCss = `${baseKey}:css`;
+    let exampleHtml = decodeB64Utf8(block.dataset.exampleHtmlB64 || "");
+    let exampleCss = decodeB64Utf8(block.dataset.exampleCssB64 || "");
 
-    // Exemples
-    let exampleHtml = DEFAULT_HTML;
-    let exampleCss = DEFAULT_CSS;
+    if (!exampleHtml) {
+      exampleHtml = `<!-- Modifie-moi 🙂 -->\n<h1>Hello 👋</h1>\n<p>Du <strong>HTML</strong> ici.</p>`;
+    }
+    if (!exampleCss) {
+      exampleCss = `body{font-family:Arial; padding:16px;}\nh1{color:teal;}`;
+    }
 
-    if (block.dataset.htmlB64) exampleHtml = decodeB64Utf8(block.dataset.htmlB64) || DEFAULT_HTML;
-    if (block.dataset.cssB64) exampleCss = decodeB64Utf8(block.dataset.cssB64) || DEFAULT_CSS;
+    exampleHtml = fixLegacyEntities(exampleHtml);
+    exampleCss = fixLegacyEntities(exampleCss);
 
-    // start
-    let startHtml = exampleHtml;
-    let startCss = exampleCss;
+    const exampleHash = `${block.dataset.exampleHtmlB64 || ""}|${block.dataset.exampleCssB64 || ""}` ||
+                        `${btoa(unescape(encodeURIComponent(exampleHtml)))}|${btoa(unescape(encodeURIComponent(exampleCss)))}`;
 
-    if (startHtml.includes("&#10;")) startHtml = startHtml.replaceAll("&#10;", "\n");
-    if (startCss.includes("&#10;")) startCss = startCss.replaceAll("&#10;", "\n");
+    const meta = safeJSONParse(localStorage.getItem(metaKey) || "");
+    let startHtml = localStorage.getItem(htmlKey) ?? exampleHtml;
+    let startCss = localStorage.getItem(cssKey) ?? exampleCss;
+    startHtml = fixLegacyEntities(startHtml);
+    startCss = fixLegacyEntities(startCss);
 
-    const render = (viewHtml, viewCss) => {
-      const htmlCode = viewHtml.state.doc.toString();
-      const cssCode = viewCss.state.doc.toString();
-      frame.srcdoc = wrapSrcdoc(htmlCode, cssCode, block);
-      try {
-        localStorage.setItem(storageHtml, htmlCode);
-        localStorage.setItem(storageCss, cssCode);
-      } catch {}
-    };
+    // Si l'exemple a changé, on repart automatiquement sur l'exemple
+    if (!meta || meta.hash !== exampleHash) {
+      startHtml = exampleHtml;
+      startCss = exampleCss;
+      localStorage.setItem(htmlKey, startHtml);
+      localStorage.setItem(cssKey, startCss);
+      localStorage.setItem(metaKey, JSON.stringify({ hash: exampleHash }));
+    }
 
+    let viewHtml, viewCss;
     let debounce = null;
 
-    const viewHtml = new EditorView({
+    const render = () => {
+      const htmlCode = viewHtml.state.doc.toString();
+      const cssCode = viewCss.state.doc.toString();
+      frame.srcdoc = wrapHtmlDoc(htmlCode, cssCode, block);
+      localStorage.setItem(htmlKey, htmlCode);
+      localStorage.setItem(cssKey, cssCode);
+    };
+
+    const scheduleRender = () => {
+      clearTimeout(debounce);
+      debounce = setTimeout(render, 120);
+    };
+
+    viewHtml = new EditorView({
       parent: hostHtml,
       state: EditorState.create({
         doc: startHtml,
@@ -190,14 +226,13 @@ ${s}
           htmlLang(),
           EditorView.updateListener.of((u) => {
             if (!u.docChanged) return;
-            clearTimeout(debounce);
-            debounce = setTimeout(() => render(viewHtml, viewCss), 120);
+            scheduleRender();
           }),
         ],
       }),
     });
 
-    const viewCss = new EditorView({
+    viewCss = new EditorView({
       parent: hostCss,
       state: EditorState.create({
         doc: startCss,
@@ -206,49 +241,40 @@ ${s}
           cssLang(),
           EditorView.updateListener.of((u) => {
             if (!u.docChanged) return;
-            clearTimeout(debounce);
-            debounce = setTimeout(() => render(viewHtml, viewCss), 120);
+            scheduleRender();
           }),
         ],
       }),
     });
 
-    block.querySelector('[data-action="run"]')?.addEventListener("click", () => render(viewHtml, viewCss));
+    block.querySelector('[data-action="run"]')?.addEventListener("click", render);
+
     block.querySelector('[data-action="clear"]')?.addEventListener("click", () => {
       viewHtml.dispatch({ changes: { from: 0, to: viewHtml.state.doc.length, insert: "" } });
       viewCss.dispatch({ changes: { from: 0, to: viewCss.state.doc.length, insert: "" } });
-      render(viewHtml, viewCss);
+      render();
     });
+
     block.querySelector('[data-action="example"]')?.addEventListener("click", () => {
       viewHtml.dispatch({ changes: { from: 0, to: viewHtml.state.doc.length, insert: exampleHtml } });
       viewCss.dispatch({ changes: { from: 0, to: viewCss.state.doc.length, insert: exampleCss } });
-      render(viewHtml, viewCss);
+      localStorage.setItem(htmlKey, exampleHtml);
+      localStorage.setItem(cssKey, exampleCss);
+      localStorage.setItem(metaKey, JSON.stringify({ hash: exampleHash }));
+      render();
     });
 
-    render(viewHtml, viewCss);
+    render();
   }
 
-  // --- Boot global ---
-  async function boot() {
-    const cm = await loadCM();
-
-    // HTML seul
-    const htmlBlocks = document.querySelectorAll("[data-html-playground]");
-    let i = 0;
-    for (const b of htmlBlocks) await initHtmlOnly(b, i++, cm);
-
-    // HTML + CSS
-    const htmlCssBlocks = document.querySelectorAll("[data-htmlcss-playground]");
-    let j = 0;
-    for (const b of htmlCssBlocks) await initHtmlCss(b, j++, cm);
+  // ------------------ Boot ------------------
+  function boot() {
+    document.querySelectorAll("[data-html-playground]").forEach((b, i) => initHtmlPlayground(b, i));
+    document.querySelectorAll("[data-htmlcss-playground]").forEach((b, i) => initHtmlCssPlayground(b, i));
   }
 
-  // Material instant loading + fallback
   if (window.document$?.subscribe) window.document$.subscribe(boot);
   else window.addEventListener("DOMContentLoaded", boot);
 
   boot();
-
-  // (optionnel) debug
-  window.bootEditors = boot;
 })();

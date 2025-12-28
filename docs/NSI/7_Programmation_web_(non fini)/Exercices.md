@@ -682,3 +682,1560 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
             </body>
         </html>
         ```
+
+---
+
+## CSS - Pratique
+
+!!! exoordi "Exercice 20 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    L'exercice suivant comportent trois fenêtres :
+
+    - La première contient un extrait de fichier `.html` : à modifier uniquement lorsque l'énoncé le précise.
+    - La deuxième contient une feuille `.css` agissant sur la mise en forme du fichier `.html`. Cette feuille est modifiable.  
+    - La troisième présente l'affichage obtenu avec les deux fichiers précédents.  
+
+    Compléter le code CSS ci-dessous pour que le paragraphe soit écrit en blanc sur fond noir et que le texte balisé par `<strong>` soit écrit en rouge sur fond jaune.
+
+    ---
+
+    {{ html_css_playground(
+        key="exo20",
+        html_example="<!-- Partie html à ne pas modifier -->
+<p>
+	Les paragraphes doivent être écrits en <strong>blanc sur fond noir</strong>.
+</p>
+<p>
+	Mettre <strong>en rouge</strong> le texte balisé par les balises <code>strong</code>. 
+	Le fond de ce texte rouge sera <strong>jaune</strong>.
+</p>",
+        css_example="/* Partie css modifiable */
+p {
+	color: green;
+	background-color: lightgray;
+}"
+        ) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css
+        /* Partie css */
+        p {
+            color: white;
+            background-color: black;
+        }
+
+        strong {
+            color: red;
+            background-color: yellow;
+        }
+        ```
+
+!!! exoordi "Exercice 21 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Compléter le code Css ci-dessous pour que :
+
+    1. L'article soit encadré d'une bordure en pointillés noirs d'épaisseur 1 pixel.
+    2. Le titre `h3` se présente sous la forme suivante :
+
+    ![illustration exercice 21](../../files/NSI/HTML/bordures1.png)
+
+    ---
+
+    {{ html_css_playground(
+  key="exo21",
+  html_example="""<!-- Partie html à ne pas modifier -->
+<article>
+	<h3> Un titre </h3>
+	<p>
+		A méditer :
+		<q>Une fois qu'on a donné son opinion, il serait logique
+		qu'on ne l'ait plus.</q>
+	</p>
+	<p>
+		L'élément en-ligne <code>&lt;q&gt; &lt;/q&gt;</code> sert
+		à baliser une citation courte dans la ligne.
+	</p>
+</article>""",
+  css_example="""/* Partie css modifiable */
+article {
+
+}
+	
+h3 {
+
+}"""
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        article{
+            border : 1px dotted black;
+        }
+
+        h3{
+            border-left : 5px ridge;
+            border-bottom : 5px ridge;
+            color : grey;
+        }
+        ```
+
+!!! exoordi "Exercice 22 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Un bloc Html n'a pas besoin de contenir de texte pour «exister». En fixant ses dimensions (width et height) dans la feuille Css et en lui attribuant des bordures, on le voit apparaître.
+
+    Modifier le Css pour obtenir une bordure ressemblant à la bordure entourant le bloc dans l'image ci-dessous. 
+
+    ![illustration exercice 21](../../files/NSI/HTML/bordures3.png)
+
+    ---
+
+    {{ html_css_playground(
+  key="exo22",
+  html_example="""<!-- Partie html à ne pas modifier -->
+<p>
+</p>""",
+  css_example="""/* Partie css modifiable */
+p{
+	width : 200px;					/* On fixe la largeur du bloc */
+	height: 100px;					/* On fixe la hauteur du bloc */
+	border: 5px ridge grey;			/* On fixe l'aspect de la bordure */
+}"""
+) }}
+
+    ??? tip "Coup de pouce"
+        Les dimensions des arrondis ne sont pas obligatoirement en pixels. Une dimension donnée en pixels donnera un coin de bordure en forme de quart de cercle. Une dimension donnée en pourcentage donnera un quart d'ellipse de dimensions proportionnelles aux dimensions de la boîte à encader.
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        p{	
+            width : 200px;
+            height: 100px;
+            border: 5px ridge grey;
+            border-radius: 10% 50% 10% 50%;
+        }
+        ```
+
+!!! exoordi "Exercice 23 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Compléter le code Css ci-dessous pour que :
+
+    1. L'`article` ait une marge extérieure de 50 pixels et une marge intérieure de 20 pixels.
+    2. Le titre `h3` ait un marge intérieure gauche de 10 pixels et une marge extérieure basse de 10 pixels
+    3. Les paragraphes aient un marge extérieure haute de 25 pixels
+
+    ---
+
+    {{ html_css_playground(
+  key="exo23",
+  html_example="""<!-- Partie html à ne pas modifier -->
+<article>
+	<h3> Un titre </h3>
+	<p>
+		A méditer :
+		<q>Une fois qu'on a donné son opinion, il serait logique
+		qu'on ne l'ait plus.</q>
+	</p>
+	<p>
+		L'élément en-ligne <code>&lt;q&gt; &lt;/q&gt;</code> sert
+		à baliser une citation courte dans la ligne.
+	</p>
+</article>""",
+  css_example="""/* Partie css modifiable */
+article{
+	border : 1px dotted black;
+}
+
+h3{
+	border-left : 5px ridge;
+	border-bottom : 5px ridge;
+	color : grey;
+}"""
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        article {
+            margin: 50px;
+            padding: 20px;
+            border : 1px dotted black;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+            padding-left: 10px;
+            border-left : 5px ridge;
+            border-bottom : 5px ridge;
+            color : grey;
+        }
+
+        p {
+            margin-top: 25px;
+        }
+        ```
+
+!!! exoordi "Exercice 24 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Dans le fichier `.html` ci-dessous, les trois paragraphes sont encadrés par une bordure gauche et une bordure basse. Modifier les parties HTML et CSS en utilisant des sélecteurs et des bordures de couleur «`transparent`» pour obtenir l'affichage ci-dessous.
+
+    On pourra augmenter l'épaisseur des bordures pour mieux voir les effets...
+
+    ![illustration exercice 21](../../files/NSI/HTML/bordures4.png)
+
+    ---
+
+    {{ html_css_playground(
+  key="exo24",
+  html_example="""<!-- Partie html à modifier -->
+<p>
+	Ce paragraphe a une bordure basse et une bordure gauche visibles.
+</p>
+
+<p>
+	Pour ce paragraphe, bordures basse et gauche sont les mêmes que
+	précédemment. Les autres bordures sont invisibles mais leur effet
+	est visible.
+</p>
+
+<p>
+	<!-- Un paragraphe vide... -->
+</p>""",
+  css_example="""/* Partie css modifiable */
+p{
+	color: purple;
+	border-left: 15px ridge;
+	border-bottom: 15px ridge;
+}"""
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```html linenums="1"
+        <!-- Partie html -->
+        <p>
+            Ce paragraphe a une bordure basse et une bordure gauche visibles.
+        </p>
+
+        <p class="bordure">
+            Pour ce paragraphe, bordures basse et gauche sont les mêmes que
+            précédemment. Les autres bordures sont invisibles mais leur effet
+            est visible.
+        </p>
+
+        <p id="triangle">
+            <!-- Un paragraphe vide... -->
+        </p>
+        ```
+
+        Et : 
+
+        ```css linenums="1"
+        /* Partie css */
+        p{
+            color: purple;
+            border-left: 15px ridge;
+            border-bottom: 15px ridge;
+        }
+
+        .bordure{
+            border-top: 15px ridge transparent;
+            border-right: 15px ridge transparent;
+        }
+
+        #triangle{
+            border-top: 50px solid transparent;
+            border-left: 100px solid red;
+            border-bottom: 50px solid transparent; 
+        }
+        ```
+
+!!! exoordi "Exercice 25 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
+    En CSS, il existe un sélecteur permettant de repérer le **numéro de présence** d'un élément dans une page `.html`. Ce sélecteur est le **pseudo-élément** `:nth-of-type(n)`. 
+    
+    Voici comment écrire en violet le 3ème titre de niveau `<h1>` présent dans la page .html :
+
+    ```html linenums="1"
+    h1:nth-of-type(3){		/* ne pas oublier le ":" !!! */
+        color: purple;
+    }
+    ```
+
+    Ce pseudo-élément permet aussi de repérer les numéros pairs et impairs à partir d'expressions de la forme $an+b$, où $a$ et $b$ sont les nombres qui définissent la règle de calcul. 
+    
+    En utilisant cette information, définir le CSS permettant d'obtenir l'affichage ci-dessous : 
+
+    ![illustration exercice 21](../../files/NSI/HTML/selecteur4.png)
+
+    ---
+
+    {{ html_css_playground(
+  key="exo25",
+  html_example="""<!-- Partie html à ne pas modifier -->
+<p> zigzag </p>
+<p> circonvolution </p>
+<p> détour </p>
+<p> crochet </p>
+<p> courbe </p>
+<p> tordu </p>
+<p> biscornu </p>
+<p> zigvolution</p>
+<p> circonzag</p>""",
+  css_example="""/* Partie css modifiable */
+p{
+	border-bottom: 3px solid red;
+	width: 250px;
+	margin: 0;						/* Pas de marge extérieur */
+}"""
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        p{
+            border-bottom: 3px solid red;   /* Tous les paragraphes sont soulignés */
+            width: 250px;
+            margin: 0;                      /* Pas de marge extérieur */
+        }
+
+        p:nth-of-type(2n){                  /* Paragraphes de n° pair */
+            border-right: 3px solid red;
+        }
+
+        p:nth-of-type(2n+1){                /* Paragraphes de n° impair */
+            border-left: 3px solid red;
+        }
+        ```
+
+!!! exoordi "Exercice 26 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Dans le fichier qui suit, sans toucher au code HTML :
+
+    1. Encadrer par une bordure verte chacune des listes.
+    2. Mettre sous fond jaune le dernier item de chaque liste.
+    3. Écrire en italique le premier item de chaque liste.
+    4. Écrire en petite majuscule l'élément d'identifiant `id="important"`.
+    5. Écrire en gras les éléments d'attribut `class="coucou"`.
+
+    ---
+
+    {{ html_css_playground(
+  key="exo26",
+  html_file="files/NSI/HTML/exo26.html",
+  css_example="""/* Partie css modifiable */
+ul {
+
+}"""
+) }}
+
+    ??? tip "Coup de pouce"
+        En plus du pseudo-élément `:nth-of-type()`, on peut utiliser les sélecteurs `:first-of-type` et `:last-of-type` pour cibler respectivement le premier et le dernier élément d'un conteneur parent.
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        ul {
+            border: 2px solid green;
+        }
+
+        ul li:last-of-type {
+            background-color: yellow;
+        }
+
+        ul li:first-of-type {
+            font-style: italic;
+        }
+
+        #important {
+            font-variant: small-caps;
+        }
+
+        .coucou {
+            font-weight: bold;
+        }
+        ```
+
+!!! exoordi "Exercice 27 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Les paragraphes `<p>` sont de type `block` par défaut dans les navigateurs. Modifier leur type afin d'observer les différences avec un affichage en-ligne.
+
+    ---
+
+    {{ html_css_playground(
+  key="exo27",
+  html_example="""<!-- Partie html à ne pas modifier -->
+<p>Algorithmique</p>
+<p>Programmation</p>
+<p>Réseaux</p>
+<p>Web</p>
+<p>Problèmes sociétaux</p>""",
+  css_example="""/* Partie css modifiable */
+p{
+    border: 1px solid orange;
+} """
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        p {
+            border: 1px solid orange;
+            display: inline;
+        }
+        ```
+
+!!! exoordi "Exercice 28 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Les paragraphes `<p>` sont de type `block` par défaut dans les navigateurs. Modifier leur type afin d'observer les différences avec un affichage en-ligne.
+
+    ![illustration exo28](../../files/NSI/HTML/display1.png)
+
+    ---
+
+    {{ html_css_playground(
+  key="exo28",
+  html_example="""<!-- Partie html à ne pas modifier -->
+<ol>
+    <li> <a href=\"css_display.html#\">Lien 1</a> </li>
+    <li> <a href=\"css_display.html#\">Lien 2</a> </li>
+    <li> <a href=\"css_display.html#\">Lien 3</a> </li>
+    <li> <a href=\"css_display.html#\">Lien 4</a> </li>
+    <li> <a href=\"css_display.html#\">Lien 5</a> </li>
+    <li> <a href=\"css_display.html#\">Lien 6</a> </li>
+    <li> <a href=\"css_display.html#\">Lien 7</a> </li>
+</ol>""",
+  css_example="""/* Partie css modifiable */
+"""
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        li{
+            display: inline;		/* affichage en ligne */
+        }
+
+        a{
+            color : green;
+            border: 1px solid;
+            text-decoration: none;
+        }
+        ```
+
+
+!!! exoordi "Exercice 28 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
+    Le but est de reproduire cette mise en page suivante en complétant le contenu des balises style. 
+    
+    Pensez à enregistrer ce travail sur un fichier HTML et un fichier CSS local afin de conserver une trace numérique dans votre espace personnel.
+
+    ![illustration exo28](../../files/NSI/HTML/misenpageGrid.png)
+
+    ---
+
+    {{ html_css_playground(
+  key="exo28",
+  html_example="""<header>
+    <h1>Un super titre</h1>
+    <h2> Un joli sous-titre</h2>
+</header>
+
+
+<div class=\"grillePrincipale\">
+
+    <nav>
+        Ici on navigue.
+        <ul>
+            <li><a href=\"#\">lien 1</a></li>
+            <li><a href=\"#\">lien 2</a></li>
+            <li><a href=\"#\">lien 3</a></li>
+            <li><a href=\"#\">lien 4</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <article>
+            Raymond Devos
+        </article>
+
+        <article>
+            L'autre jour, au café, je commande un demi. J'en bois la moitié. Il ne m'en restait plus.
+        </article>
+
+        <article>
+            Je suis adroit de la main gauche et je suis gauche de la main droite.
+        </article>
+
+        <article>   
+            Se coucher tard nuit.
+        </article>
+
+        <article>
+            Quand un homme ne dit rien alors que tout le monde parle, on n'entend plus que lui !
+        </article>
+
+        <article>
+            Si l'on peut trouver moins que rien, c'est que rien vaut déjà quelque chose.
+        </article>
+
+        <article>
+            Ne rien faire, ça peut se dire. Ca ne peut pas se faire !
+        </article>
+
+    </main>
+
+    <aside>
+        Ici, plein de remarques complémentaires super captivantes.
+    </aside>
+</div>
+
+<footer>
+C'est le pied !
+</footer>""",
+  css_example="""/* Partie css modifiable */
+ """
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        body{
+        margin:0;
+        background:#fff;
+        font-family: "Times New Roman", Times, serif;
+        color:#000;
+        }
+
+        /* --- Header / Footer --- */
+        header{
+        padding:18px 0 16px;
+        background:#9c9c9c;
+        color:#fff;
+        text-align:center;
+        }
+
+        header h1{
+        margin:0;
+        font-size:48px;
+        font-weight:700;
+        }
+
+        header h2{
+        margin:12px 0 0;
+        font-size:30px;
+        font-weight:700;
+        }
+
+        footer{
+        margin-top:10px;
+        padding:8px 0;
+        font-size:22px;
+        font-weight:700;
+        background:#9c9c9c;
+        color:#fff;
+        text-align:center;
+        }
+
+        /* --- Grille principale --- */
+        .grillePrincipale{          
+        margin:10px auto 0;
+        display:grid;
+        grid-template-columns: 210px 1fr 210px; /* nav | main | aside */
+        gap:6px;
+        }
+
+        /* --- NAV --- */
+        nav{
+        background:#cfcfcf;
+        padding:6px;
+        font-size:20px;
+        }
+
+        nav ul{
+        margin:14px 0 0;
+        padding-left:26px;
+        }
+
+        nav a{
+        color:#7f7f7f;
+        text-decoration:none;
+        font-weight:700;
+        }
+
+        /* --- MAIN : articles en 2 colonnes --- */
+        main{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:6px;
+        }
+
+        main article{
+        padding:6px;
+        font-size:20px;
+        }
+
+        /* Couleurs des articles (dans l’ordre du HTML) */
+        main article:nth-child(1){ background:#a8ff2a; font-weight:700; } /* Raymond */
+        main article:nth-child(2){ background:#fff6dc; }                  /* beige */
+        main article:nth-child(3){ background:#19f3ff; }                  /* cyan */
+        main article:nth-child(4){ background:#ffc0cb; }                  /* rose */
+        main article:nth-child(5){ background:#a8ff2a; }                  /* vert */
+        main article:nth-child(6){ background:#fff6dc; }                  /* beige */
+        main article:nth-child(7){ background:#19f3ff; }                  /* cyan */
+
+        /* --- ASIDE --- */
+        aside{
+        background:#0b7a0b;
+        color:#fff;
+        padding:8px;
+        font-size:20px;
+        font-weight:700;
+        }
+        ```
+
+!!! exoordi "Exercice 29 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Centrer horizontalement et verticalement le texte du paragraphe `<p>` dans l'article.
+
+    ---
+
+    {{ html_css_playground(
+  key="exo29",
+  html_example="""<!-- Partie html à ne pas modifier -->
+<article>
+	<p>
+		Les petits poissons rouges, les petits pois sont verts.
+		A force de taper sur des clous, il était devenu marteau.
+	</p>
+</article>""",
+  css_example="""/* Partie css modifiable */
+article{
+	width: 450px;
+	height: 180px;
+	border: 2px solid blue;
+}
+
+p{
+	width: 50%;
+}"""
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        article{
+            width: 450px;
+            height: 180px;
+            border: 2px solid blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p{
+            width: 50%;
+        }
+        ```
+
+!!! exoordi "Exercice 30 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Les styles CSS permettent de mettre des effets «whaou» avec peu de lignes. Modifier le code ci-dessous afin d'obtenir le même effet que le survol de l'image ci-dessous:
+
+    <img id="rire" alt="stromae" src="../../../files/NSI/HTML/css_images/rire.jpg" style="width:80px;height:80px;margin:0 auto;padding:5px;border:1px dashed #163c99;border-radius:4px;display:block;transition:.5s" onmouseenter="this.style.width='90px';this.style.height='90px';this.style.boxShadow='6px 6px 6px #163c99';this.style.transform='rotate(-15deg)'" onmouseleave="this.style.width='80px';this.style.height='80px';this.style.boxShadow='';this.style.transform=''">
+
+    Le chemin relatif de l'image est `css_images/rire.jpg`.
+
+    ---
+
+    {{ html_css_playground(
+  key="exo30", base_href="../../../files/NSI/HTML/",
+  html_example="""<!-- Partie html à ne pas modifier -->
+<img id=\"rire\" src=\"css_images/rire.jpg\" alt=\"stromae\" >""",
+  css_example="""/* Partie css modifiable */
+#rire{
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	padding: 5px;
+	border: 1px dashed #163c99;
+	border-radius: 4px;
+}
+
+#rire:hover{
+	width: 90px;
+}"""
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        #rire{
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            padding: 5px;
+            border: 1px dashed #163c99;
+            border-radius: 4px;
+            }
+
+        #rire:hover{
+            width: 90px;
+            height: 90px;
+            box-shadow: 6px 6px 6px #163c99;
+            transform: rotate(-15deg);
+            transition: 0.5s
+            }
+        ```
+
+
+!!! exoordi "Exercice 31 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Modifier le code CSS suivant afin de faire apparaitre l'image de Stromae lors du survol de la souris sur le paragraphe, comme dans l'exemple ci-dessous : 
+
+    <p style="width:100px;height:80px;border:2px solid darkgreen;text-align:center;" onmouseenter="this.querySelector('#banane').style.display='none'; this.querySelector('#rire').style.display='block';" onmouseleave="this.querySelector('#banane').style.display='inline'; this.querySelector('#rire').style.display='none';">
+        <span id="banane" style="color:darkgreen;font-weight:bold;">J'apprends, je suis content !</span>
+        <img id="rire" src="../../../files/NSI/HTML/css_images/rire.jpg" alt="stromae" style="width:80px;height:80px;margin:0 auto;border-radius:4px;display:none;">
+    </p>
+
+    Le chemin relatif de l'image est `css_images/rire.jpg`.
+
+    ---
+
+    {{ html_css_playground(
+  key="exo31", base_href="../../../files/NSI/HTML/",
+  html_example="""<!-- Partie html à ne pas modifier -->
+<p> 
+	<span id=\"banane\">J'apprends, je suis content !</span>
+	<img id=\"rire\" src=\"css_images/rire.jpg\" alt=\"stromae\" >
+</p>""",
+  css_example="""/* Partie css modifiable */
+#banane{				/* Le texte */
+	color: darkgreen;
+	font-weight:bold;
+}
+
+#rire{					/* L'image */
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	border-radius: 4px;
+}
+
+p{						/* Le paragraphe */
+	width: 100px;
+	height: 80px;
+	border: 2px solid darkgreen;
+	text-align: center;
+}"""
+) }}
+
+    ??? tip "Coup de pouce"
+        - La propriété `display: none;` permet de ne pas afficher un conteneur à l'écran, `display: block;` «transforme» l'élément en contenur de type bloc.
+        - Pour affecter un élément inclut dans un conteneur il suffit de déclarer les sélecteurs en les séparant par un espace. Par exemple, `p strong {...}` affecte uniquement la mise en forme des éléments `strong` contenus dans des paragraphes `p` (et pas ceux inclus dans des listes ou autre...).
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        #banane{				/* Le texte */
+            color: darkgreen;
+            font-weight:bold;
+        }
+
+        #rire{					/* L'image */
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            border-radius: 4px;
+            display: none;
+        }
+
+        p:hover #banane {
+            display: none;
+        }
+
+        p:hover #rire {
+            display: block;
+        }
+            
+        p{						/* Le paragraphe */
+            width: 100px;
+            height: 80px;
+            border: 2px solid darkgreen;
+            text-align: center;
+        }
+        ```
+
+!!! exoordi "Exercice 32 - :fontawesome-solid-skull:"
+    Cet exercice est assez difficile, mais il montre tout le potentiel contenu à l'intérieur d'une relation HTML/CSS bien pensée. 
+    
+    La liste ci-dessous est destinée à être un menu avec un sous-niveau. Apporter les modifications nécessaires pour que le rendu soit approximativement celui des images ci-dessous :
+
+    - Affichage par défaut : 
+
+        ![illustration exo28](../../files/NSI/HTML/display2.png)
+
+    - Affichage lors du survol de "Menu 1" : 
+
+        ![illustration exo28](../../files/NSI/HTML/display3.png)
+
+    ---
+
+    {{ html_css_playground(
+  key="exo32",
+  html_file="files/NSI/HTML/exo33.html",
+  css_example="""/* Partie css modifiable */
+ul {
+	list-style-type: none;		/* disparition des puces */
+	margin:0;
+}
+
+li {
+	width: 100px;
+	margin:0;
+	padding: 3px;				/* espace intérieur */
+	border: 1px solid orange;
+    height: 20px;
+	line-height: 20px;			/* centrage vertical */
+	background-color: white;
+}
+
+a {
+	text-decoration: none;
+	color: orange;
+}"""
+) }}
+
+    ??? tip "Coup de pouce"
+        Il est nécessaire de pouvoir positionner des blocs enfants par rapport à leur parent. Ce site comporte une page d'entraînement sur les positionnements dans la section "[Aller plus loin](6_Pour_aller_plus_loin.md)".
+        
+        La documentation officielle se trouve [ici](http://www.w3schools.com/cssref/pr_class_position.asp).
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        ul {
+            list-style-type: none;		/* disparition des puces */
+            margin:0;
+        }
+
+        li {
+            width: 100px;
+            margin:0;
+            padding: 3px;				/* espace intérieur */
+            border: 1px solid orange;
+            height: 20px;
+            line-height: 20px;			/* centrage vertical */
+            background-color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: orange;
+        }
+
+
+        .horizontal>li{					/* affichage horizontal du premier niveau grâce à ">" */
+            display: inline-block;		/* inline-block pour que width ait un effet */
+            position: relative;			/* pour placer en absolu un élément fils */
+        }	
+
+        .vertical{
+            display: none;				/* disparition par défaut des sous-menus */
+            position: absolute;			/* positionnement par rapport au parent */
+            top:100%;					/* 100% faut référence à la hauteur du parent */
+            right:-1px;					/* -1px par rapport à la droite du parent */
+        }
+                    
+        li:hover .vertical{				/* Survol du sous-menu */
+            display: block;				/* Affichage du bloc */
+            z-index :1 ;				/* Affichage au premier-plan */
+        }
+        ```
+
+
+---
+
+## Pour aller plus loin
+
+!!! exoordi "Exercice 33 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Donner un code permettant de réaliser le tableau ci-dessous. La mise en forme est effectuée par un fichier `.css` importé grâce à la balise `<link>`. 
+
+    ![Image tableaux à reproduire](../../files/NSI/HTML/Tableaux05.png)
+
+    ---
+
+    {{ html_playground("exo33","<!DOCTYPE html>
+<html lang=\"fr\">
+    <head>
+        <meta charset=\"utf-8\">
+        <title> Comparaison Html/Css </title>
+		<link rel=\"stylesheet\" href=\"fichiersCSS/html_table01.css\">
+    </head>
+    <body>
+		<table>
+			<!-- code à compléter ici -->
+		</table>
+    </body>
+</html>", base_href="../../../files/NSI/HTML/") }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```html linenums="1"
+        <!DOCTYPE html>
+        <html lang="fr">
+            <head>
+                <meta charset="utf-8">
+                <title> Comparaison Html/Css </title>
+                <link rel="stylesheet" href="fichiersCSS/html_table01.css">
+            </head>
+            <body>
+                <table>
+                    <tr>	<td> </td>
+                            <th>HTML</th>
+                            <th>CSS</th>  </tr>
+                    
+                    <tr>	<th> commentaires </th>
+                            <td> < !-- (sans espace) puis (espace) le texte
+                                (espace) puis  --> (sans espace)</td>
+                            <td> /* texte */ </td> </tr>
+                    <tr>	<th> rôle principal </th>
+                            <td> sémantique</td>
+                            <td> forme </td> </tr>
+                    <tr>	<th>extension</th>
+                            <td><code>.html</code></td>
+                            <td><code>.css</code></td> </tr>
+                </table>
+            </body>
+        </html>
+        ```
+
+
+!!! exoordi "Exercice 34 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Donner le code HTML nécessaire pour réaliser le tableau ci-dessous : 
+
+    ![Image tableaux à reproduire](../../files/NSI/HTML/Tableaux06.png)
+
+    ---
+
+    {{ html_playground("exo34","<!DOCTYPE html>
+<html lang=\"fr\">
+    <head>
+        <meta charset=\"utf-8\">
+        <title> Fusion </title>
+		<link rel=\"stylesheet\" href=\"fichiersCSS/html_table02.css\">
+    </head>
+    <body>
+         <table>
+           <!-- code à compléter ici -->
+         </table>
+    </body>
+</html>", base_href="../../../files/NSI/HTML/") }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```html linenums="1"
+        <!DOCTYPE html>
+        <html lang="fr">
+            <head>
+                <meta charset="utf-8">
+                <title> Fusion </title>
+                <link rel="stylesheet" href="fichiersCSS/html_table02.css">
+            </head>
+            <body>
+                <table>
+                    <tr>	<td rowspan="3">1</td>
+                            <td>2</td>
+                            <td colspan="2">3</td> </tr>
+                    
+                    <tr>	<td colspan="3">4</td> </tr>
+                    
+                    <tr>	<td>5</td>
+                            <td>6</td>
+                            <td>7</td> </tr>
+                    
+                    <tr>	<td colspan="3" rowspan="2">8</td>
+                            <td>9</td> </tr>
+                    
+                    <tr>	<td>10</td> </tr>
+                </table>
+            </body>
+        </html>
+        ```
+
+
+!!! exoordi "Exercice 35 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Modifier le Css sans toucher au code Html afin que...
+
+    - ...chaque paragraphe soit précédé de "Citation x" où x est un entier numérotant la citation :
+    - ...chaque citation soit suivie de l'image située à l'adresse `css_images/rire.jpg`.
+
+    ---
+
+    {{ html_css_playground(
+  key="exo35",
+  html_example="""<!-- Partie html à ne pas modifier -->
+<p>
+	<q>L'ennemi est bête : il croît que c'est nous l'ennemi, alors que
+	c'est lui.</q>
+</p>
+<p>
+	- Quel est le pire ? l'ignorance ou l'indifférence ?<br>
+	- J'en sais rien et je m'en fous.
+</p>
+<p>
+	<q>Boire du café empêche de dormir. Et dormir empêche de boire
+	du café.</q>
+</p>
+<p>
+	<q>Ma richesse est intérieure : tout mon argent est dans un coffre.</q>
+</p>
+<p>
+	<q>En France, on n'a pas beaucoup de champions du monde.
+		Mais dans le reste du monde, ils n'ont pas autant de champions
+		de France que nous.</q>
+</p>
+<p>
+	<q>Certains déchets nucléaires produits dans les années 80 resteront
+	dangereux pendant un demi-million d'années. Pour ceux qui sont
+	produits maintenant, il faudra compter 30 ans de plus.</q>
+</p>""",
+  css_example="""/* Partie css modifiable */
+""", base_href="../../../files/NSI/HTML/"
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        body{
+            counter-reset: citation;
+            }
+
+        p{
+            counter-increment: citation;
+            }
+
+        p::before{
+            content: 'Citation 'counter(citation)' : ';
+            }
+
+        p::after{
+            content: url("css_images/rire.jpg"); 
+            }
+        ```
+
+!!! exoordi "Exercice 36 - :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
+    L'objectif de cet exercice est d'observer les comportements.
+
+    En commentant/décommentant les sélecteurs de paragraphes `p`, tester les divers positionnements possibles vis-à-vis du `div` conteneur. Observer alors les divers problèmes (débordement du conteneur, blocs se superposant, ...).
+
+    Observer la différence d'alignement entre `float: left;` et `display: inline-block;`.
+
+    Observer ce qu'il se passe lorsqu'on modifie `min-height` en `height` pour le `div:last-of-type`.
+
+    ---
+
+    {{ html_css_playground(
+  key="exo36",
+  html_example="""<!-- Partie html à ne pas modifier -->
+<div> </div>
+<div> 
+	<p> Paragraphe 1 </p> 
+	<p> Paragraphe 2 <br>
+		Paragraphe 2 </p> 
+	<p> Paragraphe 3 <br>
+		Paragraphe 3 <br>
+		Paragraphe 3</p>
+	<p> Paragraphe 4 <br>
+		Paragraphe 4 <br>
+		Paragraphe 4 <br>
+		Paragraphe 4 </p> 
+</div>""",
+  css_example="""/* Partie css modifiable */
+/* valeur par défaut : */
+p {
+	position : relative;	
+	}
+
+/* positionnement par rapport à l'écran : 
+p {
+	position: fixed;
+	bottom: 0;
+	right:0;
+	} */
+
+/* positionnement par rapport au div parent :
+p {
+	position: absolute;
+	right: 20%;
+	top : 0;
+	} */
+
+/* flottant : 
+p {
+	width: 20%;
+	float: right;
+	} */
+
+/* en display inline-block : 
+p {
+	display: inline-block;
+	} */
+
+div {
+	border: 1px solid grey;
+	}
+
+div:first-of-type {
+	height: 100px;
+	margin-bottom: 1em;
+	}
+	
+div:last-of-type {
+	/* ne change rien mais permet de placer les enfants en absolu :*/
+	position: relative;
+	width: 60%;
+	margin: 0 auto;
+	min-height: 100px;               
+	}"""
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        /* valeur par défaut :
+        p {
+            position : relative;	
+            } */
+
+        /* positionnement par rapport à l'écran : 
+        p {
+            position: fixed;
+            bottom: 0;
+            right:0;
+            } */
+
+        /* positionnement par rapport au div parent :
+        p {
+            position: absolute;
+            right: 20%;
+            top : 0;
+            } */
+
+        /* flottant : */
+        p {
+            width: 20%;
+            float: right;
+            }
+
+        /* en display inline-block : 
+        p {
+            display: inline-block;
+            } */
+
+        div {
+            border: 1px solid grey;
+            }
+
+        div:first-of-type {
+            height: 100px;
+            margin-bottom: 1em;
+            }
+            
+        div:last-of-type {
+            /* ne change rien mais permet de placer les enfants en absolu :*/
+            position: relative;
+            width: 60%;
+            margin: 0 auto;
+            min-height: 100px;               
+            }
+        ```
+
+!!! exoordi "Exercice 37 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    1. Dans le code ci-dessous, quel est le référentiel pour le placement absolu des fils ?
+    2. Modifier le code pour que le placement absolu (premier fils) se fasse par rapport au père.
+
+    ---
+
+    {{ html_css_playground(
+  key="exo37",
+  html_example="""<!-- Partie html à ne pas modifier -->
+<div id=\"grandpere\"> 
+	Le grand-père
+	<div id=\"pere\">
+		Le père
+		<img src=\"css_images/darth.jpeg\" alt=\"le père\" width=\"50\">
+		<p> Le premier fils </p>
+		<p> le second fils </p>
+	</div>
+</div>""",
+  css_example="""/* Partie css modifiable */
+* {
+	margin: 3px;
+	padding: 3px;
+}
+
+#grandpere {
+	border: 1px solid black;
+	width : 60%;
+	height: 500px; 
+	position: relative;                   
+}
+	
+#pere{
+	border: 3px solid yellow;
+	widht: 80%;
+	height: 200px;
+}
+	
+p {
+	border: 1px solid red;
+}
+
+p:last-of-type {
+	position :fixed;
+	bottom:0;
+	right:0;
+}""", base_href="../../../files/NSI/HTML/"
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        * {
+        	margin: 3px;
+        	padding: 3px;
+        }
+
+        #grandpere {
+        	border: 1px solid black;
+        	width : 60%;
+        	height: 500px; 
+        	position: relative;                   
+        }
+        	
+        #pere{
+        	border: 3px solid yellow;
+        	widht: 80%;
+        	height: 200px;
+        	position: relative;
+        }
+        	
+        p {
+        	border: 1px solid red;
+        }
+
+        p:first-of-type {
+        	position: absolute;
+        	bottom: 0;
+        	right:0;
+        }
+
+        p:last-of-type {
+        	position :fixed;
+        	bottom:0;
+        	right:0;
+        }
+        ```
+
+!!! exoordi "Exercice 38 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Définir le style Css afin que l'image apparaisse disposée de la façon suivante :
+
+    ![Illustration boites HTML](../../files/NSI/HTML/positionnement5.png)
+
+    Le cadre est une bordure de l'élément `div`.
+
+    L'image est disposée à l'aide du paramètre `float`.
+
+    ---
+
+    {{ html_css_playground(
+  key="exo38",
+  html_example="""<!-- Partie html à ne pas modifier -->
+<div>
+	bla bla <br>
+	bla bla <br>
+	bla bla <br>
+	bla bla <br>
+	bla bla <br>
+	bla bla <br>
+	bla bla <br>
+	bla bla <br>
+	<img src=\"css_images/logohtml5.png\" width=\"102\" height=\"102\">
+</div>""",
+  css_example="""/* Partie css modifiable */
+div {
+	width: 60%;
+	height: 200px;
+	border: 1px solid black;
+}""", base_href="../../../files/NSI/HTML/"
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        div {
+            width: 60%;
+            height: 200px;
+            border: 1px solid black;
+            }
+
+        img {
+            float: right;
+            margin-right: -51px;
+            margin-top: -100px;
+            }
+        ```
+
+!!! exoordi "Exercice 39 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    La situation suivante se produit assez souvent :
+
+    un bloc (premier bloc noir) contient des éléments flottants (bloc orange), mais le bloc flottant a une hauteur trop grande et dépasse donc sur le bloc suivant (second bloc noir).
+
+    Sans modifier les dimensions et marges des trois blocs, modifier le code pour que le flottant ne déborde pas sur le second bloc noir.
+
+    ---
+
+    {{ html_css_playground(
+  key="exo39",
+  html_example="""<!-- Partie html à ne pas modifier -->
+<div id=\"je_contiens_un_flottant\">
+	blu blu
+	<p id=\"je_flotte\"> </p>
+</div>
+
+<div id=\"je_succede_au_div_contenant_un_flottant\">
+	bla bla
+</div>""",
+  css_example="""/* Partie css modifiable */
+#je_flotte {
+	float: left;
+	width: 30px;
+	height: 150px;
+	border: 2px solid orange; 
+}
+
+#je_contiens_un_flottant {
+	height: 100px;
+	border: 1px solid black;
+	margin-bottom: 5px;
+}
+
+#je_succede_au_div_contenant_un_flottant {
+	margin:0;
+	border: 1px solid black;
+}"""
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        #je_flotte {
+            float: left;
+            width: 30px;
+            height: 150px;
+            border: 2px solid orange; 
+        }
+
+        #je_contiens_un_flottant {
+            height: 100px;
+            border: 1px solid black;
+            margin-bottom: 5px;
+            /* dans l'exercice, essayer la ligne suivante pour en voir l'effet : */
+            /* overflow: auto; */
+        }
+
+        #je_succede_au_div_contenant_un_flottant {
+            margin:0;
+            border: 1px solid black;
+            clear: both;	/* pour que le flottant ne me déborde pas dessus : */
+        }
+        ```
+
+!!! exoordi "Exercice 40 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Dans le fichier qui suit, sans toucher au code Html, définir le Css pour obtenir une page semblable à :
+
+    ![positionnement1](../../files/NSI/HTML/positionnement1.png)
+
+    Lorsqu'on survole le cercle 2 : 
+
+    ![positionnement1](../../files/NSI/HTML/positionnement2.png)
+
+    Lorsqu'on survole le cercle 3.1 : 
+
+    ![positionnement1](../../files/NSI/HTML/positionnement3.png)
+
+    Le bandeau est centré horizontalement dans la page et il a une largeur de 800px.
+
+    ---
+
+    {{ html_css_playground(
+  key="exo40",
+  html_file="files/NSI/HTML/exo40.html",
+  css_example="""/* Partie css modifiable */
+ul {
+	list-style-type: none;		/* on enlève les puces des listes : */
+	margin: 0;
+	padding: 0;
+	height: 50px;
+}
+
+.horizontal>li {
+	margin: 5px;
+	padding: 0;
+}
+
+li {
+	width: 50px; 
+	text-align: center;
+}
+
+a {
+	display: block;
+	margin: 0;
+	padding:0;
+	border-radius: 50%;		/* pour avoir une forme de disque : */
+	border: 1px solid lightgrey;
+	background-color: yellow;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;		/* permet d'avoir un texte centré verticalement */
+	text-decoration: none;
+	color: lightblue;
+	font-size: 12px;
+}
+
+header {
+	height: 200px;
+	background-color: lightgreen;
+	margin: 0;
+	padding:0;
+}
+
+header>h1 {
+	color: orange;
+}
+
+nav {
+	padding-top: 130px;
+}
+
+#blocPage {
+	width: 800px; 
+	margin: 0 auto;
+}"""
+) }}
+
+    ??? success "Correction"
+        On aurait : 
+
+        ```css linenums="1"
+        /* Partie css */
+        ul {
+            list-style-type: none;		/* on enlève les puces des listes : */
+            margin: 0;
+            padding: 0;
+            height: 50px;
+        }
+
+        .horizontal>li {
+            /* les éléments li 1, 2, 3 flottent à gauche. 
+            Ils apparaissent ainsi alignés : */
+            float: left;
+            margin: 5px;
+            padding: 0;
+        }
+
+        li {
+            /* les éléments li sont déclarés en position relative de façon
+            à déclarer en position absolute les sous-listes : */
+            position: relative;
+            width: 50px; 
+            text-align: center;
+        }
+
+        a {
+            display: block;
+            margin: 0;
+            padding:0;
+            border-radius: 50%;		/* pour avoir une forme de disque : */
+            border: 1px solid lightgrey;
+            background-color: yellow;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;		/* permet d'avoir un texte centré verticalement */
+            text-decoration: none;
+            color: lightblue;
+            font-size: 12px;
+        }
+
+        .vertical {
+            /* les sous-listes ne sont pas affichées a priori : */ 
+            display: none;
+        }
+
+        .horizontal>li:hover>.vertical {
+            display: block;		/* affichage sous-liste niveau 1 au survol de l'élément li la contenant : */
+            /* enlever le positionnement qui suit et chercher à expliquer la conséquence : */
+            position: absolute;
+        }
+
+        .vertical>li:hover>.vertical {
+            display: block;		/* affichage sous-liste  de niveau >1 au survolde l'élément li la contenant  : */
+            position: absolute;
+            top: 0;
+            left: 100%;
+        }
+
+        header {
+            height: 200px;
+            position: relative;		/* position relative pour y placer h1 en absolu : */
+            background-color: lightgreen;
+            margin:0;
+            padding:0;
+        }
+
+        header>h1 {
+            position : absolute;
+            left: 50%;
+            top: 10px;
+            color: orange;
+        }
+
+        nav {
+            /* on joue ici sur la marge interne supérieure pour placer nav en bas du bandeau : */
+            padding-top: 130px;
+        }
+
+        #blocPage {
+            width: 800px; 
+            margin: 0 auto;
+        }
+        ```
