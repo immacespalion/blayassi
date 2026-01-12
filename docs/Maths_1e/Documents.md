@@ -38,3 +38,7 @@ Vous trouverez ci-dessous l'ensemble des TD des chapitres déjà aborder en clas
     
     [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td5.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td5-correction.pdf)
 
+- TD6 - Dérivation globale
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td6.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td6-correction.pdf)
+

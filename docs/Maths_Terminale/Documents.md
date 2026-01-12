@@ -96,4 +96,8 @@ Vous trouverez sur cette page les sujets et les correction des divers DHC de typ
 
 - DHC6 - Polynésie 2025 : 
     
-    [Sujet :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc6.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc6-correction.pdf) -->
+    [Sujet :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc6.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc6-correction.pdf)
+
+- DHC7 - Asie et polynésie 2024 J2 : 
+    
+    [Sujet :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc7.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc7-correction.pdf) ->
