@@ -46,6 +46,14 @@ Vous trouverez ci-dessous l'ensemble des TD des chapitres déjà aborder en clas
     
     [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td7.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/td7-correction.pdf)
 
+- TD8 - Continuité d'une fonction
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td8.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/td8-correction.pdf)
+
+- TD9 - Fonction logarithme népérien
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td9.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_term/td9-correction.pdf) -->
+
 
 - TD A - Vecteurs de l'espace
     
@@ -66,6 +74,14 @@ Vous trouverez ci-dessous l'ensemble des TD des chapitres déjà aborder en clas
 - TD E - Dénombrement (partie 2)
     
     [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/tdE.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/tdE-correction.pdf)
+
+- TD F - Produit scalaire dans l'espace
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/tdF.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/tdF-correction.pdf)
+
+- TD G - Loi binomiale
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/tdG.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_term/tdG-correction.pdf) -->
 
 
 ---
@@ -100,4 +116,4 @@ Vous trouverez sur cette page les sujets et les correction des divers DHC de typ
 
 - DHC7 - Asie et polynésie 2024 J2 : 
     
-    [Sujet :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc7.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc7-correction.pdf) ->
+    [Sujet :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc7.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc7-correction.pdf)
