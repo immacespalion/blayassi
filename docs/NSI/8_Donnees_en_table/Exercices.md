@@ -417,3 +417,13 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
         voisines = [capitale[1] for capitale in table if longitude_paris[0]-1<=float(capitale[3])<=longitude_paris[0]+1]
         ```
         Remarque : Il sera peut-être nécessaire d'enlever les descripteurs de la table afin de ne pas causer d'erreur de conversion : `table.pop(0)`.
+
+---
+
+## Fusion de table
+
+!!! exoordi "Exercice 18 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+    Réaliser l'activité [539a-9271423](https://capytale2.ac-paris.fr/web/c/539a-9271423) sur Capytale.
+
+    ??? success "Correction"
+        Disponible sur Capytale sur demande

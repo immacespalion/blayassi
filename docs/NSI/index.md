@@ -72,6 +72,8 @@ Dans cette section, tu trouveras :
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 25.01.2026 - Fin du chapitre 8 (exercice fusion + projet)
+    * 24.01.2026 - Fin du chapitre 7 avec projet, héditeur HTML+CSS, bac à sable CSS
     * 21.12.2025 - Suite chapitre 7 + MaJ editeur HTML intégré + bac à sable CSS
     * 14.12.2025 - Début du chapitre 7 + éditeur HTML intégré
     * 12.12.2025 - Ajout des premiers exercices du chapitre 6
