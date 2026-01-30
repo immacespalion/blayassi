@@ -1133,7 +1133,7 @@ p{
         ```
 
 
-!!! exoordi "Exercice 28 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
+!!! exoordi "Exercice 29 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:"
     Le but est de reproduire cette mise en page suivante en complétant le contenu des balises style. 
     
     Pensez à enregistrer ce travail sur un fichier HTML et un fichier CSS local afin de conserver une trace numérique dans votre espace personnel.
@@ -1143,7 +1143,7 @@ p{
     ---
 
     {{ html_css_playground(
-  key="exo28",
+  key="exo29",
   html_example="""<header>
     <h1>Un super titre</h1>
     <h2> Un joli sous-titre</h2>
@@ -1304,13 +1304,13 @@ C'est le pied !
         }
         ```
 
-!!! exoordi "Exercice 29 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 30 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     Centrer horizontalement et verticalement le texte du paragraphe `<p>` dans l'article.
 
     ---
 
     {{ html_css_playground(
-  key="exo29",
+  key="exo30",
   html_example="""<!-- Partie html à ne pas modifier -->
 <article>
 	<p>
@@ -1349,7 +1349,7 @@ p{
         }
         ```
 
-!!! exoordi "Exercice 30 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 31 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     Les styles CSS permettent de mettre des effets «whaou» avec peu de lignes. Modifier le code ci-dessous afin d'obtenir le même effet que le survol de l'image ci-dessous:
 
     <img id="rire" alt="stromae" src="../../../files/NSI/HTML/css_images/rire.jpg" style="width:80px;height:80px;margin:0 auto;padding:5px;border:1px dashed #163c99;border-radius:4px;display:block;transition:.5s" onmouseenter="this.style.width='90px';this.style.height='90px';this.style.boxShadow='6px 6px 6px #163c99';this.style.transform='rotate(-15deg)'" onmouseleave="this.style.width='80px';this.style.height='80px';this.style.boxShadow='';this.style.transform=''">
@@ -1359,7 +1359,7 @@ p{
     ---
 
     {{ html_css_playground(
-  key="exo30", base_href="../../../files/NSI/HTML/",
+  key="exo31", base_href="../../../files/NSI/HTML/",
   html_example="""<!-- Partie html à ne pas modifier -->
 <img id=\"rire\" src=\"css_images/rire.jpg\" alt=\"stromae\" >""",
   css_example="""/* Partie css modifiable */
@@ -1401,7 +1401,7 @@ p{
         ```
 
 
-!!! exoordi "Exercice 31 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 32 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     Modifier le code CSS suivant afin de faire apparaitre l'image de Stromae lors du survol de la souris sur le paragraphe, comme dans l'exemple ci-dessous : 
 
     <p style="width:100px;height:80px;border:2px solid darkgreen;text-align:center;" onmouseenter="this.querySelector('#banane').style.display='none'; this.querySelector('#rire').style.display='block';" onmouseleave="this.querySelector('#banane').style.display='inline'; this.querySelector('#rire').style.display='none';">
@@ -1414,7 +1414,7 @@ p{
     ---
 
     {{ html_css_playground(
-  key="exo31", base_href="../../../files/NSI/HTML/",
+  key="exo32", base_href="../../../files/NSI/HTML/",
   html_example="""<!-- Partie html à ne pas modifier -->
 <p> 
 	<span id=\"banane\">J'apprends, je suis content !</span>
@@ -1479,7 +1479,7 @@ p{						/* Le paragraphe */
         }
         ```
 
-!!! exoordi "Exercice 32 - :fontawesome-solid-skull:"
+!!! exoordi "Exercice 33 - :fontawesome-solid-skull:"
     Cet exercice est assez difficile, mais il montre tout le potentiel contenu à l'intérieur d'une relation HTML/CSS bien pensée. 
     
     La liste ci-dessous est destinée à être un menu avec un sous-niveau. Apporter les modifications nécessaires pour que le rendu soit approximativement celui des images ci-dessous :
@@ -1495,7 +1495,7 @@ p{						/* Le paragraphe */
     ---
 
     {{ html_css_playground(
-  key="exo32",
+  key="exo33",
   html_file="files/NSI/HTML/exo33.html",
   css_example="""/* Partie css modifiable */
 ul {
@@ -1573,14 +1573,14 @@ a {
 
 ## Pour aller plus loin
 
-!!! exoordi "Exercice 33 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 34 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     Donner un code permettant de réaliser le tableau ci-dessous. La mise en forme est effectuée par un fichier `.css` importé grâce à la balise `<link>`. 
 
     ![Image tableaux à reproduire](../../files/NSI/HTML/Tableaux05.png)
 
     ---
 
-    {{ html_playground("exo33","<!DOCTYPE html>
+    {{ html_playground("exo34","<!DOCTYPE html>
 <html lang=\"fr\">
     <head>
         <meta charset=\"utf-8\">
@@ -1627,14 +1627,14 @@ a {
         ```
 
 
-!!! exoordi "Exercice 34 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 35 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     Donner le code HTML nécessaire pour réaliser le tableau ci-dessous : 
 
     ![Image tableaux à reproduire](../../files/NSI/HTML/Tableaux06.png)
 
     ---
 
-    {{ html_playground("exo34","<!DOCTYPE html>
+    {{ html_playground("exo35","<!DOCTYPE html>
 <html lang=\"fr\">
     <head>
         <meta charset=\"utf-8\">
@@ -1681,7 +1681,7 @@ a {
         ```
 
 
-!!! exoordi "Exercice 35 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 36 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     Modifier le Css sans toucher au code Html afin que...
 
     - ...chaque paragraphe soit précédé de "Citation x" où x est un entier numérotant la citation :
@@ -1690,7 +1690,7 @@ a {
     ---
 
     {{ html_css_playground(
-  key="exo35",
+  key="exo36",
   html_example="""<!-- Partie html à ne pas modifier -->
 <p>
 	<q>L'ennemi est bête : il croît que c'est nous l'ennemi, alors que
@@ -1743,7 +1743,7 @@ a {
             }
         ```
 
-!!! exoordi "Exercice 36 - :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 37 - :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:"
     L'objectif de cet exercice est d'observer les comportements.
 
     En commentant/décommentant les sélecteurs de paragraphes `p`, tester les divers positionnements possibles vis-à-vis du `div` conteneur. Observer alors les divers problèmes (débordement du conteneur, blocs se superposant, ...).
@@ -1755,7 +1755,7 @@ a {
     ---
 
     {{ html_css_playground(
-  key="exo36",
+  key="exo37",
   html_example="""<!-- Partie html à ne pas modifier -->
 <div> </div>
 <div> 
@@ -1872,14 +1872,14 @@ div:last-of-type {
             }
         ```
 
-!!! exoordi "Exercice 37 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 38 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     1. Dans le code ci-dessous, quel est le référentiel pour le placement absolu des fils ?
     2. Modifier le code pour que le placement absolu (premier fils) se fasse par rapport au père.
 
     ---
 
     {{ html_css_playground(
-  key="exo37",
+  key="exo38",
   html_example="""<!-- Partie html à ne pas modifier -->
 <div id=\"grandpere\"> 
 	Le grand-père
@@ -1961,7 +1961,7 @@ p:last-of-type {
         }
         ```
 
-!!! exoordi "Exercice 38 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 39 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     Définir le style Css afin que l'image apparaisse disposée de la façon suivante :
 
     ![Illustration boites HTML](../../files/NSI/HTML/positionnement5.png)
@@ -1973,7 +1973,7 @@ p:last-of-type {
     ---
 
     {{ html_css_playground(
-  key="exo38",
+  key="exo39",
   html_example="""<!-- Partie html à ne pas modifier -->
 <div>
 	bla bla <br>
@@ -2012,7 +2012,7 @@ div {
             }
         ```
 
-!!! exoordi "Exercice 39 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 40 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     La situation suivante se produit assez souvent :
 
     un bloc (premier bloc noir) contient des éléments flottants (bloc orange), mais le bloc flottant a une hauteur trop grande et dépasse donc sur le bloc suivant (second bloc noir).
@@ -2022,7 +2022,7 @@ div {
     ---
 
     {{ html_css_playground(
-  key="exo39",
+  key="exo40",
   html_example="""<!-- Partie html à ne pas modifier -->
 <div id=\"je_contiens_un_flottant\">
 	blu blu
@@ -2079,7 +2079,7 @@ div {
         }
         ```
 
-!!! exoordi "Exercice 40 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
+!!! exoordi "Exercice 41 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:"
     Dans le fichier qui suit, sans toucher au code Html, définir le Css pour obtenir une page semblable à :
 
     ![positionnement1](../../files/NSI/HTML/positionnement1.png)
@@ -2097,7 +2097,7 @@ div {
     ---
 
     {{ html_css_playground(
-  key="exo40",
+  key="exo41",
   html_file="files/NSI/HTML/exo40.html",
   css_example="""/* Partie css modifiable */
 ul {
