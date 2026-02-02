@@ -55,7 +55,7 @@ Chaque machine connectée à un réseau possède une **carte réseau** (Ethernet
      alt="Capture d'écran de Filius avec les 3 machines"
      style="width: 60%; display: block; margin: 0 auto;">
 
-Toutefois, à ce stade, nos trois ordinateurs ne sont pas reliés entre eux et ne peuvent donc pas communiqué ou échanger quelconques informations... C'est ici qu'entre en jeu les **commutateurs** (aussi appelés **switch**) : 
+Toutefois, à ce stade, nos trois ordinateurs ne sont pas reliés entre eux et ne peuvent donc pas communiquer ou échanger quelconques informations... C'est ici qu'entre en jeu les **commutateurs** (aussi appelés **switch**) : 
 
 !!! definition "Commutateur (switch)"
     Un **commutateur** (ou **switch**) est un équipement informatique qui relie plusieurs machines sur un même réseau local. 
@@ -234,77 +234,154 @@ Considérons trois machines A, B, C d'IP respectives `192.168.129.10`, `192.168.
 
 ## Relier deux sous-réseaux : routeur, passerelle et routage 🛣️
 
-### Routeur et passerelle
+Notre solution initiale (relier les deux switchs par un cable pour unifier les deux sous-réseaux) n'est pas **viable à l'échelle d'un réseau planétaire**.
+
+Pour que les machines de deux réseaux différents puissent être connectées, on va utiliser un **dispositif équipé de deux cartes réseaux**, situé à cheval entre les deux sous-réseaux. Ce équipement de réseau est appelé **routeur**.
 
 !!! definition "Routeur"
-    Un **routeur** relie **plusieurs sous-réseaux**. Il possède généralement **une interface réseau par sous-réseau**.
+    Un **routeur** est un équipement informatique qui assure le transit des données de proche en proche, afin que les paquets de donnés soient acheminés de l'émetteur au recepteur. Les routeurs sont utilisés pour interconnecter des réseaux locaux. 
 
-!!! definition "Passerelle (par défaut)"
+    <img src="../../../files/NSI/Reseaux/routeur.png" alt="Le ping fonctionne bien" style="width: 50%; display: block; margin: 0 auto;">
+
+!!! definition "Passerelle"
     La **passerelle** est l'adresse IP du routeur que la machine utilise quand elle veut parler à une adresse **hors de son sous-réseau**.
 
----
+    *Exemple : Dans l'illustration de la définition précédente, la passerelle du réseaux A est `192.168.0.254`.*
 
-### Routage et table de routage (idée) 🧭
+!!! expert "Pour aller plus loin : Routage et table de routage"
+    Imaginons que la machine `192.168.0.1 / 24` veuille communiquer avec la machine `172.16.52.3 / 24`.   
+    L'observation du masque de sous-réseau de la machine `192.168.0.1 / 24` nous apprend qu'elle ne peut communiquer qu'avec les adresses de la forme `192.168.0.X / 24`, où `X` est un nombre entre 0 et 255.
 
-!!! definition "Routage"
-    Le **routage** est le fait de choisir **par où faire passer** un paquet pour atteindre un autre réseau.
+    !!! definition "Routage"
+        Le **routage** est le fait de choisir **par où faire passer** un paquet pour atteindre un autre réseau.
 
-!!! definition "Table de routage (idée)"
-    Une **table de routage** est un ensemble de règles (dans un routeur) qui indiquent :
-    "pour atteindre tel réseau, il faut envoyer vers telle sortie / tel prochain routeur".
+    Les 3 étapes du routage :
 
-!!! methode "Les 3 étapes (version simple)"
-    1. Je vérifie si la destination est dans mon sous-réseau (grâce au masque).
-    2. Si oui : j'envoie directement sur le LAN (via le switch).
-    3. Si non : j'envoie à ma **passerelle** (le routeur), qui se charge de transmettre.
+    - Lorsque qu'une machine A veut envoyer un message à une machine B, elle va tout d'abord **vérifier si cette machine appartient à son réseau local**. si c'est le cas, le message est envoyé par l'intermédiaire du **switch** qui relie les deux machines.
+    - Si la machine B n'est pas trouvée sur le réseau local de la machine A, le message va être **acheminé vers le routeur**, par l'intermédiaire de son **adresse de passerelle** (qui est bien une adresse appartenant au sous-réseau de A).
+    - De là, le routeur va regarder si la machine B appartient au deuxième sous-réseau auquel il est connecté. Si c'est le cas, le **message est distribué**, sinon, le routeur va donner le message **à un autre routeur** auquel il est connecté et va le charger de distribuer ce message : c'est le procédé (complexe) de **routage**, qui sera vu en classe de Terminale.
 
----
+    !!! definition "Table de routage (idée)"
+        Une **table de routage** est un ensemble de règles (dans un routeur) qui indiquent : "pour atteindre tel réseau, il faut envoyer vers telle sortie / tel prochain routeur".
 
-!!! example "TP Filius 3 (fil rouge) : ajouter un routeur + configurer les passerelles"
-    **Objectif :** faire communiquer deux sous-réseaux différents.
+!!! example "TP Filius 3 (fil rouge) : Ajout d'un routeur + configuration des passerelles"
+    Nous allons maintenant faire communiquer **proprement** les deux sous-réseaux.
 
-    1. Mettre en place deux sous-réseaux :
-        - Réseau A : `192.168.0.X / 24`
-        - Réseau B : `192.168.1.X / 24`
-    2. Ajouter un **routeur** entre les deux switchs.
-    3. Configurer le routeur (exemple classique) :
+    1. Rajouter un **routeur** entre les deux switchs.
+
+        <img src="../../../files/NSI/Reseaux/filius10.png" alt="Le ping fonctionne bien" style="width: 50%; display: block; margin: 0 auto;">
+
+    2. Configurer le routeur : L'interface reliée au Switch A doit avoir une adresse du sous-réseau A. On donne souvent une adresse finissant par `254`, qui est en quelque sorte la dernière adresse du réseau (en effet l'adresse en `255` est appelée adresse de **broadcast**, utilisée pour pinger en une seule fois l'intégralité d'un sous-réseau).
         - Interface côté réseau A : `192.168.0.254` (masque `255.255.255.0`)
         - Interface côté réseau B : `192.168.1.254` (masque `255.255.255.0`)
-        - Activer le routage (si option "routage automatique" disponible)
-    4. IMPORTANT : configurer la **passerelle** sur les PC :
-        - PC1 (réseau A) : passerelle = `192.168.0.254`
-        - PC3 (réseau B) : passerelle = `192.168.1.254`
-    5. Tester le `ping` de PC1 vers PC3.
+        - Activer "routage automatique"
 
-    ✅ Attendu : le ping **réussit**.
+        <img src="../../../files/NSI/Reseaux/filius11.png" alt="Le ping fonctionne bien" style="width: 50%; display: block; margin: 0 auto;">
 
-    !!! tip "Encore mieux : traceroute"
-        Fais un `traceroute` (ou outil équivalent dans Filius) : on doit voir un passage par la passerelle.
+    3. Tester un ping entre la machine `192.168.0.1` et `192.168.1.2`.
 
-=== "Sur un vrai PC (à connaître)"
-    - `ipconfig` (Windows) / `ip a` (Linux) : voir IP + masque + passerelle
-    - `ping adresse` : tester si une machine répond
-    - `tracert adresse` (Windows) / `traceroute adresse` (Linux) : voir les "sauts" (routeurs traversés)
+        ??? success "Résulat du `ping`"
+            Cela ne marche pas. La carte réseau refuse d'envoyer les paquets car elle ne sait pas où les envoyer.
+
+            <img src="../../../files/NSI/Reseaux/filius7.png" alt="Le ping ne fonctionne pas" style="width: 50%; display: block; margin: 0 auto;">
+
+
+
+    4. Pourquoi cet échec ? Parce que nous devons dire à chaque machine qu'une passerelle est maintenant disponible pour pouvoir sortir de son propre sous-réseau. Configurer les passerelles de chaque machine : 
+        - Machines du réseau A : passerelle = `192.168.0.254`
+        - Machines du réseau B : passerelle = `192.168.1.254`
+    5. Tester à nouveau le `ping` de `192.168.0.1` vers `192.168.1.2`.
+
+        ??? success "Résultat du `ping`"
+            ✅ Le ping **réussit** !
+
+    6. Encore mieux ! Faire un `traceroute` entre `192.168.0.1` et `192.168.1.2` : on doit voir un passage par la passerelle.
+
+        ??? success "Résultat du `traceroute`"
+            <img src="../../../files/NSI/Reseaux/filius12.png" alt="Le ping ne fonctionne pas" style="width: 50%; display: block; margin: 0 auto;">
+
+!!! tip "Cas d'un réseau domestique"
+    Chez vous, la box de votre opérateur joue **simultanément le rôle de switch et de routeur** :
+
+    - **switch** car elle répartit la connexion entre les différents dispositifs (ordinateurs branchés en ethernet, smartphone en wifi, tv connectée...)
+    - **routeur** car elle fait le lien entre ce sous-réseau domestique (les appareils de votre maison) et le réseau internet.
+
+    <img src="../../../files/NSI/Reseaux/box.png" alt="Le ping ne fonctionne pas" style="width: 60%; display: block; margin: 0 auto;">
+
+!!! expert "Pour aller plus loin : Sur un vrai PC ?"
+    Les commandes du terminal seraient : 
+
+    - `ipconfig` (Windows) / `ip a` (Linux) : permet de voir l'adresse IP locale, le masque de sous-réseau et l'adresse de la passerelle
+    - `ping adresse` : permet de tester si une machine répond
+    - `tracert adresse` (Windows) / `traceroute adresse` (Linux) : permet de voir les "sauts" entre l'émetteur et le destinataire (routeurs traversés)
 
 ---
 
-## 4) Point d'accès et cas d'une box 📶
+## Serveur DNS 🧭
 
-!!! definition "Point d'accès (Wi-Fi)"
-    Un **point d'accès** permet à des appareils de se connecter en **Wi-Fi** à un réseau local.
+Jusqu'ici, on a communique en utilisant des **adresses IP**.
+Dans la vraie vie, on prefere utiliser des noms faciles a retenir (comme `www.google.com`) plutot qu'une suite de chiffres.
 
-!!! info "Box Internet"
-    Une box domestique combine souvent plusieurs rôles :
-    - **switch** (répartir la connexion en Ethernet),
-    - **point d'accès** (Wi-Fi),
-    - **routeur** (relier le réseau local à Internet).
+!!! definition "DNS"
+    Le **DNS** (Domain Name System) est un systeme qui permet d'associer un **nom** (ex : `www.vivelansi.fr`) a une **adresse IP** (ex : `192.168.1.30`).
+    On peut le voir comme un **annuaire** : "Quel est l'IP de ce nom ?"
+
+!!! info "Pourquoi c'est indispensable ?"
+    - Les noms sont **memorables**.
+    - Une IP peut **changer**, mais on garde le meme nom de domaine.
+    - Les navigateurs et beaucoup d'applications commencent souvent par demander : "Quelle IP correspond a ce nom ?"
+
+!!! example "TP Filius : serveur web puis serveur DNS"
+    1. Sur le **Switch B**, ajouter un ordinateur et le configurer :
+
+        - IP : `192.168.1.30`
+        - Masque : `255.255.255.0`
+        - Passerelle : `192.168.1.254`
+  
+        <img src="../../../files/NSI/Reseaux/filius14.png" alt="Ajout d'un serve web" style="width: 50%; display: block; margin: 0 auto;">
+
+    2. Sur cette machine, installer un **Serveur web** et le **demarrer**.
+    3. Sur la machine `192.168.0.1`, installer un **Navigateur web**.
+    4. Tester en tapant directement l'IP du serveur web dans le navigateur : `http://192.168.1.30`
+
+        ??? success "Affichage attendu"
+            ✅ Attendu : une page s'affiche.
+
+            <img src="../../../files/NSI/Reseaux/filius13.png" alt="Une page web s'affiche" style="width: 50%; display: block; margin: 0 auto;">
+
+    5. Ajouter une nouvelle machine sur le reseau A et la configurer : 
+
+        - IP : `192.168.0.53`
+        - Masque : `255.255.255.0`
+        - Passerelle : `192.168.0.254`
+
+        <img src="../../../files/NSI/Reseaux/filius15.png" alt="Ajout d'un serve web" style="width: 50%; display: block; margin: 0 auto;">
+    6. Sur cette machine, installer un **Serveur DNS**.
+    7. Démarrer le serveur DNS, puis ajouter une entree :
+        - Nom : `www.vivelansi.fr`
+        - Adresse IP : `192.168.1.30`
+
+    8. Sur la machine `192.168.0.1`, renseigner l'adresse du serveur DNS : `192.168.0.53`
+    9.  Dans le navigateur web de `192.168.0.1`, taper : `http://www.vivelansi.fr`
+ 
+
+        ??? success "Affichage attendu"
+            ✅ Attendu : le site s'affiche, mais cette fois grace au **DNS** (nom → IP).
+
+            <img src="../../../files/NSI/Reseaux/filius13.png" alt="Une page web s'affiche" style="width: 50%; display: block; margin: 0 auto;">
+
+    
+
 
 ---
 
-## En résumé ✅
+## A retenir 📌
 
-- [x] Un LAN fonctionne bien avec des IP cohérentes + un switch
-- [x] Le **masque** définit ce qui est "local" ou "extérieur"
-- [x] Pour joindre un autre sous-réseau, il faut un **routeur** et une **passerelle**
-- [x] Le routage, c'est choisir le chemin des paquets (table de routage = idée)
-- [x] Une box fait souvent switch + routeur + point d'accès
+!!! info "A retenir (version Premiere)"
+    - Une machine sur un reseau s'identifie avec une **adresse IP**.
+    - Le **masque de sous-reseau** permet de savoir si une destination est :
+        - **dans le meme sous-reseau** (envoi direct sur le LAN),
+        - **hors sous-reseau** (il faut passer par la **passerelle**).
+    - La **passerelle** est l'adresse du **routeur** a utiliser pour sortir du reseau local.
+    - Un **routeur** relie plusieurs sous-reseaux et fait transiter les paquets.
+    - Le **DNS** sert d'annuaire : il traduit un **nom** (URL/nom de domaine) en **adresse IP**.
