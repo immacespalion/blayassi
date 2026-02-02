@@ -17,6 +17,9 @@
   const htmlLang = CM.html;
   const cssLang = CM.css; // ⚠️ doit être exporté par ton bundle
   const indentUnit = CM.indentUnit;
+  const keymap = CM.keymap;
+  const indentMore = CM.indentMore;
+  const indentLess = CM.indentLess;
 
   if (!EditorView || !EditorState || !basicSetup || !htmlLang) {
     console.error("[editor-module] CodeMirror exports missing in bundle:", CM);
@@ -128,6 +131,10 @@
           basicSetup,
           EditorState.tabSize.of(4),
           indentUnit.of("\t"),
+          keymap.of([
+            { key: "Tab", run: indentMore, preventDefault: true },
+            { key: "Shift-Tab", run: indentLess, preventDefault: true },
+          ]),
           htmlLang(),
           EditorView.updateListener.of((u) => {
             if (!u.docChanged) return;
@@ -228,6 +235,10 @@
           basicSetup,
           EditorState.tabSize.of(4),
           indentUnit.of("\t"),
+          keymap.of([
+            { key: "Tab", run: indentMore, preventDefault: true },
+            { key: "Shift-Tab", run: indentLess, preventDefault: true },
+          ]),
           htmlLang(),
           EditorView.updateListener.of((u) => {
             if (!u.docChanged) return;
@@ -245,6 +256,10 @@
           basicSetup,
           EditorState.tabSize.of(4),
           indentUnit.of("\t"),
+          keymap.of([
+            { key: "Tab", run: indentMore, preventDefault: true },
+            { key: "Shift-Tab", run: indentLess, preventDefault: true },
+          ]),
           cssLang(),
           EditorView.updateListener.of((u) => {
             if (!u.docChanged) return;

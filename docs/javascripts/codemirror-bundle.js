@@ -27208,5 +27208,8 @@ export {
   basicSetup,
   css,
   html,
-  indentUnit
+  indentUnit,
+  keymap,
+  indentMore,
+  indentLess
 };
