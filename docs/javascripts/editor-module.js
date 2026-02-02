@@ -16,6 +16,7 @@
   const basicSetup = CM.basicSetup;
   const htmlLang = CM.html;
   const cssLang = CM.css; // ⚠️ doit être exporté par ton bundle
+  const indentUnit = CM.indentUnit;
 
   if (!EditorView || !EditorState || !basicSetup || !htmlLang) {
     console.error("[editor-module] CodeMirror exports missing in bundle:", CM);
@@ -125,6 +126,8 @@
         doc: startDoc,
         extensions: [
           basicSetup,
+          EditorState.tabSize.of(4),
+          indentUnit.of("\t"),
           htmlLang(),
           EditorView.updateListener.of((u) => {
             if (!u.docChanged) return;
@@ -223,6 +226,8 @@
         doc: startHtml,
         extensions: [
           basicSetup,
+          EditorState.tabSize.of(4),
+          indentUnit.of("\t"),
           htmlLang(),
           EditorView.updateListener.of((u) => {
             if (!u.docChanged) return;
@@ -238,6 +243,8 @@
         doc: startCss,
         extensions: [
           basicSetup,
+          EditorState.tabSize.of(4),
+          indentUnit.of("\t"),
           cssLang(),
           EditorView.updateListener.of((u) => {
             if (!u.docChanged) return;

@@ -27207,5 +27207,6 @@ export {
   EditorView,
   basicSetup,
   css,
-  html
+  html,
+  indentUnit
 };
