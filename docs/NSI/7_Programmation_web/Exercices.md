@@ -1389,7 +1389,8 @@ p{
             padding: 5px;
             border: 1px dashed #163c99;
             border-radius: 4px;
-            }
+            transition: 0.5s
+        }
 
         #rire:hover{
             width: 90px;
@@ -1397,7 +1398,7 @@ p{
             box-shadow: 6px 6px 6px #163c99;
             transform: rotate(-15deg);
             transition: 0.5s
-            }
+        }
         ```
 
 

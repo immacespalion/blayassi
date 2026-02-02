@@ -53,7 +53,7 @@ Et le résultat :
 ## Pseudo-éléments CSS 🧩
 
 !!! definition "Pseudo-éléments"
-    En Css, il existe de très nombreux pseudo-éléments. Dans les exercices précédents, les pseudo-éléments :first-of-type, :last-of-type et :nth-of-type ont permis d'identifier des éléments en fonction de leur «numéro» dans un conteneur. Le pseudo-élément :hover a permis de modifier l'affichage de l'élément ciblé au passage de la souris. Il existe de nombreux autres pseudo-éléments dont certains permettent d'avoir du contenu de «texte par défaut».
+    En CSS, il existe de très nombreux pseudo-éléments. Dans les exercices précédents, les pseudo-éléments `:first-of-type`, `:last-of-type` et `:nth-of-type` ont permis d'identifier des éléments en fonction de leur «numéro» dans un conteneur. Le pseudo-élément `:hover` a permis de modifier l'affichage de l'élément ciblé au passage de la souris. Il existe de nombreux autres pseudo-éléments dont certains permettent d'avoir du contenu de «texte par défaut».
 
 !!! css "`::before` et `::after`"
     Les pseudo-éléments `::before` et `::after` permettent de placer au début (ou à la fin) d'un élément un contenu prédéfini.

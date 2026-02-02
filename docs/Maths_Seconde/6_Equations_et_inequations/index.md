@@ -1,9 +1,9 @@
 ---
 title: Objectifs
-weight: 5
+weight: 6
 ---
 
-# Statistiques
+# Équations et inéquations
 
 ## Objectifs
 
