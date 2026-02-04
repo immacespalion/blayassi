@@ -1,6 +1,6 @@
 ---
 title: Objectifs
-weight: 1
+weight: 3
 ---
 
 # Limites de suites

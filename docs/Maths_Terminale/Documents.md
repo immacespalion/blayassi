@@ -52,7 +52,11 @@ Vous trouverez ci-dessous l'ensemble des TD des chapitres déjà aborder en clas
 
 - TD9 - Fonction logarithme népérien
     
-    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td9.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_term/td9-correction.pdf) -->
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td9.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/td9-correction.pdf)
+
+- TD10 - Équations différentielles
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td10.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_term/td10-correction.pdf) -->
 
 
 - TD A - Vecteurs de l'espace
@@ -117,3 +121,11 @@ Vous trouverez sur cette page les sujets et les correction des divers DHC de typ
 - DHC7 - Asie et polynésie 2024 J2 : 
     
     [Sujet :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc7.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc7-correction.pdf)
+
+- DHC8 - ???
+    
+    <!-- [Sujet :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc7.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc7-correction.pdf) -->
+
+- DHC9 - Asie 2025 : 
+    
+    [Sujet :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc9.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/dhc_bac_term/dhc9-correction.pdf)

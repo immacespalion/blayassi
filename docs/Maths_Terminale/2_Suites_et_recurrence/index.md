@@ -1,6 +1,6 @@
 ---
 title: Objectifs
-weight: 1
+weight: 2
 ---
 
 # Suites et raisonnement par récurrence
