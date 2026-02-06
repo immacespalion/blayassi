@@ -16,33 +16,14 @@ Bravo à tous pour votre travail et **bon appétit** ! 🚀
 
 ## Vos productions
 
-#### Secondes 1
-
-- [Méline et Alix](../../files/SNT/crepes/melinealix/recettecrepes.html)
-- [Candice et Ilona](../../files/SNT/crepes/candiceilona/recettecrepes.html)
-- [Augustin et Florian](../../files/SNT/crepes/florianaugustin/recettecrepes.html)
-- [Maelys](../../files/SNT/crepes/maelys/recettecrepes.html.html)
-- [Ianis et Jean](../../files/SNT/crepes/ianisjean/recettecrepes.html)
-- [Axel et Armand](../../files/SNT/crepes/axelarmand/recettecrepes.html)
-- [Zia et Noemy](../../files/SNT/crepes/zianoemy/recettecrepes.html)
-- [Mathilde](../../files/SNT/crepes/mathilde/exercice.html)
-- [Jozef et Matéo](../../files/SNT/crepes/jozefmateo/recettecrepes.html)
-- [Tania et Learzia](../../files/SNT/crepes/tanialearzia/exercice.html)
-- [Charlotte et Rebecca](../../files/SNT/crepes/rebeccacharlott/crepe.html)
-- [Ilana et Rose](../../files/SNT/crepes/roseilana/recettecrepes.html)
-
 #### Secondes 2
 
-- [Allegra et Justine](../../files/SNT/crepes/allegrajustine/recettecrepes.html)
-- [Ely](../../files/SNT/crepes/ely/Recttecrepes.html)
-- [Juliette et Manuel](../../files/SNT/crepes/juliettemanuel/exercice%202.html)
-- [Maël et Leny](../../files/SNT/crepes/maelleny/site%20pate%20a%20crepes.html)
-- [Marie-Luce et Tom](../../files/SNT/crepes/marielucetom/recettecrepes.html)
-- [Maé et Solène](../../files/SNT/crepes/maesolene/recettecrepes.html)
-- [Lucie et Tess](../../files/SNT/crepes/lucietess/recettecrepes.html)
-- [Joachim](../../files/SNT/crepes/joachin/recettecrepes.html)
-- [Romain](../../files/SNT/crepes/romain/Romain.html)
-- [Emmanuel](../../files/SNT/crepes/emmanuel/recettecrepes.html)
-- [Clélia et Romane](../../files/SNT/crepes/cleliaromane/Recette%20crepes.html)
-- [Ilan](../../files/SNT/crepes/ilan/index.html)
-- [Quentin](../../files/SNT/crepes/quentin/recettecrepes.html)
+- [Christine et Osange](../../files/SNT/crepes/Christine_Osange/recette%20crˆpe%20Christine%20et%20Osange.html)
+- [Clara et Stella](../../files/SNT/crepes/Clare_Stella/recettecrŠpes.html)
+- [Dylan](../../files/SNT/crepes/Dylan/recette%20crepes.html)
+- [Ethan](../../files/SNT/crepes/Ethan/crepes%20recette.html)
+- [Iniesta](../../files/SNT/crepes/Iniesta/Page%20HTML%20Iniesta.html)
+- [Lana et Cassandra](../../files/SNT/crepes/Lana_Cassandra/recettecrepes.html)
+- [Léa et Garance](../../files/SNT/crepes/Lea_Garance/recettescrepes.html)
+- [Learzia et Eulalie](../../files/SNT/crepes/Learzia_Eulalie/exercice.html)
+- [Tristan et Louis](../../files/SNT/crepes/Tristan_Louis/exercice.html)

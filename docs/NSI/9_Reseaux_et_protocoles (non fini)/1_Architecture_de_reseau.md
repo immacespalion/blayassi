@@ -45,7 +45,7 @@ Chaque machine connectée à un réseau possède une **carte réseau** (Ethernet
 !!! example "TP Filius : Premières machines"
     Dans le logiciel Filius : 
     
-    1. Ajouter trois ordinateurs **portable**.
+    1. Ajouter trois ordinateurs **portables**.
     2. Cliquer sur chacun d'entre eux pour observer qu'ils possèdent tous une adresse MAC différente. 
     3. Dans le champ `Adresse IP`, saisir respectivement `192.168.0.1`, `192.168.0.2` et `192.168.0.3` et cocher `Utiliser l'adresse IP comme nom`. 
 
@@ -59,8 +59,6 @@ Toutefois, à ce stade, nos trois ordinateurs ne sont pas reliés entre eux et n
 
 !!! definition "Commutateur (switch)"
     Un **commutateur** (ou **switch**) est un équipement informatique qui relie plusieurs machines sur un même réseau local. 
-    
-    et 
 
 !!! tip "Commutateur vs Hub"
     Avant l'apparition des **commutateurs**, il étaient fréquent de rencontrer des **hubs** (beaucoup plus rare aujourd'hui). 
@@ -87,7 +85,7 @@ Toutefois, à ce stade, nos trois ordinateurs ne sont pas reliés entre eux et n
     3. Passer en **mode simulation** (triangle vert)
     4. Cliquer sur l'ordinateur `192.168.0.1`
     5. Lancer **Installation des logiciels**
-    6. Installer **Ligne de commande**, puis **Appliquer les modificiations**
+    6. Installer **Ligne de commande**, puis **Appliquer les modifications**
     7. Ouvrir l'application **Ligne de commande**
     8. Saisir `ping 192.168.0.3`
 
@@ -104,7 +102,7 @@ Toutefois, à ce stade, nos trois ordinateurs ne sont pas reliés entre eux et n
 ## Sous-réseaux et masque de sous-réseau 🧠
 
 !!! example "TP Filius : Un second réseaux !"
-    Après avoir quitter le mode simulation, ajouter un deuxième sous-réseau de la manière suivante : 
+    Après avoir quitté le mode simulation, ajouter un deuxième sous-réseau de la manière suivante : 
 
     <img src="../../../files/NSI/Reseaux/filius5.png" alt="Résultat ping" style="width: 50%; display: block; margin: 0 auto;">
 
@@ -114,7 +112,7 @@ Toutefois, à ce stade, nos trois ordinateurs ne sont pas reliés entre eux et n
 On pourrait croire que "si je branche tout ensemble, tout communique".
 En réalité, ce n'est pas que topologique : c'est aussi **numérique**.
 
-!!! example "TP Filius : Premiers essaies de connexions"
+!!! example "TP Filius : Premiers essais de connexions"
     1. Relier le **Switch A** et le **Switch B** par une connexion.
 
          <img src="../../../files/NSI/Reseaux/filius6.png" alt="Connexion des deux switchs" style="width: 50%; display: block; margin: 0 auto;">
@@ -138,7 +136,7 @@ En réalité, ce n'est pas que topologique : c'est aussi **numérique**.
             <img src="../../../files/NSI/Reseaux/filius8.png" alt="Le ping fonctionne bien" style="width: 50%; display: block; margin: 0 auto;">
 
 
-Essayons d'expliquer pour un tel résultat ce produit... 
+Essayons maintenant d’expliquer ce résultat.
 
 !!! definition "Adresse IP"
     Une **adresse IP** (de l'anglais *Internet Protocol*) est une suite de chiffres ou de lettres qui identifie une machine de façon unique sur un réseau.
@@ -147,7 +145,7 @@ Essayons d'expliquer pour un tel résultat ce produit...
 
     En IPv6, elle est composée de 8 champs hexadécimaux de 16 bits délimités par deux points, par exemple `2a03:2880:f145:82:face:b00c:0:25de`
 
-    Actuellemet, les adresses IPv4 et IPv6 continuent à cohabiter. 
+    Actuellement, les adresses IPv4 et IPv6 continuent à cohabiter. 
 
 !!! definition "Masque de sous-réseau"
     Le **masque** indique quelle partie de l'adresse IP correspond au **réseau** et quelle partie correspond à la **machine**.  
@@ -158,18 +156,18 @@ Essayons d'expliquer pour un tel résultat ce produit...
 
 
 !!! methode "Reconnaître un sous-réseau avec le masque `255.255.255.0`"
-    Si le masque est `255.255.255.0`, alors deux machines sont dans le même sous-réseau si elles ont les **3 premiers nombres identiques**.
+    Si le masque est `255.255.255.0`, alors deux machines sont dans le même sous-réseau si elles ont les **3 premiers octets identiques**.
 
-    Dans cette configuration, 256 machines peuvent donc techniquement appartenir à un même sous-réseau. (Dans les faits, on réservera les adresses finissant par 0 et 255).
+    Dans cette configuration, il existe **256 adresses** dans le sous-réseau, dont **254 utilisables** (on réserve l'adresse finissant par `0` pour le réseau et celle finissant par `255` pour le broadcast).
 
     Exemple : `192.168.0.1` et `192.168.0.33` sont ensemble, mais `192.168.1.2` est ailleurs.
 
 Comme ceci est le réglage par défaut de Filius, cela explique pourquoi `192.168.0.33` et `192.168.0.1` sont sur le même sous-réseau et peuvent donc communiquer, et pourquoi `192.168.1.2` et `192.168.0.1` ne sont pas sur le même sous-réseau.
 
 !!! methode "Reconnaître un sous-réseau avec le masque `255.255.0.0`"
-    Avec `255.255.0.0`, ce sont les **2 premiers nombres** qui doivent être identiques.
+    Avec `255.255.0.0`, ce sont les **2 premiers octets** qui doivent être identiques.
 
-    Il pourra donc y avoir $256^2 = 65636$ machines dans le même sous-réseau. 
+    Il y a alors **256^2 = 65536 adresses** possibles dans le sous-réseau (dont 65534 utilisables en pratique).
 
 !!! example "TP Filius : Changement de masque de sous-réseaux"
     1. Renommer la machine `192.168.0.30` en `192.168.1.2` et modifier son masque en `255.255.0.0`.
@@ -223,7 +221,7 @@ Considérons trois machines A, B, C d'IP respectives `192.168.129.10`, `192.168.
 
     *Exemple : Une machine d'IP `192.168.0.33` avec un masque de sous-réseau `255.255.255.0` sera désignée par `192.168.0.33 / 24` en notation CIDR.*
 
-    Le suffixe `/ 24` signifie que le masque de sous-réseau commence par 24 bits consécutifs de valeur 1 : le reste des bits (donc 8 bits) est à mis à 0.  
+    Le suffixe `/ 24` signifie que le masque de sous-réseau commence par 24 bits consécutifs de valeur 1 : le reste des bits (donc 8 bits) est mis à 0.  
     Autrement dit, ce masque vaut `11111111.11111111.11111111.00000000`, soit `255.255.255.0`.
     De la même manière, le suffixe `/ 16` donnera un masque de `11111111.11111111.00000000.00000000`, soit `255.255.0.0`.
     Ou encore, un suffixe `/ 21` donnera un masque de `11111111.11111111.11111000.00000000`, soit `255.255.248.0`.
@@ -234,19 +232,19 @@ Considérons trois machines A, B, C d'IP respectives `192.168.129.10`, `192.168.
 
 ## Relier deux sous-réseaux : routeur, passerelle et routage 🛣️
 
-Notre solution initiale (relier les deux switchs par un cable pour unifier les deux sous-réseaux) n'est pas **viable à l'échelle d'un réseau planétaire**.
+Notre solution initiale (relier les deux switchs par un câble pour unifier les deux sous-réseaux) n'est pas **viable à l'échelle d'un réseau planétaire**.
 
-Pour que les machines de deux réseaux différents puissent être connectées, on va utiliser un **dispositif équipé de deux cartes réseaux**, situé à cheval entre les deux sous-réseaux. Ce équipement de réseau est appelé **routeur**.
+Pour que les machines de deux réseaux différents puissent être connectées, on va utiliser un **dispositif équipé de deux cartes réseaux**, situé à cheval entre les deux sous-réseaux. Cet équipement de réseau est appelé **routeur**.
 
 !!! definition "Routeur"
-    Un **routeur** est un équipement informatique qui assure le transit des données de proche en proche, afin que les paquets de donnés soient acheminés de l'émetteur au recepteur. Les routeurs sont utilisés pour interconnecter des réseaux locaux. 
+    Un **routeur** est un équipement informatique qui assure le transit des données de proche en proche, afin que les paquets de données soient acheminés de l'émetteur au récepteur. Les routeurs sont utilisés pour interconnecter des réseaux locaux. 
 
     <img src="../../../files/NSI/Reseaux/routeur.png" alt="Le ping fonctionne bien" style="width: 50%; display: block; margin: 0 auto;">
 
 !!! definition "Passerelle"
     La **passerelle** est l'adresse IP du routeur que la machine utilise quand elle veut parler à une adresse **hors de son sous-réseau**.
 
-    *Exemple : Dans l'illustration de la définition précédente, la passerelle du réseaux A est `192.168.0.254`.*
+    *Exemple : Dans l'illustration de la définition précédente, la passerelle du réseau A est `192.168.0.254`.*
 
 !!! expert "Pour aller plus loin : Routage et table de routage"
     Imaginons que la machine `192.168.0.1 / 24` veuille communiquer avec la machine `172.16.52.3 / 24`.   
@@ -257,7 +255,7 @@ Pour que les machines de deux réseaux différents puissent être connectées, o
 
     Les 3 étapes du routage :
 
-    - Lorsque qu'une machine A veut envoyer un message à une machine B, elle va tout d'abord **vérifier si cette machine appartient à son réseau local**. si c'est le cas, le message est envoyé par l'intermédiaire du **switch** qui relie les deux machines.
+    - Lorsqu'une machine A veut envoyer un message à une machine B, elle va tout d'abord **vérifier si cette machine appartient à son réseau local**. si c'est le cas, le message est envoyé par l'intermédiaire du **switch** qui relie les deux machines.
     - Si la machine B n'est pas trouvée sur le réseau local de la machine A, le message va être **acheminé vers le routeur**, par l'intermédiaire de son **adresse de passerelle** (qui est bien une adresse appartenant au sous-réseau de A).
     - De là, le routeur va regarder si la machine B appartient au deuxième sous-réseau auquel il est connecté. Si c'est le cas, le **message est distribué**, sinon, le routeur va donner le message **à un autre routeur** auquel il est connecté et va le charger de distribuer ce message : c'est le procédé (complexe) de **routage**, qui sera vu en classe de Terminale.
 
@@ -319,17 +317,17 @@ Pour que les machines de deux réseaux différents puissent être connectées, o
 
 ## Serveur DNS 🧭
 
-Jusqu'ici, on a communique en utilisant des **adresses IP**.
-Dans la vraie vie, on prefere utiliser des noms faciles a retenir (comme `www.google.com`) plutot qu'une suite de chiffres.
+Jusqu'ici, on a communiqué en utilisant des **adresses IP**.
+Dans la vraie vie, on préfère utiliser des noms faciles à retenir (comme `www.google.com`) plutôt qu'une suite de chiffres.
 
 !!! definition "DNS"
-    Le **DNS** (Domain Name System) est un systeme qui permet d'associer un **nom** (ex : `www.vivelansi.fr`) a une **adresse IP** (ex : `192.168.1.30`).
-    On peut le voir comme un **annuaire** : "Quel est l'IP de ce nom ?"
+    Le **DNS** (*Domain Name System*) est un système qui associe un **nom de domaine** (ex : `www.vivelansi.fr`) à une **adresse IP** (ex : `192.168.1.30`).
+    On peut le voir comme un **annuaire** : "Quelle est l'IP de ce nom ?"
 
 !!! info "Pourquoi c'est indispensable ?"
-    - Les noms sont **memorables**.
-    - Une IP peut **changer**, mais on garde le meme nom de domaine.
-    - Les navigateurs et beaucoup d'applications commencent souvent par demander : "Quelle IP correspond a ce nom ?"
+    - Les noms sont **mémorables**.
+    - Une IP peut **changer**, mais on garde le même nom de domaine.
+    - Avant de contacter un serveur, un navigateur commence souvent par demander au DNS : **"Quelle IP correspond à ce nom ?"**
 
 !!! example "TP Filius : serveur web puis serveur DNS"
     1. Sur le **Switch B**, ajouter un ordinateur et le configurer :
@@ -337,51 +335,46 @@ Dans la vraie vie, on prefere utiliser des noms faciles a retenir (comme `www.go
         - IP : `192.168.1.30`
         - Masque : `255.255.255.0`
         - Passerelle : `192.168.1.254`
-  
-        <img src="../../../files/NSI/Reseaux/filius14.png" alt="Ajout d'un serve web" style="width: 50%; display: block; margin: 0 auto;">
 
-    2. Sur cette machine, installer un **Serveur web** et le **demarrer**.
+        <img src="../../../files/NSI/Reseaux/filius14.png" alt="Ajout d'un serveur web" style="width: 50%; display: block; margin: 0 auto;">
+
+    2. Sur cette machine, installer un **Serveur web** et le **démarrer**.
     3. Sur la machine `192.168.0.1`, installer un **Navigateur web**.
-    4. Tester en tapant directement l'IP du serveur web dans le navigateur : `http://192.168.1.30`
+    4. Tester en tapant : `http://192.168.1.30`
 
         ??? success "Affichage attendu"
-            ✅ Attendu : une page s'affiche.
+            ✅ Une page s'affiche.
 
             <img src="../../../files/NSI/Reseaux/filius13.png" alt="Une page web s'affiche" style="width: 50%; display: block; margin: 0 auto;">
 
-    5. Ajouter une nouvelle machine sur le reseau A et la configurer : 
+    5. Ajouter un nouvel ordinateur sur le réseau A et la configurer :
 
         - IP : `192.168.0.53`
         - Masque : `255.255.255.0`
         - Passerelle : `192.168.0.254`
 
-        <img src="../../../files/NSI/Reseaux/filius15.png" alt="Ajout d'un serve web" style="width: 50%; display: block; margin: 0 auto;">
-    6. Sur cette machine, installer un **Serveur DNS**.
-    7. Démarrer le serveur DNS, puis ajouter une entree :
+        <img src="../../../files/NSI/Reseaux/filius15.png" alt="Ajout d'un serveur DNS" style="width: 50%; display: block; margin: 0 auto;">
+
+    6. Sur cette machine, installer un **Serveur DNS** et le **démarrer**.
+    7. Dans le serveur DNS, ajouter une **entrée** :
         - Nom : `www.vivelansi.fr`
         - Adresse IP : `192.168.1.30`
 
     8. Sur la machine `192.168.0.1`, renseigner l'adresse du serveur DNS : `192.168.0.53`
     9.  Dans le navigateur web de `192.168.0.1`, taper : `http://www.vivelansi.fr`
- 
 
         ??? success "Affichage attendu"
-            ✅ Attendu : le site s'affiche, mais cette fois grace au **DNS** (nom → IP).
-
-            <img src="../../../files/NSI/Reseaux/filius13.png" alt="Une page web s'affiche" style="width: 50%; display: block; margin: 0 auto;">
-
-    
-
+            ✅ Le site s'affiche, mais cette fois grâce au **DNS** (nom → IP).
 
 ---
 
-## A retenir 📌
+## À retenir 📌
 
-!!! info "A retenir (version Premiere)"
-    - Une machine sur un reseau s'identifie avec une **adresse IP**.
-    - Le **masque de sous-reseau** permet de savoir si une destination est :
-        - **dans le meme sous-reseau** (envoi direct sur le LAN),
-        - **hors sous-reseau** (il faut passer par la **passerelle**).
-    - La **passerelle** est l'adresse du **routeur** a utiliser pour sortir du reseau local.
-    - Un **routeur** relie plusieurs sous-reseaux et fait transiter les paquets.
-    - Le **DNS** sert d'annuaire : il traduit un **nom** (URL/nom de domaine) en **adresse IP**.
+!!! info "À retenir"
+    - Une machine sur un **réseau** s'identifie avec une **adresse IP**.
+    - Le **masque de sous-réseau** permet de savoir si une destination est :
+        - **dans le même sous-réseau** (envoi direct sur le LAN),
+        - **hors sous-réseau** (il faut passer par la **passerelle**).
+    - La **passerelle** est l'adresse du **routeur** à utiliser pour sortir du réseau local.
+    - Un **routeur** relie plusieurs sous-réseaux et fait transiter les paquets.
+    - Le **DNS** sert d'annuaire : il traduit un **nom** (nom de domaine) en **adresse IP**.
