@@ -50,6 +50,7 @@ Accédez aux sujets et corrigés pour vous préparer efficacement aux évaluatio
 Cette section est enrichie tout au long de l’année pour vous accompagner dans vos révisions. Consultez régulièrement les nouveautés !
 
 ??? info "Historique des mises à jour"
+    * 07.02.2026 - Ajout de manuels pour le Grand Oral
     * 04.02.2026 - Exerciseurs logarithme + nouveau documents
     * 24.01.2026 - Ajout de la page Grand Oral
     * 23.01.2026 - Pleins de nouveaux documents
