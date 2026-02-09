@@ -27,7 +27,8 @@ Dans cette section, vous trouverez sur cette page des pistes de sujets pour le G
 👉 Ce ne sont pas des sujets “clé en main”, mais des idées à explorer et à personnaliser.  
 
 !!! info "Manuels"
-    Vous retrouverez ici le scan de plusieurs manuels proposant des ressources pour le Grand Oral : 
+    Vous retrouverez ici le scan de plusieurs manuels proposant des ressources pour le Grand Oral :  
+    
     - [Indice, BORDAS](../files/fiches_rev/manuels/Bordas_grand_oral.pdf)
     - [LeLivreScolaire.fr](../files/fiches_rev/manuels/LeLivreScolaire.pdf)
     - [Variations, HATIER](../files/fiches_rev/manuels/Variations_grand_oral.pdf)

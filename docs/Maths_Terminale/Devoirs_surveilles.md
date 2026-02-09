@@ -27,3 +27,7 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill�
 * Bac Blanc - Décembre: 
     
     [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/bacblanc1.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/bacblanc1-correction.pdf)
+
+* DS4 - Continuité, logarithme, produit-scalaire : 
+    
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/ds4.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/ds4-correction.pdf)
