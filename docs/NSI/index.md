@@ -72,6 +72,7 @@ Dans cette section, tu trouveras :
 Cette section est mise à jour régulièrement pour inclure de nouvelles ressources. N'hésitez pas à revenir fréquemment pour découvrir les ajouts.
 
 ??? info "Historique des mises à jour"
+    * 10.02.2026 - Fin du cours du chapitre 9
     * 08.02.2026 - Suite du chapitre 9
     * 25.01.2026 - Fin du chapitre 8 (exercice fusion + projet)
     * 24.01.2026 - Fin du chapitre 7 avec projet, héditeur HTML+CSS, bac à sable CSS

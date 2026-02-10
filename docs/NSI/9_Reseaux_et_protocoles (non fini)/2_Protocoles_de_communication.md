@@ -71,7 +71,7 @@ En résumé : le **DNS** trouve l'IP, **HTTP** échange le contenu, **TCP** fiab
 
 ## Transmission et réception 📦🏷️
 
-Quand on envoie (ou recoit) un message, les données passent de couche en couche.
+Quand on envoie (ou reçoit) un message, les données passent de couche en couche.
 À chaque étape, on ajoute des informations techniques (adresses, numéros, contrôle...) : c'est l'**encapsulation**.
 
 !!! definition "Encapsulation"
@@ -163,7 +163,7 @@ Objectif de la fin de ce TP : **voir réellement ce qui se passe** quand on fait
 - ce qui change quand on traverse un **routeur** (changement de trame, IP conservée).
 
 !!! example "TP Filius 2 - Partie 1 - Avant la communication"
-    1. Télécharger et ouvrir le fichier [ping_switch.fls](../../files/NSI/Reseaux/ping_switch.fls) avec Filius: deux machines sont reliés par un switch.
+    1. Télécharger et ouvrir le fichier [ping_switch.fls](../../files/NSI/Reseaux/ping_switch.fls) avec Filius: deux machines sont reliées par un switch.
     2. Lancer la simulation et cliquer sur le switch pour consulter sa table SAT. Que constate-t-on?
     3. Sur la machine `192.168.0.10`, taper dans le terminal la commande arp -a pour obtenir sa table de correspondance IP <-> MAC. À quoi correspond la seule ligne de cette table?
 
@@ -204,7 +204,7 @@ Objectif de la fin de ce TP : **voir réellement ce qui se passe** quand on fait
 
                 C'est pour cela que, avant d'envoyer le ping, `192.168.0.10` doit d'abord trouver l'adresse MAC correspondant à l'IP `192.168.0.11` : c'est le rôle de **ARP**.
 
-                La commande `arp -a` effectuée dans un terminal de la machine `192.168.0.10` nous a permi de voir qu'elle ne connaissait encore personne dans son sous-réseau. En effet, la table de correspondance IP <-> MAC ne contiennait que l'adresse de broadcast `255.255.255.255`, qui permet d'envoyer un message à tout le réseau.
+                La commande `arp -a` effectuée dans un terminal de la machine `192.168.0.10` nous a permis de voir qu'elle ne connaissait encore personne dans son sous-réseau. En effet, la table de correspondance IP <-> MAC ne contiennait que l'adresse de broadcast `255.255.255.255`, qui permet d'envoyer un message à tout le réseau.
 
                 Constatant qu'elle ne sait pas quelle est l'adresse MAC de `192.168.0.11`, la machine `192.168.0.10` commence donc par envoyer un message à tout le sous-réseau, par l'adresse MAC de broadcast `FF:FF:FF:FF:FF:FF`. Le switch va lui aussi lui aussi relayer ce message à tous les équipements qui lui sont connectés (dans notre cas, un seul ordinateur).
 
@@ -216,7 +216,7 @@ Objectif de la fin de ce TP : **voir réellement ce qui se passe** quand on fait
 
                 C'est à partir de ce moment que la machine `192.168.0.10` sait comment communiquer avec `192.168.0.11`. Elle l'écrit dans sa table `arp`, afin de ne plus avoir à émettre le message n°1 et que le switch, qui a vu passer sur ses ports 0 et 1 des messages venant des cartes MAC `BC:81:81:42:9C:31` et `2A:AB:AC:27:D6:A7` a mis à jour sa table SAT
 
-            === "Message 3 : Envoie du `ping`"
+            === "Message 3 : Envoi du `ping`"
 
                 La machine `192.168.0.10` envoie le `ping` : 
 
@@ -305,52 +305,129 @@ Objectif de la fin de ce TP : **voir réellement ce qui se passe** quand on fait
 
             <img src="../../../files/NSI/Reseaux/filiusB11.png" alt="Une page web s'affiche" style="width: 60%; display: block; margin: 0 auto;">
 
-
-
-
+Le ping/ARP nous montre comment on atteint une machine. Maintenant, nous allons déterminer comment réagir en cas de perte du message. 
 
 ---
 
-## 4) Protocole du bit alterné 🔁✅
+## Protocole du bit alterné 🔁✅
 
-TCP est un protocole réel et complexe. Pour comprendre l'idée de fiabilisation, on étudie un protocole **très simple** : le **bit alterné**.
+Les données circulent sous forme de **trames** et le réseau peut, parfois, être perturbé (pertes, retards, duplications).
+Le **protocole du bit alterné** est un protocole très simple qui montre comment on peut rendre une transmission **fiable**, même si des trames disparaissent.
 
-### Le problème : pertes possibles
-Sur un réseau, une trame peut :
-- être **perdue**,
-- arriver **en retard**,
-- être **dupliquée**.
+### Contexte simple
 
-On veut donc un mécanisme simple pour être sûr que le récepteur reçoit bien ce qui est envoyé.
+Pour rendre la suite du cours plus concrète, nous allons nous placer dans une situation simple : 
 
----
+- Alice veut envoyer à Bob un message M, qu'elle a prédécoupé en sous-messages M0, M1, M2,...
+- Alice envoie ses sous-messages à une cadence $\Delta t$ fixée (appelé **timeout**)
+
+!!! info "En pratique"
+    En pratique, les sous-messages partent quand leur acquittement a été reçu ou qu'on a attendu celui-ci trop longtemps : on parle alors de **timeout**
+
+### Situation idéale
+
+Idéalement, tous les sous-messages arrivent à destination dans le bon ordre. La transmission est donc correcte. 
+
+<img src="../../../files/NSI/Reseaux/bit1.png" alt="Illustration de la situation idéale" style="width: 60%; display: block; margin: 0 auto;">
+
+### Situation réelle
+
+Mais parfois, les choses ne se passent pas toujours aussi bien. Car si on maîtrise parfaitement le timing de l'envoi des sous-messages d'Alice, on ne sait pas combien de temps vont mettre ces sous-messages pour arriver, ni même (attention je vais passer dans un tunnel) s'ils ne vont pas être détruits en route.
+
+<img src="../../../files/NSI/Reseaux/bit2.png" alt="Illustration de la situation idéale" style="width: 60%; display: block; margin: 0 auto;">
+
+Par exemple, dans ce schéma, le sous-message M0 a pris plus de temps à arriver et se retrouve donc après le sous-message M1. De plus, le sous-message M2 s'est perdu en cours de route... 
+
+### Une solution naïve...
+
+Que pourrais-t-on faire pour éviter de tels problèmes ?
+
+Comme le fait le protocole TCP, il serait envisageable de numéroter les sous-messages afin que Bob puisse les remettre dans l'ordre une fois arrivés, ou même redemander spécifiquement des sous-messages perdus. Cette méthode est très efficace, mais chère en ressources. Essayons de trouver une solution plus basique...
+
+Nous allons demander à Bob d'envoyer un signal, un accusé de réception, pour dire à Alice qu'il vient de recevoir son message. Nous appelerons ce signal **ACK** (de l'anglais *ACKnowledgment*, "accusé de réception").   
+Ce signal ACK permettra à Alice de renvoyer un message qu'elle considèrera comme perdu : 
+
+<img src="../../../files/NSI/Reseaux/bit3.png" alt="Illustration de la situation naive" style="width: 60%; display: block; margin: 0 auto;">
+
+Dans cet exemple, le message M1 se perd. Bob n'envoie donc pas d'ACK. Alice suppose (avec raison) que ce message n'est pas parvenu jusqu'à Bob, et donc renvoie le message M1.
+
+### ... mais peu efficace
+
+Si les problèmes de message perdu, les problèmes de temporalité évoqués précédemment ne sont eux pas résolu...
+
+<img src="../../../files/NSI/Reseaux/bit4.png" alt="Illustration de la situation naive" style="width: 60%; display: block; margin: 0 auto;">
+
+Dans cet exemple, le deuxième ACK de Bob a mis trop de temps pour arriver (ou s'est perdu en route) et donc Alice a supposé que son sous-message M1 n'était pas arrivé. Elle l'a donc renvoyé, et Bob se retrouve avec deux fois le sous-message M1. La transmission est incorrecte.
+
+En faisant transiter un message entre Bob et Alice, nous **multiplions par 2 la probabilité que des problèmes techniques de transmission interviennent**. Et pour l'instant rien ne nous permet de les détecter.
 
 ### Principe du bit alterné
 
+Bob va maintenant intégrer une méthode de **validation** du sous-message reçu. Il pourra décider de le **garder** ou de l'**écarter** : le but est d'éviter les doublons.
+
+Pour cela, Alice ajoute à chaque sous-message un **bit de contrôle** (numéro de séquence) qui alterne : 0 puis 1 puis 0 puis 1…  
+On l'appelle souvent **bit alterné** (ou bit de séquence).
+
+- Alice envoie `Mi` avec un bit `b` (0 ou 1).
+- Bob renvoie un acquittement **ACKb** pour confirmer : "j'ai reçu la trame numérotée b".
+
+!!! definition "Acquittement (ACK)"
+    Un **ACK** (accusé de réception) est un message envoyé par le récepteur pour confirmer une réception.
+    - **ACK0** : "la trame 0 a été reçue"
+    - **ACK1** : "la trame 1 a été reçue"
+
+!!! methode "Règle côté émetteur (Alice)"
+    1. Envoyer le message `Mi` avec le bit `b`.
+    2. Attendre **ACKb** (avec un **timeout**).
+    3. Si le timeout expire (pas d'ACK reçu) : **réémettre** `Mi` avec le même bit `b`.
+    4. Quand ACKb est reçu : passer au message suivant et **inverser** le bit (`b ← 1 - b`).
+
+!!! methode "Règle côté récepteur (Bob)"
+    Bob garde en mémoire le bit **attendu**.
+
+    - Si Bob reçoit une trame avec le bit **attendu** :
+        - il **accepte** le message,
+        - il renvoie **ACK** correspondant,
+        - puis il change le bit attendu (0 ↔ 1).
+    - Si Bob reçoit une trame avec le bit **non attendu** :
+        - c'est un **doublon** (réémission),
+        - il **rejette** le message (il ne le livre pas deux fois),
+        - mais il renvoie quand même l'ACK correspondant au dernier message valide (pour "rassurer" Alice).
+
+L'ensemble de ces règles portent le nom de **protocole du bit alterné**. 
+
 !!! definition "Protocole du bit alterné"
     L'émetteur numérote les trames avec un bit qui alterne : **0 puis 1 puis 0 puis 1...**  
-    Le récepteur répond avec un acquittement correspondant : **ACK0** ou **ACK1**.
+    Le récepteur répond avec **ACK0** ou **ACK1**.  
+    Si l'ACK n'arrive pas à temps, l'émetteur **réémet**.
 
-### Déroulement (sans panne)
+Observons ce protocole dans plusieurs cas :
 
-!!! methode "Fonctionnement sans panne"
-    1. L'émetteur envoie la trame **0**.
-    2. Le récepteur la reçoit et renvoie **ACK0**.
-    3. L'émetteur envoie la trame **1**.
-    4. Le récepteur renvoie **ACK1**.
-    5. On recommence (0, 1, 0, 1...).
+=== "Perte d'un sous-message"
+    <img src="../../../files/NSI/Reseaux/bit5.png" alt="Perte d'un sous-message" style="width: 60%; display: block; margin: 0 auto;">
 
-### Déroulement (avec perte)
+    Ici, le message `M1` se perd. N'ayant pas reçu **ACK1** avant le timeout, Alice **réémet** `M1` avec le même bit.
 
-!!! methode "Fonctionnement avec perte + timeout"
-    - L'émetteur envoie une trame (ex : **0**) et attend **ACK0**.
-    - Si l'ACK n'arrive pas (trame ou ACK perdu), l'émetteur attend un délai (**timeout**) puis **réémet** la trame.
-    - Grâce au bit 0/1, le récepteur peut reconnaître un **doublon** et éviter de traiter deux fois la même trame.
+=== "Perte d'un ACK"
+    <img src="../../../files/NSI/Reseaux/bit6.png" alt="Perte d'un ACK" style="width: 60%; display: block; margin: 0 auto;">
 
-!!! warning "Pourquoi le bit est indispensable ?"
-    Sans numéro (même 1 bit), le récepteur ne peut pas distinguer :
-    - "nouvelle trame",
-    - "trame renvoyée car l'ACK s'est perdu".
+    Ici, **ACK1** se perd. Alice réémet `M1`.  
+    Bob détecte que c'est un **doublon** (bit non attendu), donc il ne relivre pas `M1`, mais il renvoie **ACK1**.
+
+=== "Retard d'un sous-message"
+    <img src="../../../files/NSI/Reseaux/bit7.png" alt="Retard d'un sous-message" style="width: 60%; display: block; margin: 0 auto;">
+
+    Ici, `M1` arrive en retard. Alice réémet `M1` après timeout.  
+    Bob reçoit une première fois `M1` (bit attendu) → il accepte + ACK1.  
+    Puis l'ancien `M1` en retard arrive (bit non attendu) → doublon → rejet + renvoi ACK1.
+
+!!! warning "Limites"
+    Ce protocole n'autorise qu'**un seul message "en vol"** à la fois (stop-and-wait).  
+    Il est donc simple, mais peu efficace si le réseau est lent.
+
+!!! tip "Point historique"
+    Le protocole du bit alterné est un **exemple classique de protocole ARQ** (réémission sur erreur/perte).
+    Il sert surtout à comprendre les mécanismes de fiabilisation utilisés dans des protocoles plus complexes.
 
 ---
 
