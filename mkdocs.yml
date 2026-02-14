@@ -88,6 +88,9 @@ extra:
     provider: google
     property: G-65TK1PRCWG
 
+hooks: 
+  - plugins/exo_numbering.py
+
 plugins:
   - search
   #- pyodide_macros:         # plugin du thème Pyodide

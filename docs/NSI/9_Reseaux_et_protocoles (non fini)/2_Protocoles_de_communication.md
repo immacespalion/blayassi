@@ -228,7 +228,7 @@ Objectif de la fin de ce TP : **voir réellement ce qui se passe** quand on fait
 
                 <img src="../../../files/NSI/Reseaux/filiusB7.png" alt="Une page web s'affiche" style="width: 90%; display: block; margin: 0 auto;">
 
-!!! exemple "TP Filius 2 - Partie 3 - Communication à travers un routeur"
+!!! example "TP Filius 2 - Partie 3 - Communication à travers un routeur"
     L'objectif est maintenant d'observer les différentes étapes lors d'un ping entre des machines de sous-réseaux différents:
 
     ![illustration du réseau](../../files/NSI/Reseaux/filiusB8.png)
@@ -286,7 +286,7 @@ Objectif de la fin de ce TP : **voir réellement ce qui se passe** quand on fait
             ??? expert "Pour aller plus loin : NAT"
                 Dans notre cas, le routeur va laisser intacte l'adresse IP Source. Ce n'est pas toujours le cas. 
                 
-                Dans le cas classique de la box qui relie votre domicile à internet, le routeur contenu dans celle-ci va remplacer l'adresse locale de votre ordinateur ou smartphone (ex `192.168.0.26`) par son IP publique (celle apparaissant sur [whatsmyip.com](whatsmyip.com), par exemple). Elle effectue ce qu'on appelle une **translation d'adresse (NAT)**. 
+                Dans le cas classique de la box qui relie votre domicile à internet, le routeur contenu dans celle-ci va remplacer l'adresse locale de votre ordinateur ou smartphone (ex `192.168.0.26`) par son IP publique (celle apparaissant sur [whatsmyip.com](http://whatsmyip.com), par exemple). Elle effectue ce qu'on appelle une **translation d'adresse (NAT)**. 
                 
                 Pourquoi ? Parce que sinon la réponse du serveur distant que vous interrogez serait envoyée sur une adresse locale (votre adresse `192.168.0.26`), qui est introuvable depuis un réseau extérieur. Il faut donc remplacer toutes les adresses locales par l'IP publique de votre box. 
                 

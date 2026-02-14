@@ -19,11 +19,11 @@ Bravo à tous pour votre travail et **bon appétit** ! 🚀
 #### Secondes 2
 
 - [Christine et Osange](../../files/SNT/crepes/Christine_Osange/recette%20crˆpe%20Christine%20et%20Osange.html)
-- [Clara et Stella](../../files/SNT/crepes/Clare_Stella/recettecrŠpes.html)
+- [Clara et Stella](../../files/SNT/crepes/Clara_Stella/recette.html)
 - [Dylan](../../files/SNT/crepes/Dylan/recette%20crepes.html)
-- [Ethan](../../files/SNT/crepes/Ethan/crepes%20recette.html)
+- [Ethan](../../files/SNT/crepes/) MISSING
 - [Iniesta](../../files/SNT/crepes/Iniesta/Page%20HTML%20Iniesta.html)
 - [Lana et Cassandra](../../files/SNT/crepes/Lana_Cassandra/recettecrepes.html)
-- [Léa et Garance](../../files/SNT/crepes/Lea_Garance/recettescrepes.html)
-- [Learzia et Eulalie](../../files/SNT/crepes/Learzia_Eulalie/exercice.html)
+- [Léa et Garance](../../files/SNT/crepes/) MISSING
+- [Learzia et Eulalie](../../files/SNT/crepes/) MISSING
 - [Tristan et Louis](../../files/SNT/crepes/Tristan_Louis/exercice.html)
