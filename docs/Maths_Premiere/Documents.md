@@ -48,6 +48,6 @@ Vous trouverez ci-dessous l'ensemble des TD des chapitres déjà aborder en clas
 
 - TD8 - Suites arithmétiques et géométriques
     
-    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td8.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td8-correction.pdf) -->
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td8.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td8-correction.pdf)
 
 
