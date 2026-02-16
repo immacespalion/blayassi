@@ -49,11 +49,11 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill�
 
 * DS4 - Dérivation globale et produit scalaire : 
     
-    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds4.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds4-correction.pdf)
+    <!-- [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds4.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds4-correction.pdf) -->
 
 * DS5 - Suites arithmétiques et géométriques, produit sclaire et dérivation globale (+ second degré) : 
 
-    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds5.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds5-correction.pdf)
+    <!-- [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds5.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/24_25/ds5-correction.pdf) -->
 
 * DS6 - Fonctions trigonométriques :
 
@@ -96,11 +96,11 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill�
 
 * DS6 - Produit scalaire :  
 
-    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/ds6.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/ds6-correction.pdf)
+    <!-- [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/ds6.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/ds6-correction.pdf) -->
 
 * DS7 - Suites arithmétiques et géométriques : 
 
-    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/ds7.pdf)  / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/ds7-correction.pdf)
+    <!-- [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/ds7.pdf)  / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_1e/23_24/ds7-correction.pdf) -->
 
 * DS8 - Fonctions trigonométriques :  
     
