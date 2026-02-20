@@ -87,6 +87,18 @@ extra:
   analytics:
     provider: google
     property: G-65TK1PRCWG
+  alternate:
+    - name: Français
+      link: https://immacespalion.github.io/blayassi/
+    - name: English
+      link: https://immacespalion-github-io.translate.goog/blayassi/?_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=fr&_x_tr_pto=nui
+      lang: en
+    - name: Español
+      link: https://immacespalion-github-io.translate.goog/blayassi/?_x_tr_sl=fr&_x_tr_tl=es&_x_tr_hl=fr&_x_tr_pto=nui
+      lang: es
+    - name: Italian
+      link: https://immacespalion-github-io.translate.goog/blayassi/?_x_tr_sl=fr&_x_tr_tl=it&_x_tr_hl=fr&_x_tr_pto=nui
+      lang: it
 
 hooks: 
   - plugins/exo_numbering.py
