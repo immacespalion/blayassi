@@ -70,7 +70,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     for i in range(len(voyages)):
         for j in range(len(durees)):
-            if voyages[i]['dest'] == durees[j]['dest'] and durees[j]['dest'] >= 2 :
+            if voyages[i]['dest'] == durees[j]['dest'] and durees[j]['nbheures'] >= 2 :
                 print(voyages[i]['nom'])
     ```
 
@@ -84,7 +84,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
     Titre,Auteur,Extrait,Année 
     Air vif,Eluard,J'ai regardé devant moi,1951
     Je vis...,Labé,J'ai chaud extrême en endurant froidure
-    Heureux..,du Bellay,Heureux qui comme Ulysse, à fait...,1552
+    Heureux..,du Bellay,Heureux qui comme Ulysse, a fait...,1552
     "La voix,Baudelaire,Mon berceau s'adossait...",1857
     ```
 
@@ -96,7 +96,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
         Ligne 3 : Il manque la valeur pour `Année` : `Je vis...,Labé,J'ai chaud extrême en endurant froidure,1555`
 
 
-        Ligne 4 : La virgule dans la citation va poser problème puisqu'il s'agit également du délimiteur. Il faut entourer la citation de guillemets : `Heureux..,du Bellay,"Heureux qui comme Ulysse, à fait...",1552`
+        Ligne 4 : La virgule dans la citation va poser problème puisqu'il s'agit également du délimiteur. Il faut entourer la citation de guillemets : `Heureux..,du Bellay,"Heureux qui comme Ulysse, a fait...",1552`
 
         Ligne 5 : Les guillemets sont mals positionnés. Lors que l'importation, seul `Titre` et `Auteur` auront une valeur. Version rectifiée : `La voix,Baudelaire,Mon berceau s'adossait...,1857`
 

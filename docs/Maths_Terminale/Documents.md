@@ -56,7 +56,19 @@ Vous trouverez ci-dessous l'ensemble des TD des chapitres déjà aborder en clas
 
 - TD10 - Équations différentielles
     
-    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td10.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_term/td10-correction.pdf) -->
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td10.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/td10-correction.pdf)
+
+- TD11 - Aire et intégrales
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td11.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/td11-correction.pdf)
+
+- TD12 - Calcul intégral
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td12.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_term/td12-correction.pdf) -->
+
+- TD13 - Fonctions trigonométriques
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td13.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_term/td13-correction.pdf) -->
 
 
 - TD A - Vecteurs de l'espace
@@ -85,7 +97,15 @@ Vous trouverez ci-dessous l'ensemble des TD des chapitres déjà aborder en clas
 
 - TD G - Loi binomiale
     
-    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/tdG.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_term/tdG-correction.pdf) -->
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/tdG.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/tdG-correction.pdf)
+
+- TD H - Équations cartésiennes d'un plan
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/tdH.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/tdH-correction.pdf)
+
+- TD I - Représentation paramétrique de droites
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/tdI.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_term/tdI-correction.pdf) -->
 
 
 ---
