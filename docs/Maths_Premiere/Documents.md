@@ -50,4 +50,20 @@ Vous trouverez ci-dessous l'ensemble des TD des chapitres déjà aborder en clas
     
     [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td8.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td8-correction.pdf)
 
+- TD9 - Probabilités conditionnelles
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td9.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td9-correction.pdf)
+
+- TD10 - Application au produit scalaire
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td10.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td10-correction.pdf) -->
+
+- TD11 - Variation d'une fonction
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td11.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td11-correction.pdf) -->
+
+- TD12 - Variables aléatoires
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td12.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td12-correction.pdf) -->
+
 
