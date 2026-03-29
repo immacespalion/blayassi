@@ -31,3 +31,15 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill�
 * DS4 - Continuité, logarithme, produit-scalaire : 
     
     [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/ds4.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/ds4-correction.pdf)
+
+* DS4 bis - Continuité, logarithme, produit-scalaire : 
+    
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/ds4b.pdf)
+
+* DS5 - Continuité, logarithme, produit-scalaire : 
+    
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/ds5.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/ds5-correction.pdf)
+
+* Bac Blanc 2 - Sujet 0 : 
+    
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/bacblanc2-0.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/bacblanc2-0-correction.pdf)
