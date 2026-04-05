@@ -56,7 +56,7 @@ Vous trouverez ci-dessous l'ensemble des TD des chapitres déjà aborder en clas
 
 - TD10 - Application au produit scalaire
     
-    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td10.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td10-correction.pdf) -->
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td10.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td10-correction.pdf)
 
 - TD11 - Variation d'une fonction
     
