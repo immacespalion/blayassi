@@ -130,7 +130,7 @@ Les corrections sont généralement disponibles, mais elles ne doivent être con
 
     ??? success "Correction"
 
-        1. Le masque de sous réseau est : `11111111.11111111.11000000.00000000`. Il reste donc 6 bits libre pour l'IP machine sur le 3e octet soit $2^6=64$ valeurs possibles. Notre réseau commence à `192`, grâce au 32 valeurs, nous pouvons donc aller de $[192; 192+64-1]$ soit `255`. La dernière adresse IP est donc `166.102.255.254`.
+        1. Le masque de sous réseau est : `11111111.11111111.11000000.00000000`. Il reste donc 6 bits libre pour l'IP machine sur le 3e octet soit $2^6=64$ valeurs possibles. Notre réseau commence à `192`, grâce au 64 valeurs, nous pouvons donc aller de $[192; 192+64-1]$ soit `255`. La dernière adresse IP est donc `166.102.255.254`.
         2. Le masque de sous réseau est : `11111111.11111111.11100000.00000000`. Il reste donc 5 bits libre pour l'IP machine sur le 3e octet soit $2^5=32$ valeurs possibles. Notre réseau commence à `192`, grâce au 32 valeurs, nous pouvons donc aller de $[192; 192+32-1]$ soit `223`. La dernière adresse IP est donc `166.102.223.254`.
 
 !!! exopapier "Exercice 1 - :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:" 

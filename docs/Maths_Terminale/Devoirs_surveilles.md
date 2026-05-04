@@ -43,3 +43,7 @@ Vous trouverez sur cette page les sujets et les correction des devoirs surveill√
 * Bac Blanc 2 - Sujet 0 : 
     
     [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/bacblanc2-0.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/bacblanc2-0-correction.pdf)
+
+* Bac Blanc 2 : 
+    
+    [Sujet :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/bacblanc2.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/ds_maths_term/25_26/bacblanc2-correction.pdf)
