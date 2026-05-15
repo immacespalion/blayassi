@@ -64,7 +64,7 @@ Vous trouverez ci-dessous l'ensemble des TD des chapitres déjà aborder en clas
 
 - TD12 - Calcul intégral
     
-    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td12.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_term/td12-correction.pdf) -->
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/td12.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/td12-correction.pdf)
 
 - TD13 - Fonctions trigonométriques
     
@@ -105,7 +105,15 @@ Vous trouverez ci-dessous l'ensemble des TD des chapitres déjà aborder en clas
 
 - TD I - Représentation paramétrique de droites
     
-    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/tdI.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_term/tdI-correction.pdf) -->
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/tdI.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_term/tdI-correction.pdf)
+
+- TD J - Somme de variables aléatoires
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/tdJ.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_term/tdJ-correction.pdf) -->
+
+- TD K - Loi des grands nombres
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_term/tdK.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_term/tdK-correction.pdf) -->
 
 
 ---

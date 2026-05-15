@@ -60,10 +60,22 @@ Vous trouverez ci-dessous l'ensemble des TD des chapitres déjà aborder en clas
 
 - TD11 - Variation d'une fonction
     
-    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td11.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td11-correction.pdf) -->
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td11.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td11-correction.pdf)
 
 - TD12 - Variables aléatoires
     
-    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td12.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td12-correction.pdf) -->
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td12.pdf) / [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td12-correction.pdf)
+
+- TD13 - Fonction exponentielle
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td13.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td13-correction.pdf) -->
+
+- TD14 - Géométrie analytique
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td14.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td14-correction.pdf) -->
+
+- TD15 - Fonctions trigonométriques
+    
+    [Fiche du TD :fontawesome-solid-file-pdf:](../files/td_premiere/td15.pdf) / <!-- [Correction :fontawesome-solid-file-pdf:](../files/td_premiere/td15-correction.pdf) -->
 
 
